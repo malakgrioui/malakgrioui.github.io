@@ -206,7 +206,7 @@ body {
 
 /* Miscellaneous */
 .button{
-    background-color: rgba(253, 129, 187, 0.3);
+    background-color: rgba(70, 130, 180, 0.3);
     padding: 10px;
     text-decoration: none;
     border-radius: 5%;
@@ -215,7 +215,7 @@ body {
 
 /* I only used button-outline on this project, but you may like the other one more */
 .button-outline{
-    border: 2px solid  rgba(253, 129, 187, 0.3);
+    border: 2px solid  rgba(70, 130, 180, 0.3);
     padding: 10px;
     text-decoration: none;
     border-radius: 5%;
@@ -246,8 +246,8 @@ body {
 
 /* ANIMATIONS AND OTHER BEAUTIES */
 .button-outline:hover, .button-outline:active{
-    border: 2px solid  rgba(253, 129, 187, 0.3);
-    background-color: rgba(253, 129, 187, 0.6);
+    border: 2px solid  rgba(70, 130, 180, 0.3);
+    background-color: rgba(70, 130, 180, 0.6);
     padding: 10px;
     text-decoration: none;
     border-radius: 5%;
