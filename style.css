@@ -94,15 +94,15 @@ body {
 }
 
 /* Background colors */
-.baby-pink{
-    background-color: rgba(253, 129, 187, 0.3);
+.steel-blue{
+    background-color: rgba(70, 130, 180, 0.3);
     margin: 20px auto;
     padding: 20px;
     text-align: center;
 }
 
-.baby-pink-light{
-    background-color: rgba(243, 162, 200, 0.3);
+.grey{
+    background-color: rgba(128, 128, 128, 0.3);
     margin: 20px auto;
     padding: 20px;
     text-align: center;
