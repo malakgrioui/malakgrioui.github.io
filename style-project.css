@@ -11,7 +11,7 @@
 /* DARK THEME */
 @media (prefers-color-scheme: dark) {
     @media screen and (max-width: 929px) {
-        .baby-pink-light {
+        .grey {
             margin-left: auto;
             margin-right: auto;
         }
