@@ -10,7 +10,7 @@ html{
 }
 
 body {
-    background-color: rgba(253, 244, 244, 30%);
+    background-color: rgba(70, 130, 180, 30%);
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0px;
 }
@@ -87,7 +87,7 @@ body {
 }
 
 .colorful-letter{
-    background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+    background-image: linear-gradient(135deg, rgb(70, 130, 180)0%, rgb(128, 128, 128)60%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -385,9 +385,9 @@ footer{
 .progress-bar span {
     height: 10px;
     float: left;
-    background: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+    background: linear-gradient(135deg, rgb(70, 130, 180)0%, rgb(128, 128, 128)60%);
     border-radius: 20px;
-    -webkit-background: linear-gradient(135deg, rgb(250, 113, 283) 0%, rgb(255, 142, 134) 60%);
+    -webkit-background: linear-gradient(135deg, rgb(70, 130, 180) 0%, rgb(128, 128, 128) 60%);
     -webkit-border-radius: 20px;
 }
 
