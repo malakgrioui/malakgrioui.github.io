@@ -413,7 +413,7 @@ footer{
 
 .comm-lead {
     width: 90%;
-    animation: comm-adapt 3s;
+    animation: comm-lead 3s;
 }
 
 .team-player {
@@ -428,7 +428,7 @@ footer{
 
 .creativity {
     width: 75%;
-    animation: open-minded 3s;
+    animation: creativity 3s;
 }
 
 @keyframes html {
@@ -467,7 +467,7 @@ footer{
     }
 }
 
-@keyframes comm-adapt {
+@keyframes comm-lead {
     0% {
         width: 0%;
     }
@@ -494,7 +494,7 @@ footer{
     }
 }
 
-@keyframes open-minded {
+@keyframes creativity {
     0% {
         width: 0%;
     }
