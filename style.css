@@ -290,6 +290,26 @@ nav {
     padding: 0 20px;
 }
 
+/* Style du bouton CV */
+.nav-left {
+    flex: 1;
+}
+
+.nav-left .button-outline {
+    padding: 8px 15px;
+    text-decoration: none;
+    border: 2px solid rgba(70, 130, 180, 0.7);
+    border-radius: 5px;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-left .button-outline:hover {
+    background-color: rgba(70, 130, 180, 0.7);
+    color: white;
+}
+
+
 /* Menu de navigation */
 .main-nav {
     display: flex;
