@@ -271,15 +271,19 @@ body {
 
 /* ---------------------------------- */
 
-/* NAV */
 /* NAVIGATION */
 nav {
     background-color: rgb(253, 249, 249);
-    margin-bottom: 30px;
-    padding: 15px 0; 
-    height: 60px; 
+    padding: 15px 0;
+    height: 70px; /* Ajuste la hauteur */
     display: flex;
     align-items: center;
+    position: fixed; /* Fixe la barre en haut */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* S'assure que la nav reste au-dessus */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
 }
 
 /* Conteneur principal de la nav */
@@ -287,23 +291,25 @@ nav {
     display: flex;
     align-items: center;
     width: 90%;
-    max-width: 1300px; 
+    max-width: 1300px;
     margin: auto;
-    padding: 0 30px; 
+    padding: 0 40px; /* Ajoute une marge à gauche et à droite */
 }
 
 /* Garde le bouton à gauche */
 .nav-left {
-    position: absolute;
-    left: 0;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .nav-left .button-outline {
-    padding: 8px 15px;
+    padding: 10px 20px;
     text-decoration: none;
     border: 2px solid rgba(70, 130, 180, 0.7);
     border-radius: 5px;
     color: black;
+    font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -312,19 +318,18 @@ nav {
     color: white;
 }
 
-
-/* Menu de navigation */
+/* Centrage du menu */
 .main-nav {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
     margin: 0 auto;
     padding: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    flex: 1;
+    justify-content: center;
 }
 
+/* Style des liens */
 .main-nav li {
     padding: 5px 10px;
 }
@@ -340,18 +345,17 @@ nav {
     font-weight: bold;
 }
 
-/* Icônes à droite */
+/* Icônes alignées à droite */
 .nav-icons {
-    position: absolute;
-    right: 0;
+    flex: 1;
     display: flex;
-    align-items: center;
-    gap: 15px;
+    justify-content: flex-end;
+    gap: 20px; /* Ajoute un peu plus d'espace entre les icônes */
 }
 
 /* Style des icônes */
 .nav-icons img {
-    width: 25px;
+    width: 30px; /* Légèrement plus grandes */
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -361,22 +365,41 @@ nav {
     transform: scale(1.1);
 }
 
-/* Menu burger pour mobile */
-.toggle, #drop {
-    display: none;
+/* ----- RESPONSIVE ----- */
+@media screen and (max-width: 900px) {
+    .nav-container {
+        width: 95%;
+        padding: 0 20px;
+    }
 }
 
 @media screen and (max-width: 750px) {
+    nav {
+        height: auto;
+        padding: 10px 0;
+    }
+
     .nav-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
+    .nav-left {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
     .main-nav {
         flex-direction: column;
         display: none;
-        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav li {
+        padding: 10px;
     }
 
     #drop:checked + .main-nav {
@@ -389,10 +412,22 @@ nav {
         border: 1px solid #fd81bb4d;
         padding: 10px;
         cursor: pointer;
+        text-align: center;
+        width: 100%;
     }
 
     .toggle:hover {
         background-color: #f0e7e7;
+    }
+
+    /* Ajustement des icônes */
+    .nav-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-icons img {
+        width: 28px;
     }
 }
 
