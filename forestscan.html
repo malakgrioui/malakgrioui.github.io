@@ -32,20 +32,38 @@
 <body>
     <!-- navigation bar -->
     <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <!--
-            <li><a href="about-me.html">About me</a></li>
-            <li><a href="skill-set.html">Skill-set</a></li>
-            -->
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="index.html#contact-me">Contact me</a></li>
-        </ul>
+        <div class="nav-container">
+
+            <div class="nav-left">
+                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
+            </div>
+            
+            <!-- Menu burger pour mobile -->
+            <label for="drop" class="toggle" id="main-toggle">
+                <span class="nav-icon"></span>
+            </label>
+            <input type="checkbox" id="drop">
+    
+            <!-- Menu de navigation -->
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#contact-me">Contact me</a></li>
+            </ul>
+    
+            <!-- Icônes LinkedIn et Email alignées à droite -->
+            <div class="nav-icons">
+                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
+                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
+                    <img src="assets/square-envelope-solid.png" alt="Email">
+                </a>
+            </div>
+    
+        </div>
     </nav>
+
 
     <!-- project name -->
     <section class="w-900 padding center">
