@@ -282,8 +282,8 @@ nav {
 /* Conteneur principal pour aligner le menu et les icônes */
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Sépare le menu et les icônes */
     align-items: center;
+    justify-content: space-between;
     width: 90%;
     max-width: 1200px;
     margin: auto;
@@ -317,6 +317,9 @@ nav {
     gap: 20px;
     margin: 0 auto;
     padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .main-nav li {
