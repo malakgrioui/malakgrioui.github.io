@@ -276,18 +276,20 @@ body {
 nav {
     background-color: rgb(253, 249, 249);
     margin-bottom: 30px;
-    padding: 10px 0;
+    padding: 15px 0; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
 }
 
-/* Conteneur principal pour aligner le menu et les icônes */
+/* Conteneur principal de la nav */
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1300px; 
     margin: auto;
-    padding: 0 20px;
+    padding: 0 30px; 
 }
 
 /* Garde le bouton à gauche */
