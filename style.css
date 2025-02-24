@@ -283,11 +283,11 @@ nav {
 .nav-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    padding: 10px 20px;
-    position: relative;
+    padding: 0 20px;
 }
 
 /* Garde le bouton à gauche */
