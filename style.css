@@ -295,7 +295,7 @@ nav {
     display: flex;
     list-style: none;
     gap: 20px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
