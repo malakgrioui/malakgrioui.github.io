@@ -274,12 +274,7 @@ body {
 /* NAV */
 /* NAVIGATION */
 nav {
-    background-color: rgb(253, 249, 249);
     margin-bottom: 30px;
-    padding: 15px 0; 
-    height: 60px; 
-    display: flex;
-    align-items: center;
 }
 
 /* Conteneur principal de la nav */
@@ -312,17 +307,13 @@ nav {
     color: white;
 }
 
-
-/* Menu de navigation */
-.main-nav {
+.main-nav{
+    background-color: rgb(253, 249, 249);
     display: flex;
-    list-style: none;
-    gap: 20px;
-    margin: 0 auto;
-    padding: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    list-style-type: none;
+    justify-content: center;
+    padding: 20px;
+    margin: 0px;
 }
 
 .main-nav li {
@@ -332,69 +323,60 @@ nav {
 .main-nav li a {
     color: #000000;
     text-decoration: none;
-    font-size: 1rem;
 }
 
 .main-nav li a:hover {
-    color: rgb(70, 130, 180);
+    color: rgb(254, 175, 210);
+    text-decoration: none;
     font-weight: bold;
 }
 
-/* Icônes à droite */
-.nav-icons {
-    position: absolute;
-    right: 0;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.sticky {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+    align-self: flex-start; /* <-- this is the fix */
 }
 
-/* Style des icônes */
-.nav-icons img {
-    width: 25px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-/* Effet au survol */
-.nav-icons img:hover {
-    transform: scale(1.1);
-}
-
-/* Menu burger pour mobile */
-.toggle, #drop {
+/* Nav-icon */
+.toggle, #drop{
     display: none;
 }
 
-@media screen and (max-width: 750px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .main-nav {
-        flex-direction: column;
-        display: none;
-        gap: 10px;
-    }
-
-    #drop:checked + .main-nav {
-        display: flex;
-    }
-
-    .toggle {
-        display: block;
-        background-color: #ffffff;
-        border: 1px solid #fd81bb4d;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    .toggle:hover {
-        background-color: #f0e7e7;
-    }
+#main-toggle{
+    border: 1px solid #df36854d;
+    float: right;
+    padding: 20px;
+    /* position: relative; */
+    user-select: none;
 }
+
+.nav-icon{
+    background-color: #df36854d;
+    display: block;
+    height: 3px;
+    width: 10px;
+    position: relative;
+}
+
+.nav-icon::before,
+.nav-icon::after{
+    background-color: #df36854d;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.nav-icon::before{
+    top: 5px;
+}
+
+.nav-icon::after{
+    top: -5px;
+}
+
 
 /* ---------------------------------- */
 
