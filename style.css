@@ -559,8 +559,8 @@ body {
 }
 
 .box-contact a:hover img {
-    transform: scale(1.1); /* Slightly enlarges the icon */
-    opacity: 0.8; /* Reduces opacity slightly */
+    transform: scale(1.2); /* Increases size */
+    opacity: 0.8; /* Reduces opacity */
 }
 
 
