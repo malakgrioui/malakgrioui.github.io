@@ -395,25 +395,30 @@ body {
         justify-content: center;
     }
 
+    /* Align CV button and icons on the same row */
     .top-row {
-        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* Aligns left and right elements */
         align-items: center;
+        width: 100%;
+        padding: 5px 15px;
     }
 
     .nav-left {
-        position: static;
+        display: flex;
+        align-items: center; /* Vertically aligns the button */
     }
 
     .nav-left .button-outline {
         font-size: 0.9rem;
-        padding: 6px 10px;
+        padding: 6px 12px;
+        display: flex;
+        align-items: center;
     }
 
     .nav-icons {
-        position: static;
         display: flex;
+        align-items: center;
         gap: 10px;
     }
 
@@ -422,12 +427,14 @@ body {
         height: auto;
     }
 
+    /* Adjust the menu burger below */
     .toggle {
         display: block;
         margin-top: 8px;
         padding: 5px;
         border: 1px solid rgba(70, 130, 180, 0.4);
         cursor: pointer;
+        align-self: center; /* Centers the burger below the row */
     }
 
     #drop {
@@ -447,9 +454,10 @@ body {
     }
 
     body {
-        padding-top: 130px; /* ajuste selon la hauteur mobile */
+        padding-top: 130px; /* Adjust according to mobile navbar height */
     }
 }
+
 
 @media screen and (min-width: 751px) {
     nav {
