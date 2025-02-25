@@ -495,11 +495,26 @@ body {
     }
 
     .nav-icons {
-        position: absolute;
-        right: 0;
         display: flex;
-        gap: 15px;
+        align-items: center; /* Centre verticalement les icônes */
+        justify-content: flex-end; /* Aligne à droite */
+        position: absolute;
+        right: 20px; /* Ajoute un petit espace à droite */
+        top: 50%;
+        transform: translateY(-50%); /* Centre les icônes verticalement */
+        gap: 12px; /* Ajoute un espacement entre les icônes */
     }
+
+    .nav-icons img {
+        width: 26px; /* Ajuste légèrement la taille des icônes */
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-icons img:hover {
+        transform: scale(1.1);
+    }
+
 
     .toggle, #drop {
         display: none;
