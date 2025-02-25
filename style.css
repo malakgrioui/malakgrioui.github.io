@@ -472,15 +472,20 @@ body {
     }
 
     .nav-left {
-        position: absolute;
-        left: 0;
+        display: flex;
+        align-items: center; /* Assure l'alignement vertical */
+        height: 100%; /* Prend toute la hauteur de la barre */
     }
 
     .nav-left .button-outline {
         font-size: 1rem;
-        padding: 8px 15px;
+        padding: 6px 12px; /* Ajuste la taille du bouton */
+        height: auto;
+        display: flex;
+        align-items: center; /* Centre le texte verticalement */
+        justify-content: center;
     }
-
+}
     .main-nav {
         display: flex;
         gap: 20px;
