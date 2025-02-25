@@ -383,41 +383,51 @@ body {
         left: 0;
         right: 0;
         z-index: 1000;
-        padding: 8px 0;
+        padding: 5px 0;
         height: auto;
         display: flex;
         align-items: center;
-        flex-direction: column;
+        background-color: rgb(253, 249, 249);
     }
 
     .nav-container {
+        width: 95%;
+        padding: 0 10px;
         flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 5px 5px;
     }
 
     body {
-        padding-top: 160px; /* Espacement nécessaire pour éviter la superposition sur mobile */
+        padding-top: 100px; /* ajuster selon nouvelle hauteur nav */
     }
 
-    .nav-left {
+    .top-row {
+        display: flex;
         width: 100%;
-        text-align: center;
-        margin-bottom: 5px;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .nav-left .button-outline {
-        font-size: 0.9rem;
-        padding: 6px 12px;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .nav-icons {
+        gap: 10px;
+    }
+
+    .nav-icons img {
+        width: 22px;
     }
 
     .toggle {
         display: block;
-        cursor: pointer;
-        padding: 6px 15px;
+        width: 100%;
+        text-align: center;
+        padding: 4px;
+        margin-top: 5px;
         border: 1px solid rgba(70, 130, 180, 0.4);
-        margin-bottom: 5px;
+        background-color: transparent;
     }
 
     #drop {
@@ -426,28 +436,18 @@ body {
 
     .main-nav {
         display: none;
-        width: 100%;
         flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
-        background-color: rgb(253, 249, 249);
+        gap: 8px;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
     }
 
     #drop:checked ~ .main-nav {
         display: flex;
     }
-
-    .main-nav li {
-        padding: 8px 0;
-    }
-
-    .nav-icons {
-        width: 100%;
-        justify-content: center;
-        margin-top: 5px;
-        padding-bottom: 5px;
-    }
 }
+
 
 /* ---------------------------------- */
 
