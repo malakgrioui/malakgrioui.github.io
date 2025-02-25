@@ -272,8 +272,165 @@ body {
 /* ---------------------------------- */
 
 /* NAVIGATION */
-<label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+/* NAVIGATION */
+nav {
+    background-color: rgb(253, 249, 249);
+    padding: 15px 0;
+    height: 70px; /* Ajuste la hauteur */
+    display: flex;
+    align-items: center;
+    position: fixed; /* Fixe la barre en haut */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* S'assure que la nav reste au-dessus */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
+}
+
+/* Conteneur principal de la nav */
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 85%; /* Réduit légèrement la largeur */
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px; /* Ajoute une marge */
+}
+
+/* Ajuste la hauteur du contenu pour qu'il ne soit pas caché sous la navbar */
+body {
+    padding-top: 80px; /* Ajoute un espace en haut pour éviter le chevauchement */
+}
+
+/* Garde le bouton à gauche */
+.nav-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-left .button-outline {
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid rgba(70, 130, 180, 0.7);
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-left .button-outline:hover {
+    background-color: rgba(70, 130, 180, 0.7);
+    color: white;
+}
+
+/* Centrage du menu */
+.main-nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+}
+
+/* Style des liens */
+.main-nav li {
+    padding: 5px 10px;
+}
+
+.main-nav li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.main-nav li a:hover {
+    color: rgb(70, 130, 180);
+    font-weight: bold;
+}
+
+/* Icônes alignées à droite */
+.nav-icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* Ajoute un peu plus d'espace entre les icônes */
+}
+
+/* Style des icônes */
+.nav-icons img {
+    width: 28px; /* Ajuste légèrement la taille */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol */
+.nav-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Cache le menu burger sur ordinateur */
+.toggle {
+    display: none;
+}
+
+/* ----- RESPONSIVE ----- */
+@media screen and (max-width: 750px) {
+    nav {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Afficher le menu burger uniquement sur mobile */
+    .toggle {
+        display: block;
+        background-color: #ffffff;
+        border: 1px solid #fd81bb4d;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .toggle:hover {
+        background-color: #f0e7e7;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav li {
+        padding: 10px;
+    }
+
+    #drop:checked + .main-nav {
+        display: flex;
+    }
+
+    /* Ajustement des icônes */
+    .nav-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-icons img {
+        width: 26px;
+    }
+}
+
 
 /* ---------------------------------- */
 
