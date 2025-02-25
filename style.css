@@ -303,9 +303,8 @@ body {
 
 /* Garde le bouton à gauche */
 .nav-left {
-    flex: 1;
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
 }
 
 .nav-left .button-outline {
