@@ -553,6 +553,16 @@ body {
     }
 }
 
+/* Hover effect for Contact Me icons */
+.box-contact a img {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.box-contact a:hover img {
+    transform: scale(1.1); /* Slightly enlarges the icon */
+    opacity: 0.8; /* Reduces opacity slightly */
+}
+
 
 /* ---------------------------------- */
 
