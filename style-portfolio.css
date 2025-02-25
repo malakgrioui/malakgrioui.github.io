@@ -4,7 +4,9 @@
     border-radius: 10px; /* Soft rounded edges */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow effect */
     padding: 20px; /* Space inside the card */
-    margin: 20px auto; /* Spacing between cards */
+    margin: 40px auto; /* Adds top and bottom margin & auto centers horizontally */
+    width: 90%; /* Ensures it doesn't stretch too much */
+    max-width: 1100px; /* Prevents overly wide cards on large screens */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
