@@ -385,49 +385,50 @@ body {
         z-index: 1000;
         padding: 5px 0;
         height: auto;
-        display: flex;
-        align-items: center;
         background-color: rgb(253, 249, 249);
     }
 
     .nav-container {
-        width: 95%;
-        padding: 0 10px;
         flex-direction: column;
-    }
-
-    body {
-        padding-top: 100px; /* ajuster selon nouvelle hauteur nav */
+        width: 95%;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
     }
 
     .top-row {
-        display: flex;
         width: 100%;
+        display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
+    .nav-left {
+        position: static;
+    }
+
     .nav-left .button-outline {
-        padding: 5px 10px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        padding: 6px 10px;
     }
 
     .nav-icons {
+        position: static;
+        display: flex;
         gap: 10px;
     }
 
     .nav-icons img {
         width: 22px;
+        height: auto;
     }
 
     .toggle {
         display: block;
-        width: 100%;
-        text-align: center;
-        padding: 4px;
-        margin-top: 5px;
+        margin-top: 8px;
+        padding: 5px;
         border: 1px solid rgba(70, 130, 180, 0.4);
-        background-color: transparent;
+        cursor: pointer;
     }
 
     #drop {
@@ -436,15 +437,72 @@ body {
 
     .main-nav {
         display: none;
-        flex-direction: column;
-        gap: 8px;
         width: 100%;
+        flex-direction: column;
         text-align: center;
-        padding: 8px 0;
+        margin-top: 8px;
     }
 
     #drop:checked ~ .main-nav {
         display: flex;
+    }
+
+    body {
+        padding-top: 130px; /* ajuste selon la hauteur mobile */
+    }
+}
+
+@media screen and (min-width: 751px) {
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 10px 0;
+        background-color: rgb(253, 249, 249);
+        height: 60px;
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1300px;
+        margin: auto;
+        width: 90%;
+        position: relative;
+    }
+
+    .nav-left {
+        position: absolute;
+        left: 0;
+    }
+
+    .nav-left .button-outline {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .main-nav {
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-icons {
+        position: absolute;
+        right: 0;
+        display: flex;
+        gap: 15px;
+    }
+
+    .toggle, #drop {
+        display: none;
+    }
+
+    body {
+        padding-top: 0;
     }
 }
 
