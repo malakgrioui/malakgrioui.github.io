@@ -272,11 +272,10 @@ body {
 /* ---------------------------------- */
 
 /* NAVIGATION */
-/* NAVIGATION */
 nav {
     background-color: rgb(253, 249, 249);
     padding: 15px 0;
-    height: 70px; /* Ajuste la hauteur */
+    height: 50px; /* Ajuste la hauteur */
     display: flex;
     align-items: center;
     position: fixed; /* Fixe la barre en haut */
