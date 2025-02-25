@@ -378,58 +378,76 @@ body {
 /* ----- RESPONSIVE ----- */
 @media screen and (max-width: 750px) {
     nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 8px 0;
         height: auto;
-        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .nav-container {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        width: 100%;
+        padding: 5px 10px;
     }
 
-    /* Afficher le menu burger uniquement sur mobile */
+    body {
+        padding-top: 130px; /* Espacement nécessaire pour éviter la superposition sur mobile */
+    }
+
+    .nav-left {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .nav-left .button-outline {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
     .toggle {
         display: block;
-        background-color: #ffffff;
-        border: 1px solid #fd81bb4d;
-        padding: 10px;
         cursor: pointer;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 10px;
+        padding: 6px 15px;
+        border: 1px solid rgba(70, 130, 180, 0.4);
+        margin-bottom: 5px;
     }
 
-    .toggle:hover {
-        background-color: #f0e7e7;
+    #drop {
+        display: none;
     }
 
     .main-nav {
-        flex-direction: column;
         display: none;
         width: 100%;
-        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        background-color: rgb(253, 249, 249);
     }
 
-    .main-nav li {
-        padding: 10px;
-    }
-
-    #drop:checked + .main-nav {
+    #drop:checked ~ .main-nav {
         display: flex;
     }
 
-    /* Ajustement des icônes */
-    .nav-icons {
-        justify-content: center;
-        margin-top: 10px;
+    .main-nav li {
+        padding: 8px 0;
     }
 
-    .nav-icons img {
-        width: 26px;
+    .nav-icons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 5px;
+        padding-bottom: 5px;
     }
 }
-
 
 /* ---------------------------------- */
 
