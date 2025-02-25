@@ -274,8 +274,8 @@ body {
 /* NAVIGATION */
 nav {
     background-color: rgb(253, 249, 249);
-    padding: 15px 0;
-    height: 50px; /* Ajuste la hauteur */
+    padding: 8px 0;
+    height: 55px; /* Ajuste la hauteur */
     display: flex;
     align-items: center;
     position: fixed; /* Fixe la barre en haut */
@@ -293,7 +293,7 @@ nav {
     width: 85%; /* Réduit légèrement la largeur */
     max-width: 1200px;
     margin: auto;
-    padding: 0 30px; /* Ajoute une marge */
+    padding: 0 20px; /* Ajoute une marge */
 }
 
 /* Ajuste la hauteur du contenu pour qu'il ne soit pas caché sous la navbar */
