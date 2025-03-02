@@ -1,0 +1,915 @@
+/* BODY */
+html{
+    font-size: 100%;
+    line-height: 1.2rem;
+    /* text-size adjust is to maintain the text-size even when the users rotates their phone to landscape view */
+    -webkit-text-size-adjust: 100%;
+    /* Firefox supports only the android version and safari supports only the ios version at the moment according to MDN (2023)*/
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    background-color: rgba(244, 244, 253, 30%);
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0px;
+}
+/*-------------------------------------------*/
+
+/* GENERAL */
+/* Fonts */
+.large{
+    font-weight: normal;
+    line-height: normal;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0px;  
+    background-image: linear-gradient(135deg, rgb(70, 130, 180) 0%, rgb(128, 128, 128) 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    word-wrap: break-word;
+}
+
+.medium-spacing{
+    font-weight: normal;
+    line-height: normal;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    margin: 0px;
+}
+
+.medium-spacing-halfsize{
+    font-weight: normal;
+    line-height: normal;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    margin: 0px;
+}
+
+.main-title-large{
+    font-weight: normal;
+    line-height: normal;
+    font-size: 3rem;
+}
+
+.main-title{
+    font-weight: normal;
+    line-height: normal;
+    font-size: 1.5rem;
+}
+
+.small{
+    font-weight: normal;
+    font-size: 0.7rem;
+}
+
+.quote{
+    font-family: 'Covered By Your Grace', cursive, sans-serif;
+    font-size: 1.5em;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.colorful-letter{
+    background-image: linear-gradient(135deg, rgb(70, 130, 180)0%, rgb(128, 128, 128)60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Background colors */
+.steel-blue{
+    background-color: rgba(70, 130, 180, 0.3);
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.grey{
+    background-color: rgba(128, 128, 128, 0.3);
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Setting alignments and sizing */
+/* for the flexbox */
+.wrapper{
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    gap: 20px 20px;
+}
+
+.column{
+    flex: 50%;
+}
+
+.w-900{
+    max-width: 900px;
+    margin: auto;
+}
+
+/* for the grid system */
+.grid-system-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.grid-system-4{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* other */
+.max-width{
+    max-width: 450px;
+}
+
+.max-height{
+    max-height: 350px;
+}
+
+.align-center{
+    align-self: center;
+}
+
+.justify-content{
+    justify-content: right;
+}
+
+.justify{
+    text-align: justify;
+}
+
+.center{
+    text-align: center;
+}
+
+.padding{
+    padding: 20px;
+}
+
+.padding-top{
+    padding-top: 20px;
+}
+
+.padding-right{
+    padding-right: 20px;
+}
+
+.padding-bottom{
+    padding-bottom: 20px;
+}
+
+.padding-left{
+    padding-left: 20px;
+}
+
+.margin-auto{
+    margin: auto;
+}
+
+.margin-trbl10{
+    margin: 10px;
+}
+
+/* for sticky bottom button */
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom{
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Miscellaneous */
+.button{
+    background-color: rgba(70, 130, 180, 0.3);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5%;
+    color: black;
+}
+
+/* I only used button-outline on this project, but you may like the other one more */
+.button-outline{
+    border: 2px solid  rgba(70, 130, 180, 0.3);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5%;
+    color: black;
+}
+
+.link{
+    text-decoration: none;
+}
+
+/* I had to double this code, because of the :hover and :active on link above */
+.link-no-scale{
+    text-decoration: none;
+}
+
+.no-padding-list-item{
+    padding-left: 0;
+}
+
+.padding-list-10{
+    padding: 10px;
+}
+
+.no-bullet-list{
+    list-style-type: none;
+}
+/* ---------------------------------- */
+
+/* ANIMATIONS AND OTHER BEAUTIES */
+.button-outline:hover, .button-outline:active{
+    border: 2px solid  rgba(70, 130, 180, 0.3);
+    background-color: rgba(70, 130, 180, 0.6);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5%;
+    color: rgb(255, 255, 255);
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.link:hover, .link:active{
+    font-size: 1.2rem;
+    transform: scale(1.5);
+    transition: 1s ease-in-out;
+    /* second solution: */
+    /* font-size: 1.2rem; 
+    transition: font-size 2s ease-in-out;  */
+}
+
+.progress-bar:hover, .progress-bar:active {
+    box-shadow: 5px 5px 5px #cdadcd;
+    transition: box-shadow 1s ease;
+}
+
+/* ---------------------------------- */
+
+/* ================= NAVIGATION STYLES ================= */
+
+/* Styles généraux de la barre de navigation */
+nav {
+    background-color: rgb(253, 249, 249);
+    padding: 8px 0;
+    height: 55px; /* Hauteur ajustée */
+    display: flex;
+    align-items: center;
+    position: fixed; /* Fixe la barre en haut */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* S'assure que la navbar reste au-dessus des autres éléments */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour améliorer la visibilité */
+}
+
+/* Conteneur principal de la navigation */
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 85%; /* Réduit légèrement la largeur pour un meilleur centrage */
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px; /* Ajoute une marge intérieure */
+}
+
+/* Ajustement du padding-top pour éviter le chevauchement avec la navbar */
+body {
+    padding-top: 80px;
+}
+
+/* ================= BOUTON DE TÉLÉCHARGEMENT DU CV ================= */
+
+/* Positionne le bouton à gauche */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .button-outline {
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid rgba(70, 130, 180, 0.7);
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Effet hover du bouton */
+.nav-left .button-outline:hover {
+    background-color: rgba(70, 130, 180, 0.7);
+    color: white;
+}
+
+/* ================= MENU PRINCIPAL ================= */
+
+/* Centrage des liens du menu */
+.main-nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+}
+
+/* Style des liens */
+.main-nav li {
+    padding: 5px 10px;
+}
+
+.main-nav li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.main-nav li a:hover {
+    color: rgb(70, 130, 180);
+    font-weight: bold;
+}
+
+/* ================= ICÔNES DE DROITE ================= */
+
+/* Alignement des icônes LinkedIn et Email */
+.nav-icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* Espacement entre les icônes */
+}
+
+.nav-icons img {
+    width: 28px; /* Ajuste la taille des icônes */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Effet hover des icônes */
+.nav-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Cache le menu burger sur les écrans larges */
+.toggle {
+    display: none;
+}
+
+.language-select {
+    border: 2px solid rgba(70, 130, 180, 0.7);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Style au survol */
+.language-select:hover {
+    background-color: rgba(70, 130, 180, 0.7);
+    color: white;
+}
+
+
+/* ====================== RESPONSIVE DESIGN ====================== */
+
+@media screen and (max-width: 750px) {
+
+    /* Ajustement de la navbar pour mobile */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 5px 0;
+        height: auto;
+        background-color: rgb(253, 249, 249);
+    }
+
+    /* Conteneur en colonne pour le mobile */
+    .nav-container {
+        flex-direction: column;
+        width: 95%;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Alignement du bouton CV et des icônes sur la même ligne */
+    .top-row {
+        display: flex;
+        justify-content: space-between; /* Alignement des éléments à gauche et à droite */
+        align-items: center;
+        width: 100%;
+        padding: 5px 15px;
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center; /* Aligne verticalement le bouton */
+    }
+
+    .nav-left .button-outline {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-icons img {
+        width: 22px;
+        height: auto;
+    }
+
+    /* Ajustement du menu burger */
+    .toggle {
+        display: block;
+        margin-top: 8px;
+        padding: 5px;
+        /*border: 1px solid rgba(70, 130, 180, 0.4);*/
+        cursor: pointer;
+        align-self: center; /* Centre le burger en dessous */
+    }
+
+    #drop {
+        display: none;
+    }
+
+    /* Styles du menu déroulant */
+    .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    #drop:checked ~ .main-nav {
+        display: flex;
+    }
+
+    /* Ajuste le padding-top en fonction de la hauteur de la navbar */
+    body {
+        padding-top: 130px;
+    }
+}
+
+@media screen and (min-width: 751px) {
+
+    /* Navbar fixe sur les grands écrans */
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 10px 0;
+        background-color: rgb(253, 249, 249);
+        height: 60px;
+    }
+
+    /* Conteneur principal */
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1300px;
+        margin: auto;
+        width: 90%;
+        position: relative;
+    }
+
+    /* Alignement vertical du bouton CV */
+    .nav-left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .nav-left .button-outline {
+        font-size: 1rem;
+        padding: 6px 12px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Centrage du menu */
+    .main-nav {
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Alignement des icônes à droite */
+    .nav-icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        gap: 12px;
+    }
+
+    .nav-icons img {
+        width: 26px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-icons img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Cache le menu burger sur ordinateur */
+    .toggle, #drop {
+        display: none;
+    }
+
+    /* Supprime le padding-top inutile sur ordinateur */
+    body {
+        padding-top: 0;
+    }
+}
+
+/* Hover effect for Contact Me icons */
+.box-contact a img {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+.box-contact a:hover img {
+    transform: scale(1.2); /* Increases size */
+    opacity: 0.8; /* Reduces opacity */
+}
+
+
+/* ---------------------------------- */
+
+/* FOOTER */
+footer{
+    color: #000000;
+    text-align: center;
+    padding: 20px 0px;
+}
+/* ---------------------------------- */
+
+/* INTRODUCTION */
+.header-img{
+    border-radius: 70%;
+}
+/* ---------------------------------- */
+
+/* ARTICLE */
+/* Everything here is made with general classes. Find them in the GENERAL section */
+/* ---------------------------------- */
+
+/* ABOUT ME */
+/* Everything here is made with general classes. Find them in the GENERAL section */
+/* ---------------------------------- */
+
+/* SKILLS */
+.skills {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.progress-bar {
+    background-color: #353b48;
+    display: block;
+    height: 10px;
+    border-radius: 20px;
+}
+
+.progress-bar span {
+    height: 10px;
+    float: left;
+    background: linear-gradient(135deg, rgb(70, 130, 180)0%, rgb(128, 128, 128)60%);
+    border-radius: 20px;
+    -webkit-background: linear-gradient(135deg, rgb(70, 130, 180) 0%, rgb(128, 128, 128) 60%);
+    -webkit-border-radius: 20px;
+}
+
+.html {
+    width: 90%;
+    animation: html 3s;
+}
+
+.css {
+    width: 75%;
+    animation: css 3s;
+}
+
+.javascript {
+    width: 63%;
+    animation: javascript 3s;
+}
+
+.php {
+    width: 54%;
+    animation: php 3s;
+}
+
+.comm-lead {
+    width: 90%;
+    animation: comm-lead 3s;
+}
+
+.team-player {
+    width: 85%;
+    animation: team-player 3s;
+}
+
+.problem-solving {
+    width: 82%;
+    animation: problem-solving 3s;
+}
+
+.creativity {
+    width: 75%;
+    animation: creativity 3s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 63%;
+    }
+}
+
+@keyframes php {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 54%;
+    }
+}
+
+@keyframes comm-lead {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes team-player {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes problem-solving {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 82%;
+    }
+}
+
+@keyframes creativity {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 75%;
+    }
+}
+/* ---------------------------------- */
+
+/* PROJECTS */
+/* I also used these card settings on other sub-pages */
+.card{
+    box-shadow: 0 3px 10px rgb(127 110 187 / 0.2); 
+    padding: 20px;
+}
+
+.box{
+    width: auto; 
+    height: auto; 
+    max-width: 100%; 
+    max-height: 250px; 
+    object-fit: contain;
+}
+/* ---------------------------------- */
+
+/* CONTACT ME */
+.box-contact{
+    display: block;
+    width: 100%; 
+    text-align: center;
+}
+
+.logo{
+    width: 50px;
+}
+/* ---------------------------------- */
+
+/* SPECIAL THANKS */
+/* Everything here is made with general classes. Find them in the GENERAL section */
+/* ---------------------------------- */
+
+/* RESPONSIVENESS */
+/* Had to pay attention for that wondow.innerWidth when calculated max-width */
+@media screen and (max-width: 867px){
+    body{
+        font-size: 90%;
+    }
+
+    .grid-system-2{
+        grid-template-columns: 1fr;
+    }
+
+    .large{
+        font-size: 4rem;
+    }
+
+    .medium-spacing{
+        font-size: 2.5rem;
+    }
+
+    .main-title-large{
+        font-size: 2rem;
+        text-align: center;  
+        margin: 0;
+    }
+
+    .main-title{
+        text-align: center;
+        margin: 0;
+    }
+
+    .small{
+        font-size: 0.6rem;
+    }
+
+    .max-width{
+        max-width: 300px
+    }
+
+    .max-height{
+        max-height: 250px;
+    }
+
+    .padding-top{
+        padding-top: 10px;
+    }
+    
+    .padding-right{
+        padding-right: 10px;
+    }
+
+    .padding-bottom{
+        padding-bottom: 10px;
+    }
+    
+    .padding-left{
+        padding-left: 10px;
+    }
+
+    .logo{
+        width: 40px;
+    }
+}
+
+/* wrapper on home page looks better with this @media */
+@media screen and (max-width: 750px){
+    .wrapper{
+        flex-direction: column;
+        gap: 20px 0px;
+    }
+
+    .column{
+        flex: 100%;
+    }
+
+    .box{
+        margin: auto;
+    }
+
+    .thanks{
+        text-align: center;
+    }
+}
+
+/* media query for hamburger menu with dropdown */
+@media screen and (max-width: 510px){
+    .main-nav{
+        display: none;
+    }
+
+    .toggle{
+        display: block;
+        background-color: #ffffff;
+        border: 1px solid #fd81bb4d;
+    }
+    
+    .toggle:hover{
+        background-color: #f0e7e7;
+    }
+    
+    #drop:checked+.main-nav{
+        display: block;
+    }
+
+    nav{
+        padding-bottom: 25px;
+    }
+
+    .max-width{
+        max-width: 100%;
+    }
+}
+
+/* media query for smaller screens */
+/* smaller fonts were my way to go */
+@media screen and (max-width: 377px){
+    body{
+        line-height: 1.5rem;
+    }
+
+    .large{
+        font-size: 3rem;
+    }
+
+    .medium-spacing{
+        font-size: 1.5rem;
+    }
+
+    .medium-spacing-halfsize{
+        font-size: 1.5rem;
+    }
+
+    .main-title{
+        font-size: 1rem;
+    }
+
+    .main-title-large{
+        font-size: 1.5rem;
+    }
+}
