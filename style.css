@@ -382,6 +382,25 @@ body {
     display: none;
 }
 
+.language-select {
+    border: 2px solid rgba(70, 130, 180, 0.7);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Style au survol */
+.language-select:hover {
+    background-color: rgba(70, 130, 180, 0.7);
+    color: white;
+}
+
+
 /* ====================== RESPONSIVE DESIGN ====================== */
 
 @media screen and (max-width: 750px) {
