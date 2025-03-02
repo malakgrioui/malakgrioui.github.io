@@ -1,0 +1,35 @@
+/* Styling for project cards */
+.project-card {
+    background-color: white; /* Ensures card stands out */
+    border-radius: 10px; /* Soft rounded edges */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow effect */
+    padding: 20px; /* Space inside the card */
+    margin: 40px auto; /* Adds top and bottom margin & auto centers horizontally */
+    width: 90%; /* Ensures it doesn't stretch too much */
+    max-width: 1100px; /* Prevents overly wide cards on large screens */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Hover effect to enhance interactivity */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* MEDIA OVERWRITE AND NEW SETTINGS */
+@media screen and (max-width: 950px){
+    .main-title{
+        text-align: center;
+    }
+
+    .max-width{
+        max-width: 450px;
+    }
+} 
+
+@media screen and (max-width: 600px){
+    .max-width{
+        max-width: 100%;
+        height: auto;
+    }
+}
