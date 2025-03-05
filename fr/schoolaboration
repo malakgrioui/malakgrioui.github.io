@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vérifiez cette partie et modifiez-la selon vos préférences -->
+    <meta name="description" content="Texte d'exemple pour la balise meta d'un modèle de portfolio">
+    <meta name="keywords" content="Texte d'exemple pour la balise meta d'un modèle de portfolio">
+    <meta name="author" content="Texte d'exemple pour la balise meta d'un modèle de portfolio">
+    <title>Schoolaboration</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-project.css">
+    <!-- Police pour la citation -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- Police pour le corps du texte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- Police pour les titres -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barre de navigation -->
+    <nav class="sticky">
+    <div class="nav-container">
+
+        <div class="top-row">
+            <!-- Bouton à gauche -->
+            <div class="nav-left">
+                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Télécharger mon CV ici</a>
+            </div>
+
+            <!-- Icônes à droite -->
+            <div class="nav-icons">
+                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
+                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
+                    <img src="assets/square-envelope-solid.png" alt="Email">
+                </a>
+                <select class="language-select" onchange="location = this.value;">
+                    <option value="/">Français</option>
+                    <option value="/en/">English</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Menu burger pour mobile -->
+        <label for="drop" class="toggle" id="main-toggle">☰</label>
+        <input type="checkbox" id="drop">
+
+        <!-- Menu de navigation -->
+        <ul class="main-nav">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Me contacter</a></li>
+        </ul>
+
+    </div>
+</nav>
+    
+    <!-- Nom du projet -->
+    <section class="w-900 padding center">
+        <h2 class="medium-spacing-halfsize">Schoolaboration</h2>
+        <p class="center italic">Une plateforme de gestion du bénévolat pour les étudiants.</p>
+    </section>
+
+    <!-- À propos du projet -->
+    <section class="w-900 padding center">
+        <h3 class="main-title">Entreprise</h3>
+        <section>
+            <p class="justify"><b>La Cordée</b> – une école engagée pour l’égalité des chances, proposant 
+            une éducation innovante aux enfants issus de milieux défavorisés, soutenue par Espérance Banlieues et HOPE.</p>
+        </section>
+    </section>
+
+    <section class="w-900 padding">
+        <h3 class="main-title center">Contexte</h3>
+        <p class="justify">Le projet visait à simplifier la planification du bénévolat, à renforcer l’engagement et 
+          à optimiser les processus administratifs grâce à une plateforme numérique intuitive, réduisant le temps de gestion 
+          et améliorant l’accessibilité pour les étudiants et les éducateurs.</p>
+    </section>
+    <section class="wrapper">
+        <section class="column card">
+            <p class="bold center">Contributions Clés</p>
+            <ul class="justify padding-list-10">
+                <li><span class="colorful-letter"><b>Mise en place de l’outil et refonte du système :</b> Intégration d’un nouvel outil de gestion du bénévolat, remplaçant l’ancien système inefficace pour améliorer l’expérience utilisateur et la coordination.</span></li>
+                <li><span class="colorful-letter"><b>Restructuration de la base de données :</b> Conception et mise en œuvre d’une architecture de base de données plus efficace pour améliorer l’organisation, l’accès et l’analyse des données.</span></li>
+                <li><span class="colorful-letter"><b>Analyse et optimisation du système :</b> Évaluation approfondie de l’outil existant, identification des points de friction et proposition d’améliorations stratégiques pour fluidifier la gestion du bénévolat.</span></li>
+                <li><span class="colorful-letter"><b>Coordination des parties prenantes :</b> Collaboration étroite avec les coordinateurs de La Cordée, les bénévoles et les partenaires externes pour aligner les objectifs du projet et garantir une adoption fluide.</span></li>
+                <li><span class="colorful-letter"><b>Recherche utilisateur et collecte de retours :</b> Organisation de sessions de brainstorming, cartographie des user stories et recueil de feedbacks pour affiner les fonctionnalités de la plateforme.</span></li>
+                <li><span class="colorful-letter"><b>Optimisation des processus et documentation :</b> Développement de guides et documentations détaillés pour aider les coordinateurs à s’adapter au nouveau système, réduisant le temps d’intégration et assurant une transition fluide.</span></li>
+            </ul>
+        </section>
+        <section class="column card">
+            <p class="bold center">Méthodologie et Outils</p>
+            <ul class="justify padding-list-10">
+                <li><span class="colorful-letter"><b>Approche :</b> Agile (Scrum) – Développement itératif et intégration continue des retours utilisateurs.</span></li>
+                <br>
+                <li><span class="colorful-letter"><b>Outils Utilisés :</b></span></li>
+                <ul class="justify padding-list-10">
+                    <li><span class="colorful-letter"><b>Gestion de projet :</b> Miro</span></li>
+                    <li><span class="colorful-letter"><b>Collaboration :</b> Microsoft Workspace</span></li>
+                </ul>
+            </ul>
+        </section>
+    </section>
+
+    <!-- Ce que j'ai appris -->
+    <section class="w-900 padding center grey">
+            <h3 class="main-title">Leçons Apprises</h3>
+            <ul class="justify padding-list-10">
+                <li class="no-padding-list-item"><b>L’analyse des systèmes est essentielle pour une transformation réussie</b>, permettant d’identifier et de résoudre efficacement les inefficacités.</li>
+                <li class="no-padding-list-item"><b>L’optimisation des bases de données améliore considérablement la performance</b>, réduisant les goulets d’étranglement et facilitant l’accès aux données.</li>
+                <li class="no-padding-list-item"><b>Un feedback continu favorise l’amélioration</b>, affinant l’utilisabilité de la plateforme et renforçant l’engagement des utilisateurs.</li>
+            </ul>
+    </section>
+
+    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Retour au portfolio</a></p>
+
+</body>
+
+</html>
