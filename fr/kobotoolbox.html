@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vérifiez cette partie et modifiez-la selon vos préférences -->
+    <meta name="description" content="Texte d'exemple pour la balise meta d'un modèle de portfolio">
+    <meta name="keywords" content="Texte d'exemple pour la balise meta d'un modèle de portfolio">
+    <meta name="author" content="Texte d'exemple pour la balise meta d'un modèle de portfolio">
+    <title>Collecte et Reporting des Données</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-project.css">
+    <!-- Police pour la citation -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- Police pour le corps du texte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- Police pour les titres -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barre de navigation -->
+    <nav class="sticky">
+    <div class="nav-container">
+
+        <div class="top-row">
+            <!-- Bouton à gauche -->
+            <div class="nav-left">
+                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Télécharger mon CV ici</a>
+            </div>
+
+            <!-- Icônes à droite -->
+            <div class="nav-icons">
+                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
+                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
+                    <img src="assets/square-envelope-solid.png" alt="Email">
+                </a>
+                <select class="language-select" onchange="location = this.value;">
+                    <option value="/">Français</option>
+                    <option value="/en/">English</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Menu burger pour mobile -->
+        <label for="drop" class="toggle" id="main-toggle">☰</label>
+        <input type="checkbox" id="drop">
+
+        <!-- Menu de navigation -->
+        <ul class="main-nav">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Me contacter</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+    <!-- Nom du projet -->
+    <section class="w-900 padding center">
+        <h2 class="medium-spacing-halfsize">Collecte et Reporting Automatisés des Données</h2>
+        <p class="center italic">Automatiser la collecte des données et les flux de reporting.</p>
+    </section>
+
+        <!-- À propos de ce projet -->
+    <section class="w-900 padding center">
+        <h3 class="main-title">Entreprise</h3>
+        <section>
+            <p class="center"><b>Global Mangrove Trust</b> – Une organisation à but non lucratif exploitant la technologie pour mener des projets de restauration environnementale à grande échelle.</p>
+        </section>
+    </section>
+
+    <section class="w-900 padding">
+        <h3 class="main-title center">Contexte</h3>
+        <p class="justify">Le projet visait à simplifier le reporting pour les ONG et les équipes sur le terrain en automatisant 
+            l’extraction, la structuration et le traitement des données, améliorant ainsi considérablement l’efficacité des évaluations 
+            des projets de restauration des mangroves.</p>
+    </section>
+    <section class="wrapper">
+        <section class="column card">
+            <p class="bold center">Contributions Clés</p>
+            <ul class="justify padding-list-10">
+                <li><span class="colorful-letter"><b>Optimisation des Processus :</b> Identification des inefficacités dans les flux de reporting et conception d’un pipeline de données automatisé.</span></li>
+                <li><span class="colorful-letter"><b>Développement d’Automatisation :</b> Supervision de l’implémentation d’un système de récupération automatique des données via des scripts Python, l’API Kobotoolbox et Google Cloud Platform, réduisant le temps de traitement de 70 %.</span></li>
+                <li><span class="colorful-letter"><b>Engagement des Parties Prenantes :</b> Collaboration avec les ONG et les équipes techniques pour affiner les méthodologies de structuration des données.</span></li>
+                <li><span class="colorful-letter"><b>Évolutivité & Standardisation :</b> Mise en place d’un cadre structuré pour les données, adaptable aux futurs projets de conservation.</span></li>
+            
+            </ul>
+        </section>
+        <section class="column card">
+            <p class="bold center">Méthodologie & Outils</p>
+            <ul class="justify padding-list-10">
+                <li><span class="colorful-letter"><b>Approche :</b> Agile (Scrum) – Implémentation de sprints itératifs avec retours utilisateurs continus et ajustements successifs.</span></li>
+                <br>
+                <li><span class="colorful-letter"><b>Outils Utilisés :</b></span></li>
+                <ul class="justify padding-list-10">
+                    <li><span class="colorful-letter"><b>Gestion de Projet :</b> Miro</span></li>
+                    <li><span class="colorful-letter"><b>Automatisation & Développement :</b> API Kobotoolbox, Python, Google Cloud Functions</span></li>
+                    <li><span class="colorful-letter"><b>Collaboration :</b> Google Workspace</span></li>
+ 
+                </ul>
+            </ul>
+        </section>
+    </section>
+
+    <!-- Ce que j'ai appris -->
+    <section class="w-900 padding center grey">
+            <h3 class="main-title">Leçons Retenues</h3>
+            <ul class="justify padding-list-10">
+                <li class="no-padding-list-item"><b>L’automatisation améliore l’efficacité</b>, permettant aux ONG de se concentrer sur l’impact plutôt que sur le traitement manuel des données.</li>
+                <li class="no-padding-list-item"><b>L’évolutivité doit être pensée dès le départ</b> afin de garantir que les solutions puissent s’adapter aux besoins croissants des projets.</li>
+                <li class="no-padding-list-item"><b>Comprendre les besoins des utilisateurs finaux est essentiel</b> pour développer des processus d’automatisation intuitifs et faciles à utiliser.</li>
+                <li class="no-padding-list-item"><b>La structuration standardisée des données</b> améliore la précision des rapports et facilite la prise de décision.</li>
+
+            </ul>
+    </section>
+
+    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Retour au portfolio</a></p>
+
+</body>
+
+</html>
