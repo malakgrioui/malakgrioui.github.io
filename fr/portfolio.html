@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vérifiez cette partie et modifiez-la selon vos préférences -->
+    <meta name="description" content="Texte d'exemple pour la balise meta d'un modèle de portfolio">
+    <meta name="keywords" content="Texte d'exemple pour la balise meta d'un modèle de portfolio">
+    <meta name="author" content="Texte d'exemple pour la balise meta d'un modèle de portfolio">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Cette page utilise le style principal et le style de la page "À propos de moi" -->
+    <link rel="stylesheet" type="text/css" href="style-about-me.css">
+    <link rel="stylesheet" type="text/css" href="style-portfolio.css">
+    <!-- Police pour la citation -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- Police pour le corps du texte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- Police pour les titres -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barre de navigation -->
+    <nav class="sticky">
+    <div class="nav-container">
+
+        <div class="top-row">
+            <!-- Bouton à gauche -->
+            <div class="nav-left">
+                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Télécharger mon CV ici</a>
+            </div>
+
+            <!-- Icônes à droite -->
+            <div class="nav-icons">
+                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
+                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
+                    <img src="assets/square-envelope-solid.png" alt="Email">
+                </a>
+                <select class="language-select" onchange="location = this.value;">
+                    <option value="/">Français</option>
+                    <option value="/en/">English</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Menu burger pour mobile -->
+        <label for="drop" class="toggle" id="main-toggle">☰</label>
+        <input type="checkbox" id="drop">
+
+        <!-- Menu de navigation -->
+        <ul class="main-nav">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Me contacter</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+    <!-- Projet 1 -->
+    <div class="project-card">
+        <section class="grid-system-2 w-900 padding">
+            <section class="justify align-center">
+                <h3 class="main-title padding-top"><b>Forest Scan</b></h3>
+                <p>Développement et gestion de la méthodologie Scrum pour <b>Global Mangrove Trust</b>, définissant l’orientation stratégique, 
+                    favorisant les partenariats et supervisant les cycles de développement agile. Coordination interfonctionnelle 
+                    pour assurer une exécution fluide tout en alignant les jalons techniques avec les objectifs environnementaux.</p>
+                
+                <p class="padding-top"><a href="forestscan.html" class="button-outline">Plus d'infos</a></p>
+            </section>
+            <section class="center padding-top align-center">
+                <p><a href="forestscan.html"><img class="max-width" src="assets/forestscan.png" alt="forestscan"></a></p>
+            </section>
+        </section>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="project-card">
+        <section class="grid-system-2 w-900 padding">
+            <section class="justify align-center">
+                <h3 class="main-title padding-top"><b>EarthWallet</b></h3>
+                <p>Direction du développement produit et de la feuille de route pour une application de finance durable B2B2C chez <b>Handprint.Tech</b>, 
+                    coordination des équipes interfonctionnelles pour concevoir, construire et déployer une solution numérique permettant 
+                    aux banques d’émettre des cartes de paiement finançant des projets environnementaux.</p>
+                <p class="padding-top"><a href="earthwallet.html" class="button-outline">Plus d'infos</a></p>
+            </section>
+            <section class="center">
+                <p><a href="earthwallet.html"><img class="max-width" src="assets/earthwallet.png" alt="earthwallet"></a>
+            </section>
+        </section>
+    </div>
+
+    <!-- Projet 3 -->
+    <div class="project-card">
+        <section class="grid-system-2 w-900 padding">
+            <section class="justify">
+                <h3 class="main-title padding-top"><b>Collecte et Reporting Automatisés des Données</b></h3>
+                <p>Optimisation des processus de collecte et de reporting des données pour <b>Global Mangrove Trust</b> en automatisant les flux 
+                    de travail via Python avec l’API Kobotoolbox et Google Cloud Platform, réduisant la charge de travail manuelle 
+                    de 70 % et améliorant la précision des données.</p>
+                <p class="padding-top"><a href="kobotoolbox.html" class="button-outline">Plus d'infos</a></p>
+            </section>
+            <section class="center">
+                <p><a href="kobotoolbox.html"><img class="max-width" src="assets/kobotoolbox.png" alt="kobotoolbox"></a>
+            </section>
+        </section>
+    </div>
+    
+    <!-- Projet 4 -->
+    <div class="project-card">
+        <section class="grid-system-2 w-900 padding">
+            <section class="justify">
+                <h3 class="main-title padding-top"><b>Dositrace 4.0</b></h3>
+                <p>Amélioration de l’application et transformation numérique chez <b>Biomediqa</b>, en mettant l’accent sur la conception UX/UI, 
+                    l’optimisation des processus et la gestion produit pour améliorer l’expérience utilisateur et l’efficacité opérationnelle.</p>
+                <p class="padding-top"><a href="dositrace.html" class="button-outline">Plus d'infos</a></p>
+            </section>
+            <section class="center">
+                <p><a href="dositrace.html"><img class="max-width" src="assets/dositrace.png" alt="dositrace"></a>
+            </section>
+        </section>
+    </div>
+
+    <!-- Projet 5 -->
+    <div class="project-card">
+        <section class="grid-system-2 w-900 padding">
+            <section class="justify">
+                <h3 class="main-title padding-top"><b>Start-Up Sherpa</b></h3>
+                <p>Développement et gestion de la stratégie produit pour Start-Up Sherpa, une plateforme numérique soutenant 
+                    les entrepreneurs en phase de démarrage grâce à des outils de diagnostic, des conseils d’experts et des opportunités de réseautage.</p>
+                <p class="padding-top"><a href="sherpa.html" class="button-outline">Plus d'infos</a></p>
+            </section>
+            <section class="center">
+                <p><a href="sherpa.html"><img class="max-width" src="assets/sherpa.png" alt="sherpa"></a>
+            </section>
+        </section>
+    </div>
+
+</body>
+
+</html>
