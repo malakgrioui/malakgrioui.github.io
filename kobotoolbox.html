@@ -1,133 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Automated Data Collection & Reporting</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automated Data Collection — Malak Grioui</title>
+  <meta name="description" content="Python-driven automation of field data collection and reporting at Global Mangrove Trust, reducing manual workload by 70%.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Language">
+          <option value="/">EN</option>
+          <option value="/fr/">FR</option>
+        </select>
+        <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
-            </div>
-
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/">English</option>
-                    <option value="/fr/">Français</option>
-                </select>
-            </div>
+  <header class="project-hero">
+    <div class="project-hero-inner">
+      <a href="portfolio.html" class="project-back">← Back to all projects</a>
+      <div class="project-hero-meta">
+        <span class="company-badge-dark">Global Mangrove Trust</span>
+        <div class="tags tags-dark">
+          <span>Python</span>
+          <span>Automation</span>
+          <span>Data Engineering</span>
+          <span>ClimTech</span>
         </div>
+      </div>
+      <h1>Automated Data Collection &amp; Reporting</h1>
+      <p class="tagline">Python-driven automation of field data workflows — cutting manual reporting time by 70% for mangrove restoration projects.</p>
+    </div>
+  </header>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+  <main class="project-content">
+    <div class="project-content-inner">
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Contact me</a></li>
+      <div class="project-section">
+        <h2>Company</h2>
+        <p><strong>Global Mangrove Trust</strong> is a mission-driven non-profit leveraging technology and data science to drive large-scale environmental restoration, with a focus on carbon sequestration and biodiversity conservation.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Context &amp; Challenge</h2>
+        <p>NGOs and field teams managing conservation projects were spending excessive time on manual data collection and reporting. The project aimed to streamline this by automating data retrieval, structuring, and processing — significantly improving efficiency in mangrove restoration assessments and freeing teams to focus on impact over administration.</p>
+      </div>
+
+      <div class="project-two-col">
+        <div class="detail-card">
+          <h3>Key Contributions</h3>
+          <ul>
+            <li><strong>Process Optimization</strong> Identified inefficiencies in reporting workflows and designed an end-to-end automated data pipeline.</li>
+            <li><strong>Automation Development</strong> Oversaw implementation of automated data retrieval via Python scripts, Kobotoolbox API, and Google Cloud Platform — reducing processing time by 70%.</li>
+            <li><strong>Stakeholder Engagement</strong> Collaborated with NGOs and technical teams to refine data structuring methodologies for real-world accuracy.</li>
+            <li><strong>Scalability &amp; Standardization</strong> Established a structured data framework adaptable for future conservation projects and partners.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Methodology &amp; Tools</h3>
+          <ul>
+            <li><strong>Approach</strong> Agile — iterative sprints with continuous user feedback.</li>
+            <li><strong>Automation</strong> Python, Kobotoolbox API</li>
+            <li><strong>Cloud Infrastructure</strong> Google Cloud Functions</li>
+            <li><strong>Project Management</strong> Miro</li>
+            <li><strong>Collaboration</strong> Google Workspace</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lessons-card">
+        <h2>Lessons Learned</h2>
+        <ul>
+          <li>Automation enables NGOs to redirect energy from manual data work toward mission-critical impact activities.</li>
+          <li>Scalability must be designed from the start — retrofitting it later is exponentially more costly.</li>
+          <li>Understanding end-user workflows intimately is what separates automation that works from automation that creates new problems.</li>
+          <li>Standardized data structuring compounds over time — the investment in clean schemas pays off with every subsequent report.</li>
         </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="portfolio.html" class="btn-outline">← Back to All Projects</a>
+      </div>
 
     </div>
-</nav>
+  </main>
 
-    <!-- project name -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">Automated Data Collection & Reporting</h2>
-        <p class="center italic">Automating data collection and reporting workflows.</p>
-    </section>
+  <footer class="site-footer">
+    <p>© 2024 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-        <!-- about this project -->
-    <section class="w-900 padding center">
-        <h3 class="main-title">Company</h3>
-        <section>
-            <p class="center"><b>Global Mangrove Trust</b> – A mission-driven non-profit leveraging technology to drive large-scale environmental restoration.</p>
-        </section>
-    </section>
-
-    <section class="w-900 padding">
-        <h3 class="main-title center">Context</h3>
-        <p class="justify">The project aimed to streamline reporting for NGOs and field teams by automating 
-            data retrieval, structuring, and processing, significantly improving efficiency in mangrove restoration 
-            project assessments.</p>
-    </section>
-    <section class="wrapper">
-        <section class="column card">
-            <p class="bold center">Key Contributions</p>
-            <ul class="justify padding-list-10">
-                <!-- if you take the span-s out, the fonts won't be that colorful -->
-                <li><span class="colorful-letter"><b>Process Optimization:</b> Identified inefficiencies in reporting workflows and designed an automated data pipeline.</span></li>
-                <li><span class="colorful-letter"><b>Automation Development:</b> Managed the implementation of automated data retrieval via Python scripts, Kobotoolbox API and Google Cloud Platform, reducing processing time by 70%.</span></li>
-                <li><span class="colorful-letter"><b>Stakeholder Engagement:</b> Collaborated with NGOs and technical teams to refine data structuring methodologies.</span></li>
-                <li><span class="colorful-letter"><b>Scalability & Standardization:</b> Established a structured data framework adaptable for future conservation projects.</span></li>
-            
-            </ul>
-        </section>
-        <section class="column card">
-            <p class="bold center">Methodology & Tools</p>
-            <ul class="justify padding-list-10">
-                <li><span class="colorful-letter"><b>Approach:</b> Agile (Scrum) – Implemented iterative sprints with continuous user feedback and adjustments.</span></li>
-                <br>
-                <li><span class="colorful-letter"><b>Tools Used:</b></span></li>
-                <ul class="justify padding-list-10">
-                    <li><span class="colorful-letter"><b>Project Management:</b> Miro</span></li>
-                    <li><span class="colorful-letter"><b>Automation & Development:</b> Kobotoolbox API, Python, Google Cloud Functions</span></li>
-                    <li><span class="colorful-letter"><b>Collaboration:</b> Google Workspace</span></li>
- 
-                </ul>
-            </ul>
-        </section>
-    </section>
-
-    <!-- what did i learn -->
-    <section class="w-900 padding center grey">
-            <h3 class="main-title">Lessons Learned</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item"><b>Automation enhances efficiency</b>, allowing NGOs to focus on impact rather than manual data processing.</li>
-                <li class="no-padding-list-item"><b>Scalability must be considered from the start</b> to ensure solutions can expand with project demands.</li>
-                <li class="no-padding-list-item"><b>Understanding end-user needs is critical</b> to developing intuitive and user-friendly automation processes.</li>
-                <li class="no-padding-list-item"><b>Standardized data structuring</b> improves reporting accuracy and enables better decision-making.</li>
-
-            </ul>
-    </section>
-
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Back to portfolio</a></p>
-
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 </body>
-
 </html>

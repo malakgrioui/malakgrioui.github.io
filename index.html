@@ -1,289 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Informations SEO -->
-    <title>Malak Grioui | Product Manager & Digital Innovator</title>
-    <meta name="description" content="Future Product Manager passionate about leveraging technology and innovation to drive digital transformation and sustainable solutions.">
-    <meta name="keywords" content="Product Manager, Digital Transformation, Tech Innovation, Agile Management, Sustainability, Business Strategy, UX/UI, Software Development">
-    <meta name="author" content="Malak Grioui">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Malak Grioui | Product Manager & Digital Innovator">
-    <meta property="og:description" content="Future Product Manager passionate about digital transformation, agile methodologies, and impact-driven technology.">
-    <meta property="og:image" content="https://malakgrioui.github.io/assets/profile-pic.png">
-    <meta property="og:url" content="https://malakgrioui.github.io">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Malak Grioui | Product Manager & Digital Innovator">
-    <meta name="twitter:description" content="Passionate about leveraging technology to drive digital transformation and sustainability.">
-    <meta name="twitter:image" content="https://malakgrioui.github.io/assets/profile-pic.png">
-
-    <!-- Canonical & Hreflang -->
-    <link rel="canonical" href="https://malakgrioui.github.io">
-    <link rel="alternate" href="https://malakgrioui.github.io/en/" hreflang="en">
-    <link rel="alternate" href="https://malakgrioui.github.io/fr/" hreflang="fr">
-
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malak Grioui | Product Manager & Digital Innovator</title>
+  <meta name="description" content="Product Manager passionate about building impactful digital products at the intersection of technology and sustainability.">
+  <meta name="keywords" content="Product Manager, Digital Transformation, Tech Innovation, Agile, Sustainability, UX/UI">
+  <meta name="author" content="Malak Grioui">
+  <meta property="og:title" content="Malak Grioui | Product Manager & Digital Innovator">
+  <meta property="og:description" content="Building products that matter — at the intersection of technology, impact, and sustainability.">
+  <meta property="og:image" content="https://malakgrioui.github.io/assets/profile-pic.png">
+  <meta property="og:url" content="https://malakgrioui.github.io">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Malak Grioui | Product Manager">
+  <meta name="twitter:description" content="Building products that matter — tech, impact, sustainability.">
+  <meta name="twitter:image" content="https://malakgrioui.github.io/assets/profile-pic.png">
+  <link rel="canonical" href="https://malakgrioui.github.io">
+  <link rel="alternate" href="https://malakgrioui.github.io" hreflang="en">
+  <link rel="alternate" href="https://malakgrioui.github.io/fr/" hreflang="fr">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
+
+  <!-- Navigation -->
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
-            </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="assets/square-envelope-solid.png" alt="Email">
-                </a>
-                
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/">English</option>
-                    <option value="/fr/">Français</option>
-                </select>
-                
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Language">
+          <option value="/">EN</option>
+          <option value="/fr/">FR</option>
+        </select>
+        <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-label">Product Manager &amp; Digital Innovator</span>
+        <h1>Malak<br><span class="text-accent">Grioui</span></h1>
+        <p class="hero-tagline">Building products that matter — at the intersection of technology, impact, and sustainability.</p>
+        <div class="hero-actions">
+          <a href="portfolio.html" class="btn-primary">View My Work</a>
+          <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-light">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo-wrap">
+          <img src="assets/profile-pic.png" alt="Malak Grioui" class="hero-photo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Strip -->
+  <div class="expertise-strip">
+    <div class="expertise-strip-inner">
+      <span>Product Management</span>
+      <span class="sep">·</span>
+      <span>Agile &amp; Scrum</span>
+      <span class="sep">·</span>
+      <span>UX / UI Design</span>
+      <span class="sep">·</span>
+      <span>Digital Transformation</span>
+      <span class="sep">·</span>
+      <span>Sustainability</span>
+      <span class="sep">·</span>
+      <span>Data &amp; Automation</span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label">About Me</span>
+          <h2>Engineering meets business — with a focus on impact</h2>
+          <p>I hold a dual degree from <strong>ITEEM – Centrale Lille</strong> and <strong>Skema Business School</strong>, combining engineering rigor with business strategy. This foundation shapes how I approach product work: data-informed, user-centric, and always tied to real-world outcomes.</p>
+          <p>From AI-powered environmental tools to sustainable fintech platforms, I've led cross-functional teams to build and ship products that solve meaningful problems. I thrive at the intersection of technical complexity and strategic clarity.</p>
+          <div class="skill-tags">
+            <span>Jira</span>
+            <span>Figma</span>
+            <span>Miro</span>
+            <span>Python</span>
+            <span>Google Cloud</span>
+            <span>Agile / Scrum</span>
+            <span>Azure</span>
+            <span>GitHub</span>
+            <span>Kobotoolbox</span>
+          </div>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-number">7</span>
+            <span class="highlight-label">Projects Delivered</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">3+</span>
+            <span class="highlight-label">Industries</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">Agile</span>
+            <span class="highlight-label">Certified PM</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">FR / EN</span>
+            <span class="highlight-label">Bilingual</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="featured-projects section-padding" id="work">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Featured Work</span>
+        <h2>Selected Projects</h2>
+      </div>
+      <div class="featured-grid">
+
+        <div class="featured-card">
+          <div class="featured-card-img">
+            <img src="assets/forestscan.png" alt="Forest Scan project screenshot">
+          </div>
+          <div class="featured-card-content">
+            <div class="featured-card-meta">
+              <span class="company-badge">Global Mangrove Trust</span>
+              <div class="tags">
+                <span>Product Management</span>
+                <span>AI / ML</span>
+                <span>ClimTech</span>
+              </div>
             </div>
+            <h3>Forest Scan</h3>
+            <p>AI-driven satellite analysis tool for assessing blue carbon project feasibility. Led the full Scrum implementation — from stakeholder alignment to iterative sprint delivery.</p>
+            <a href="forestscan.html" class="card-link">View Case Study →</a>
+          </div>
         </div>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+        <div class="featured-card">
+          <div class="featured-card-img">
+            <img src="assets/earthwallet.png" alt="EarthWallet project screenshot">
+          </div>
+          <div class="featured-card-content">
+            <div class="featured-card-meta">
+              <span class="company-badge">Handprint.Tech</span>
+              <div class="tags">
+                <span>FinTech</span>
+                <span>Sustainability</span>
+                <span>B2B2C</span>
+              </div>
+            </div>
+            <h3>EarthWallet</h3>
+            <p>B2B2C sustainable payment card platform enabling banks to directly fund environmental projects. Owned the full product roadmap from ideation through launch.</p>
+            <a href="earthwallet.html" class="card-link">View Case Study →</a>
+          </div>
+        </div>
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Contact me</a></li>
-        </ul>
-
+      </div>
+      <div class="see-all-wrap">
+        <a href="portfolio.html" class="btn-outline">See All 7 Projects</a>
+      </div>
     </div>
-</nav>
+  </section>
 
-    <!-- introduction -->
-    <header class="grid-system-2 w-900 padding">
-        <section class="align-center">
-            <h1 class="medium-spacing">Hello, I am</h1>
-            <h1 class="large">Malak GRIOUI</h1>
-            <p class="justify">Future <b>Product Manager</b> passionate about leveraging technology and 
-                innovation to drive <b>digital transformation</b> and <b>sustainable solutions</b>.</p>
-        </section>
-        <section class="center align-center">
-            <img class="header-img max-width max-height" src="assets/profile-pic.png" alt="profile-picture">
-        </section>
-    </header>
+  <!-- Contact -->
+  <section class="contact section-padding" id="contact">
+    <div class="container contact-inner">
+      <span class="section-label light">Get In Touch</span>
+      <h2>Let's build something<br>meaningful together.</h2>
+      <p>Whether you want to talk product strategy, explore a collaboration, or just say hello — I'd love to hear from you.</p>
+      <div class="contact-links">
+        <a href="mailto:malak.grioui@hotmail.fr" class="btn-primary">Send an Email</a>
+        <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener" class="btn-outline-light">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2024 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <!-- quote -->
-    <article class="steel-blue">
-        <p class="quote uppercase">        </p>
-        <p>        </p>
-    </article>
-
-    <!-- about me -->
-    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
-    <section class="wrapper">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="assets/about-me.png" alt="about-me-logo">
-        </section>
-        <section class="justify align-center">
-            <p class="bold">About me</p>
-            <p>Passionate about <b>innovation</b>, <b>digital transformation</b>, and <b>sustainability</b>, I thrive at 
-                the intersection of technology and impact-driven solutions. With an <b>engineering degree</b> 
-                from <b></b>ITEEM - Centrale Lille and Skema Business School, I have experience leading <b>tech-driven 
-                projects</b> across <b>product development</b>, <b>agile management</b> and <b>business strategy</b>.</p>
-            
-            <p>From optimizing <b>healthtech applications</b> to designing <b>sustainable banking solutions</b>, 
-                I thrive at the intersection of technology and impact-driven solutions. 
-                My goal? To build the future by leveraging <b></b>innovation and strategic thinking to 
-                solve real-world challenges.</p>
-            
-            <p>Let’s connect! 🚀</p>
-            <!--
-            <p class="padding-top"><a href="about-me.html" class="button-outline">More info</a></p>
-            -->
-        </section>
-    </section>
-
-    <!-- skills -->
-    <!-- use this to showcase your skills, if you make changes, do not forget to modify the css accordingly -->
-    <!--
-    <section>
-        <h3 class="main-title center padding">Skills</h3>
-    </section>
-    <section class="wrapper">
-                <section class="column">
-            <p class="padding-bottom">Professional skills</p>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>communication, leadership</p>
-                        <span class="progress-bar"><span class="comm-lead"></span></span>
-                    </li>
-                    <li>
-                        <p>teamplayer, adaptability</p>
-                        <span class="progress-bar"><span class="team-player"></span></span>
-                    </li>
-                    <li>
-                        <p>problem solving</p>
-                        <span class="progress-bar"><span class="problem-solving"></span></span>
-                    </li>
-                    <li>
-                        <p>creativity</p>
-                        <span class="progress-bar"><span class="creativity"></span></span>
-                    </li>
-                </ul>
-            </section>
-        </section>
-        <section class="column">
-            <p class="padding-bottom">Programming Languages</p>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>Python</p>
-                    </li>
-                    <li>
-                        <p>HTML, CSS</p>
-                    </li>
-                    <li>
-                        <p>php, mysql</p>
-                    </li>
-                    <li>
-                        <p>Java</p>
-                    </li>
-                </ul>
-            </section>
-        </section>
-        <section class="column">
-            <p class="padding-bottom">Technical Skills</p>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>Certified Agile PM </p>
-                    </li>
-                    <li>
-                        <p>Scrum Framework</p>
-                    </li>
-                    <li>
-                        <p>Microsoft Office</p>
-                    </li>
-                    <li>
-                        <p> Azure</p>
-                    </li>
-                    <li>
-                        <p>Jira</p>
-                    </li>
-                    <li>
-                        <p>GitHub</p>
-                    </li>
-                    <li>
-                        <p>Figma, Miro</p>
-                    </li>
-                </ul>
-            </section>
-        </section>
-    </section>
-    </section>
--->
-    <!-- Projects -->
-    <!-- If you have more projects you are working on at the moment, or just want to show more, double the whole section below without the title and you are good to go -->
-    <section>
-        <h3 class="main-title center padding">Projects</h3>
-    </section>
-    <section class="wrapper">
-        
-        <section class="column card justify flex">
-            <img class="box" src="assets/forestscan.png" alt="forestscan">
-            <p class="padding bold center">Forest Scan</p>
-            <p>Spearheaded the Scrum framework for Forest Scan at <b>Global Mangrove Trust</b>, defining the strategic direction, 
-                fostering partnerships, and overseeing agile development cycles. Managed cross-functional collaboration 
-                to ensure seamless execution while aligning technical milestones with environmental goals.</p>
-            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
-        </section>
-
-        <section class="column card justify flex">
-            <img class="box" src="assets/earthwallet.png" alt="earthwallet">
-            <p class="padding bold center">EarthWallet</p>
-            <p>Led the development of an innovative B2B2C sustainable finance platform at <b>Handprint.Tech</b>, leading 
-                cross-functional teams to design, deploy, and scale a transformative digital solution enabling banks 
-                to integrate eco-conscious payment cards into their offerings, directly funding global environmental initiatives.</p>
-    
-            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
-        </section>
-
-    </section>
-
-        <p class="padding-top bottom center"><a href="portfolio.html" class="button-outline">See more Projects</a></p>
-
-
-    <!-- contact me -->
-    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="assets/Contact-me-img.png" alt="contact-me-illustration">
-        </section>
-        <section class="margin-auto align-center">
-            <h1 class="medium-spacing center">Let's get in touch!<span></span></h1>
-            <h4 class="subtitle center">Feel free to reach out via LinkedIn or Email!</h4>
-            <section class="box-contact margin-auto padding-top">
-                <span style="margin-right: 15px;">
-                    <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" aria-label="Visit my LinkedIn profile">
-                        <img class="logo" src="assets/linkedin-brands.png" alt="LinkedIn">
-                    </a>
-                </span>
-                <span>
-                    <a href="mailto:malak.grioui@hotmail.fr" target="_blank" aria-label="Send me an email">
-                        <img class="logo" src="assets/square-envelope-solid.png" alt="Email">
-                    </a>
-                </span>
-            </section>
-        </section>
-    </section>
-
-    <!-- special thanks -->
-    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
-    <section>
-        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
-            <a class="colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> by Storyset
-
-        </p>
-        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
-            <span><a class="colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">Font Awesome</a></span>
-        </p>
-    </section>
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+  </script>
 
 </body>
-
 </html>

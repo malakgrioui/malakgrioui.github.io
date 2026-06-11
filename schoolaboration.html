@@ -1,133 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Schoolaboration</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schoolaboration — Malak Grioui</title>
+  <meta name="description" content="Volunteer management platform for La Cordée — digitizing workflows and boosting student participation through smart tooling.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Language">
+          <option value="/">EN</option>
+          <option value="/fr/">FR</option>
+        </select>
+        <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
-            </div>
-
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/">English</option>
-                    <option value="/fr/">Français</option>
-                </select>
-            </div>
+  <header class="project-hero">
+    <div class="project-hero-inner">
+      <a href="portfolio.html" class="project-back">← Back to all projects</a>
+      <div class="project-hero-meta">
+        <span class="company-badge-dark">La Cordée</span>
+        <div class="tags tags-dark">
+          <span>Non-profit</span>
+          <span>Digital Transformation</span>
+          <span>Volunteer Management</span>
         </div>
+      </div>
+      <h1>Schoolaboration</h1>
+      <p class="tagline">A volunteer management platform that digitized and streamlined coordination for a school dedicated to equal opportunity education.</p>
+    </div>
+  </header>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+  <main class="project-content">
+    <div class="project-content-inner">
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Contact me</a></li>
+      <div class="project-section">
+        <h2>Company</h2>
+        <p><strong>La Cordée</strong> is a school dedicated to providing equal opportunities through innovative education for underprivileged children, supported by Espérance Banlieues and HOPE. Their mission relies heavily on volunteer engagement — making operational efficiency a direct enabler of educational impact.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Context &amp; Challenge</h2>
+        <p>Managing a large volunteer base manually was creating bottlenecks that limited La Cordée's reach and impact. The project sought to simplify scheduling, improve engagement, and optimize administrative processes through an intuitive digital platform — reducing coordination overhead and increasing accessibility for students and educators alike.</p>
+      </div>
+
+      <div class="project-two-col">
+        <div class="detail-card">
+          <h3>Key Contributions</h3>
+          <ul>
+            <li><strong>Tool Implementation &amp; System Overhaul</strong> Integrated a new volunteer management tool to replace the inefficient legacy system.</li>
+            <li><strong>Database Restructuring</strong> Designed a more efficient database architecture to improve data organization, retrieval, and reporting.</li>
+            <li><strong>System Analysis &amp; Optimization</strong> Evaluated the existing tools in depth, identifying pain points and proposing strategic enhancements.</li>
+            <li><strong>Stakeholder Coordination</strong> Worked with coordinators, volunteers, and external partners to ensure smooth adoption and alignment.</li>
+            <li><strong>User Research &amp; Feedback</strong> Organized brainstorming sessions, conducted user story mapping, and gathered feedback to refine functionalities.</li>
+            <li><strong>Process Documentation</strong> Developed comprehensive guides to reduce onboarding time and ensure sustainable transitions.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Methodology &amp; Tools</h3>
+          <ul>
+            <li><strong>Approach</strong> Agile (Scrum) — iterative development with continuous user feedback integration.</li>
+            <li><strong>Project Management</strong> Miro</li>
+            <li><strong>Collaboration</strong> Microsoft Workspace</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lessons-card">
+        <h2>Lessons Learned</h2>
+        <ul>
+          <li>System analysis is the prerequisite of effective transformation — without deeply understanding existing inefficiencies, solutions risk solving the wrong problem.</li>
+          <li>Database optimization has compounding effects: cleaner data structures reduce operational friction long after the project ends.</li>
+          <li>In non-profit contexts, adoption hinges on trust and simplicity — feature richness matters far less than intuitive, low-friction workflows.</li>
         </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="portfolio.html" class="btn-outline">← Back to All Projects</a>
+      </div>
 
     </div>
-</nav>
-    
-    <!-- project name -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">Schoolaboration</h2>
-        <p class="center italic">A volunteer management platform for students.</p>
-    </section>
+  </main>
 
-    <!-- about this project -->
-    <section class="w-900 padding center">
-        <h3 class="main-title">Company</h3>
-        <section>
-            <p class="justify"><b>La Cordée</b> – a school dedicated to providing equal opportunities through 
-            innovative education for underprivileged children, supported by Espérance Banlieues and HOPE.</p>
-        </section>
-    </section>
+  <footer class="site-footer">
+    <p>© 2024 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <section class="w-900 padding">
-        <h3 class="main-title center">Context</h3>
-        <p class="justify">The project sought to simplify volunteer scheduling, improve engagement, and optimize 
-          administrative processes through an intuitive digital platform, reducing time spent on management and 
-          increasing accessibility for both students and educators.</p>
-    </section>
-    <section class="wrapper">
-        <section class="column card">
-            <p class="bold center">Key Contributions</p>
-            <ul class="justify padding-list-10">
-                <!-- if you take the span-s out, the fonts won't be that colorful -->
-                <li><span class="colorful-letter"><b>Tool Implementation & System Overhaul:</b> Integrated a new volunteer management tool, replacing the existing inefficient system to improve usability and coordination.</span></li>
-                <li><span class="colorful-letter"><b>Database Restructuring:</b> Designed and implemented a more efficient database architecture to enhance data organization, retrieval, and reporting.</span></li>
-                <li><span class="colorful-letter"><b>System Analysis & Optimization:</b> Conducted an in-depth evaluation of the existing tool, identifying pain points and proposing strategic enhancements to streamline volunteer management.</span></li>
-                <li><span class="colorful-letter"><b>Stakeholder Coordination:</b> Worked closely with La Cordée coordinators, volunteers, and external partners to align project goals and ensure seamless adoption.</span></li>
-                <li><span class="colorful-letter"><b>User Research & Feedback Collection:</b> Organized brainstorming sessions, conducted user story mapping, and gathered feedback to refine platform functionalities.</span></li>
-                <li><span class="colorful-letter"><b>Process Optimization & Documentation:</b> Developed comprehensive guides and documentation to help coordinators adapt to the new system, reducing onboarding time and ensuring smooth transitions.</span></li>
-
-            </ul>
-        </section>
-        <section class="column card">
-            <p class="bold center">Methodology & Tools</p>
-            <ul class="justify padding-list-10">
-                <li><span class="colorful-letter"><b>Approach:</b> Agile (Scrum) – Iterative development cycles and continuous user feedback integration.</span></li>
-                <br>
-                <li><span class="colorful-letter"><b>Tools Used:</b></span></li>
-                <ul class="justify padding-list-10">
-                    <li><span class="colorful-letter"><b>Project Management:</b> Miro</span></li>
-                    <li><span class="colorful-letter"><b>Collaboration:</b> Microsoft Workspace</span></li>
-                    
-                </ul>
-            </ul>
-        </section>
-    </section>
-
-    <!-- what did i learn -->
-    <section class="w-900 padding center grey">
-            <h3 class="main-title">Lessons Learned</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item"><b>System analysis is crucial for effective transformation</b>, ensuring inefficiencies are properly identified and addressed.</li>
-                <li class="no-padding-list-item"><b>Database optimization significantly enhances performance</b>, reducing operational bottlenecks and improving data accessibility.</li>
-                <li class="no-padding-list-item"><b>Continuous feedback drives improvement</b>, refining platform usability and engagement over time.</li>
-            </ul>
-    </section>
-
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Back to portfolio</a></p>
-
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 </body>
-
 </html>

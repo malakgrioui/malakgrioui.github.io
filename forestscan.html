@@ -1,134 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Forest Scan</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forest Scan — Malak Grioui</title>
+  <meta name="description" content="AI-driven satellite analysis tool for blue carbon project feasibility, led by Malak Grioui at Global Mangrove Trust.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Language">
+          <option value="/">EN</option>
+          <option value="/fr/">FR</option>
+        </select>
+        <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
-            </div>
-
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/">English</option>
-                    <option value="/fr/">Français</option>
-                </select>
-            </div>
+  <header class="project-hero">
+    <div class="project-hero-inner">
+      <a href="portfolio.html" class="project-back">← Back to all projects</a>
+      <div class="project-hero-meta">
+        <span class="company-badge-dark">Global Mangrove Trust</span>
+        <div class="tags tags-dark">
+          <span>Product Management</span>
+          <span>Agile / Scrum</span>
+          <span>AI / ML</span>
+          <span>ClimTech</span>
         </div>
+      </div>
+      <h1>Forest Scan</h1>
+      <p class="tagline">A cost-effective AI-driven tool leveraging satellite data to support early-stage blue carbon project feasibility assessments.</p>
+    </div>
+  </header>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+  <main class="project-content">
+    <div class="project-content-inner">
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Contact me</a></li>
+      <div class="project-section">
+        <h2>Company</h2>
+        <p><strong>Global Mangrove Trust</strong> is a mission-driven non-profit harnessing cutting-edge technology and data science to drive large-scale environmental restoration, with a focus on carbon sequestration and biodiversity conservation.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Context &amp; Challenge</h2>
+        <p>Assessing the feasibility of blue carbon projects is costly and time-consuming. The initiative focused on building an AI-driven system leveraging open-source satellite data to analyze deforestation trends and classify land types — enabling faster, cheaper, and more scalable carbon credit project evaluation and conservation planning.</p>
+      </div>
+
+      <div class="project-two-col">
+        <div class="detail-card">
+          <h3>Key Contributions</h3>
+          <ul>
+            <li><strong>Agile Process Implementation</strong> Established and maintained Scrum best practices — facilitating sprint planning, retrospectives, and daily stand-ups.</li>
+            <li><strong>Cross-Functional Team Management</strong> Coordinated work between data scientists, developers, and environmental researchers.</li>
+            <li><strong>Backlog &amp; Roadmap Management</strong> Structured development priorities to ensure feature delivery aligned with project objectives.</li>
+            <li><strong>Stakeholder Engagement</strong> Secured a university partnership to integrate environmental research, boosting data credibility.</li>
+            <li><strong>Product Optimization</strong> Facilitated rapid iterations and deployment cycles to continuously improve the application.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Methodology &amp; Tools</h3>
+          <ul>
+            <li><strong>Approach</strong> Agile (Scrum) — iterative sprints and backlog refinement.</li>
+            <li><strong>Project Management</strong> Monday.com</li>
+            <li><strong>Collaboration</strong> Miro, Google Workspace</li>
+            <li><strong>Development</strong> Google Cloud Platform, GitHub</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lessons-card">
+        <h2>Lessons Learned</h2>
+        <ul>
+          <li>Agile methodologies optimize iterative development, ensuring faster feature deployment and continuous stakeholder alignment.</li>
+          <li>Cross-functional collaboration is essential when integrating technical work with domain-specific expertise like environmental science.</li>
+          <li>Structured sprints and backlog prioritization improve resource allocation and reduce project delays significantly.</li>
         </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="portfolio.html" class="btn-outline">← Back to All Projects</a>
+      </div>
 
     </div>
-</nav>
+  </main>
 
-    <!-- project name -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">Forest Scan</h2>
-        <p class="center italic">A cost-effective AI-driven tool leveraging satellite data to support early-stage blue carbon project feasibility assessments.</p>
-    </section>
+  <footer class="site-footer">
+    <p>© 2024 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <!-- about this project -->
-    <section class="w-900 padding center">
-        <h3 class="main-title">Company</h3>
-        <section>
-            <p class="justify"><b>Global Mangrove Trust</b> – A mission-driven non-profit harnessing cutting-edge technology 
-                and data science to drive large-scale environmental restoration, focusing on carbon sequestration and 
-                biodiversity conservation.</p>
-        </section>
-    </section>
-
-    <section class="w-900 padding">
-        <h3 class="main-title center">Context</h3>
-        <p class="justify">The initiative focused on building an AI-driven system leveraging open-source 
-            satellite data to analyze deforestation trends and classify land types, aiding carbon credit 
-            projects and conservation efforts.</p>
-    </section>
-    <section class="wrapper">
-        <section class="column card">
-            <p class="bold center">Key Contributions</p>
-            <ul class="justify padding-list-10">
-                <!-- if you take the span-s out, the fonts won't be that colorful -->
-                <li><span class="colorful-letter"><b>Agile Process Implementation:</b> Established and maintained Scrum best practices, facilitating sprint planning, retrospectives, and daily stand-ups.</span></li>
-                <li><span class="colorful-letter"><b>Cross-Functional Team Management:</b> Coordinated work between data scientists and developers.</span></li>
-                <li><span class="colorful-letter"><b>Backlog & Roadmap Management:</b> Structured development priorities and ensured feature delivery aligned with project objectives.</span></li>
-                <li><span class="colorful-letter"><b>Stakeholder Engagement:</b> Engaged stakeholders and secured a university partnership to integrate environmental research, boosting data credibility.</span></li>
-                <li><span class="colorful-letter"><b>Product Optimization:</b> Facilitated rapid iterations and deployment to improve the App.</span></li>
-                
-            </ul>
-        </section>
-        <section class="column card">
-            <p class="bold center">Methodology & Tools</p>
-            <ul class="justify padding-list-10">
-                <li><span class="colorful-letter"><b>Approach:</b> Agile (Scrum) – Implemented iterative sprints and backlog refinement.</span></li>
-                <br>
-                <li><span class="colorful-letter"><b>Tools Used:</b></span></li>
-                <ul class="justify padding-list-10">
-                    <li><span class="colorful-letter"><b>Project Management:</b> Monday</span></li>
-                    <li><span class="colorful-letter"><b>Collaboration:</b> Miro, Google Workspace</span></li>
-                    <li><span class="colorful-letter"><b>Development:</b> Google Cloud Platform, Github</span></li>
-                    
-                </ul>
-            </ul>
-        </section>
-    </section>
-
-    <!-- what did i learn -->
-    <section class="w-900 padding center grey">
-            <h3 class="main-title">Lessons Learned</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item"><b>Agile methodologies optimize iterative development</b>, ensuring faster feature deployment and stakeholder alignment.</li>
-                <li class="no-padding-list-item"><b>Cross-functional collaboration</b> is essential for integrating technical and environmental expertise.</li>
-                <li class="no-padding-list-item"><b>Structured sprints and backlog prioritization improve resource allocation</b>, minimizing project delays.</li>
-            </ul>
-    </section>
-
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Back to portfolio</a></p>
-
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 </body>
-
 </html>

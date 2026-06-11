@@ -1,137 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Earthwallet</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EarthWallet — Malak Grioui</title>
+  <meta name="description" content="B2B2C sustainable payment card platform enabling banks to fund environmental projects, led by Malak Grioui at Handprint.Tech.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Language">
+          <option value="/">EN</option>
+          <option value="/fr/">FR</option>
+        </select>
+        <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
-            </div>
-
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/">English</option>
-                    <option value="/fr/">Français</option>
-                </select>
-            </div>
+  <header class="project-hero">
+    <div class="project-hero-inner">
+      <a href="portfolio.html" class="project-back">← Back to all projects</a>
+      <div class="project-hero-meta">
+        <span class="company-badge-dark">Handprint.Tech</span>
+        <div class="tags tags-dark">
+          <span>Product Management</span>
+          <span>FinTech</span>
+          <span>Sustainability</span>
+          <span>B2B2C</span>
         </div>
+      </div>
+      <h1>EarthWallet</h1>
+      <p class="tagline">A B2B2C platform enabling banks to integrate sustainability into their financial products through eco-friendly payment cards.</p>
+    </div>
+  </header>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+  <main class="project-content">
+    <div class="project-content-inner">
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Contact me</a></li>
+      <div class="project-section">
+        <h2>Company</h2>
+        <p><strong>Handprint.Tech</strong> is a tech startup focused on embedding sustainability into everyday transactions — making it simple for companies and consumers to take meaningful environmental action at scale.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Context &amp; Challenge</h2>
+        <p>The goal was to develop a scalable financial product enabling banks to offer eco-friendly payment cards — empowering millions of consumers to fund environmental restoration projects with every transaction. The project required a robust product strategy, a seamless UX, and strong technical foundations for global scalability.</p>
+      </div>
+
+      <div class="project-two-col">
+        <div class="detail-card">
+          <h3>Key Contributions</h3>
+          <ul>
+            <li><strong>Product Roadmap</strong> Defined and executed a structured roadmap aligning with business goals and evolving market needs.</li>
+            <li><strong>User &amp; Market Research</strong> Conducted competitive analysis and user interviews to validate product-market fit.</li>
+            <li><strong>Functional Specifications</strong> Created detailed user stories, requirements, and system diagrams to guide development.</li>
+            <li><strong>Cross-functional Coordination</strong> Managed collaboration between engineering, design, and business teams for timely, high-quality delivery.</li>
+            <li><strong>API &amp; Data Architecture</strong> Contributed to defining data architecture and API integrations for seamless transactions.</li>
+            <li><strong>Stakeholder Communication</strong> Aligned with banking partners and sustainability organizations on product features and constraints.</li>
+            <li><strong>Testing &amp; QA</strong> Oversaw product testing phases to ensure high standards for usability and performance.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Methodology &amp; Tools</h3>
+          <ul>
+            <li><strong>Approach</strong> Agile (Scrum) — iterative sprints with continuous user feedback.</li>
+            <li><strong>Project Management</strong> Jira, Azure DevOps</li>
+            <li><strong>Design &amp; Prototyping</strong> Figma, Miro</li>
+            <li><strong>API Testing</strong> Postman</li>
+            <li><strong>Collaboration</strong> Slack, Notion, Google Workspace</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lessons-card">
+        <h2>Lessons Learned</h2>
+        <ul>
+          <li>Aligning tech with sustainability goals requires deep collaboration between financial institutions, regulators, and tech teams — assumptions cost time.</li>
+          <li>Iterative development and rapid feedback loops significantly enhance product-market fit, allowing quick pivots before costly mistakes.</li>
+          <li>Cross-functional communication is the invisible foundation of execution — bridging engineering, design, and business prevents rework and delays.</li>
         </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="portfolio.html" class="btn-outline">← Back to All Projects</a>
+      </div>
 
     </div>
-</nav>
+  </main>
 
-    <!-- project name -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">EarthWallet</h2>
-        <p class="center italic">A B2B2C platform enabling banks to integrate sustainability into their financial products.</p>
-    </section>
+  <footer class="site-footer">
+    <p>© 2024 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <!-- about this project -->
-    <section class="w-900 padding center">
-        <h3 class="main-title">Company</h3>
-        <section>
-            <p class="center"><b>Handprint.Tech</b> – A tech startup focused on embedding sustainability into everyday transactions.</p>
-        </section>
-    </section>
-
-    <section class="w-900 padding">
-        <h3 class="main-title center">Context</h3>
-        <p class="justify">The goal was to develop a scalable financial product allowing banks to offer eco-friendly 
-            payment cards, empowering millions of consumers to fund environmental restoration projects with every 
-            transaction. The project required a robust product strategy, seamless UX, and a strong technical 
-            foundation for global scalability.</p>
-    </section>
-    <section class="wrapper">
-        <section class="column card">
-            <p class="bold center">Key Contributions</p>
-            <ul class="justify padding-list-10">
-                <!-- if you take the span-s out, the fonts won't be that colorful -->
-                <li><span class="colorful-letter"><b>Product Roadmap:</b> Defined and implemented a structured roadmap aligning with business goals and market needs.</span></li>
-                <li><span class="colorful-letter"><b>User & Market Research:</b> Conducted competitive analysis and user interviews to define product-market fit.</span></li>
-                <li><span class="colorful-letter"><b>Functional Specifications:</b> Created detailed user stories, requirement specifications, and system diagrams to guide development.</span></li>
-                <li><span class="colorful-letter"><b>Cross-functional Coordination:</b> Managed collaboration between engineering, design, and business teams to ensure timely and high-quality delivery.</span></li>
-                <li><span class="colorful-letter"><b>API & Data Architecture:</b> Contributed to defining data architecture and API integrations for seamless transactions.</span></li>
-                <li><span class="colorful-letter"><b>Stakeholder Communication:</b> Worked closely with banking partners and sustainability organizations to align on product features.</span></li>
-                <li><span class="colorful-letter"><b>Testing & QA:</b> Oversaw product testing phases, ensuring high standards for usability and performance.</span></li>
-                
-            </ul>
-        </section>
-        <section class="column card">
-            <p class="bold center">Methodology & Tools</p>
-            <ul class="justify padding-list-10">
-                <li><span class="colorful-letter"><b>Approach:</b> Agile (Scrum) – Implemented iterative sprints with continuous user feedback and adjustments.</span></li>
-                <br>
-                <li><span class="colorful-letter"><b>Tools Used:</b></span></li>
-                <ul class="justify padding-list-10">
-                    <li><span class="colorful-letter"><b>Project Management:</b> Jira, Azure</span></li>
-                    <li><span class="colorful-letter"><b>Design & Prototyping:</b> Figma, Miro</span></li>
-                    <li><span class="colorful-letter"><b>Development & API Management:</b> Postman</span></li>
-                    <li><span class="colorful-letter"><b>Collaboration:</b> Slack, Notion, Google Workspace</span></li>
-                </ul>
-            </ul>
-        </section>
-    </section>
-
-    <!-- what did i learn -->
-    <section class="w-900 padding center grey">
-            <h3 class="main-title">Lessons Learned</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item"><b>Aligning tech with sustainability goals requires deep collaboration</b> between financial institutions, regulators, and tech teams.</li>
-                <li class="no-padding-list-item"><b>Iterative development & rapid feedback loops significantly enhance product-market fit</b>, allowing quick pivots when necessary.</li>
-                <li class="no-padding-list-item"><b>Cross-functional communication is key</b>, bridging gaps between engineering, design, and business units ensures seamless execution.</li>
-            </ul>
-    </section>
-
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Back to portfolio</a></p>
-
-
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 </body>
-
 </html>

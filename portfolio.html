@@ -1,192 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- This page benefits from the main css and also from the about-me css, that is why all 3 is linked -->
-    <link rel="stylesheet" type="text/css" href="style-about-me.css">
-    <link rel="stylesheet" type="text/css" href="style-portfolio.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Malak Grioui</title>
+  <meta name="description" content="Product management and digital transformation projects by Malak Grioui — spanning ClimTech, FinTech, HealthTech, and more.">
+  <meta name="author" content="Malak Grioui">
+  <link rel="canonical" href="https://malakgrioui.github.io/portfolio.html">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
+
+  <!-- Navigation -->
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Language">
+          <option value="/">EN</option>
+          <option value="/fr/">FR</option>
+        </select>
+        <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
-            </div>
+  <!-- Page Header -->
+  <header class="portfolio-header">
+    <div class="container">
+      <span class="section-label light">Portfolio</span>
+      <h1>My Work</h1>
+      <p>7 projects across product management, digital transformation, and tech innovation.</p>
+    </div>
+  </header>
 
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/">English</option>
-                    <option value="/fr/">Français</option>
-                </select>
+  <!-- Projects Grid -->
+  <section class="portfolio-grid-section">
+    <div class="container">
+      <div class="projects-grid">
+
+        <!-- Forest Scan -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="assets/forestscan.png" alt="Forest Scan">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Global Mangrove Trust</span>
+              <div class="tags">
+                <span>Product Management</span>
+                <span>AI / ML</span>
+                <span>ClimTech</span>
+              </div>
             </div>
+            <h3>Forest Scan</h3>
+            <p>AI-driven satellite tool for blue carbon project feasibility. Spearheaded the Scrum framework, aligned stakeholders, and managed iterative delivery across data science and engineering teams.</p>
+            <a href="forestscan.html" class="card-link">View Case Study →</a>
+          </div>
         </div>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+        <!-- EarthWallet -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="assets/earthwallet.png" alt="EarthWallet">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Handprint.Tech</span>
+              <div class="tags">
+                <span>FinTech</span>
+                <span>Sustainability</span>
+                <span>B2B2C</span>
+              </div>
+            </div>
+            <h3>EarthWallet</h3>
+            <p>B2B2C sustainable payment card platform enabling banks to fund environmental projects. Led product strategy, roadmap, and cross-functional delivery from ideation to launch.</p>
+            <a href="earthwallet.html" class="card-link">View Case Study →</a>
+          </div>
+        </div>
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Contact me</a></li>
-        </ul>
+        <!-- Automated Data Collection -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="assets/kobotoolbox.png" alt="Automated Data Collection">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Global Mangrove Trust</span>
+              <div class="tags">
+                <span>Python</span>
+                <span>Automation</span>
+                <span>Data Engineering</span>
+              </div>
+            </div>
+            <h3>Automated Data Collection &amp; Reporting</h3>
+            <p>Automated field data collection and reporting workflows using Python, Kobotoolbox API, and Google Cloud Platform — cutting manual workload by 70% and improving data accuracy.</p>
+            <a href="kobotoolbox.html" class="card-link">View Case Study →</a>
+          </div>
+        </div>
 
+        <!-- Dositrace -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="assets/dositrace.png" alt="Dositrace 4.0">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Biomediqa</span>
+              <div class="tags">
+                <span>HealthTech</span>
+                <span>UX / UI</span>
+                <span>Product Management</span>
+              </div>
+            </div>
+            <h3>Dositrace 4.0</h3>
+            <p>Enhanced UX/UI and process optimization for a medical software platform. Focused on usability improvements and product management to reduce operational friction for clinical teams.</p>
+            <a href="dositrace.html" class="card-link">View Case Study →</a>
+          </div>
+        </div>
+
+        <!-- Start-Up Sherpa -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="assets/sherpa.png" alt="Start-Up Sherpa">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Sherpa</span>
+              <div class="tags">
+                <span>Product Strategy</span>
+                <span>Entrepreneurship</span>
+                <span>Platform</span>
+              </div>
+            </div>
+            <h3>Start-Up Sherpa</h3>
+            <p>Digital platform supporting early-stage entrepreneurs with diagnostic tools, expert guidance, and networking opportunities. Led product strategy and cross-functional delivery.</p>
+            <a href="sherpa.html" class="card-link">View Case Study →</a>
+          </div>
+        </div>
+
+        <!-- Schoolaboration -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="assets/schoolaboration.png" alt="Schoolaboration">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">La Cordée</span>
+              <div class="tags">
+                <span>Non-profit</span>
+                <span>Digital Transformation</span>
+                <span>Volunteer Management</span>
+              </div>
+            </div>
+            <h3>Schoolaboration</h3>
+            <p>Volunteer management tool that digitized workflows for a non-profit organization, boosting student participation and improving operational accessibility at scale.</p>
+            <a href="schoolaboration.html" class="card-link">View Case Study →</a>
+          </div>
+        </div>
+
+        <!-- Booster SME -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="assets/booster.png" alt="Booster SME">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Videoportrait</span>
+              <div class="tags">
+                <span>SME Growth</span>
+                <span>Business Strategy</span>
+                <span>Digital Transformation</span>
+              </div>
+            </div>
+            <h3>Booster SME</h3>
+            <p>Digital transformation and growth strategy for a small business — covering market presence, sales optimization, branding, and structured project management implementation.</p>
+            <a href="booster.html" class="card-link">View Case Study →</a>
+          </div>
+        </div>
+
+      </div>
     </div>
-</nav>
+  </section>
 
-
-    <!-- Use align center accordingly as it my center vertically the image or the text. Or if you do not want to use it at all, then just delete it -->
-    <!-- project1 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify align-center">
-                <h3 class="main-title padding-top"><b>Forest Scan</b></h3>
-                <p>Spearheaded the Scrum framework for Forest Scan at <b>Global Mangrove Trust</b>, defining the strategic direction, 
-                    fostering partnerships, and overseeing agile development cycles. Managed cross-functional collaboration 
-                    to ensure seamless execution while aligning technical milestones with environmental goals.</p>
-                
-                <p class="padding-top"><a href="forestscan.html" class="button-outline">More info</a></p>
-            </section>
-            <section class="center padding-top align-center">
-                <p><a href="forestscan.html"><img class="max-width" src="assets/forestscan.png" alt="forestscan"></a></p>
-            </section>
-        </section>
+  <!-- Contact -->
+  <section class="contact section-padding" id="contact">
+    <div class="container contact-inner">
+      <span class="section-label light">Get In Touch</span>
+      <h2>Interested in working together?</h2>
+      <p>I'm always open to interesting conversations about product, technology, and impact.</p>
+      <div class="contact-links">
+        <a href="mailto:malak.grioui@hotmail.fr" class="btn-primary">Send an Email</a>
+        <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener" class="btn-outline-light">Connect on LinkedIn</a>
+      </div>
     </div>
+  </section>
 
-    <!-- project2 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify align-center">
-                <h3 class="main-title padding-top"><b>EarthWallet</b></h3>
-                <p>Led the product development and roadmap for a B2B2C sustainable finance application at <b>Handprint.Tech</b>, 
-                    coordinating cross-functional teams to design, build, and deploy a high-impact digital solution enabling 
-                    banks to issue payment cards that fund environmental projects.
-                </p>
-                <p class="padding-top"><a href="earthwallet.html" class="button-outline">More info</a></p>
-            </section>
-            <section class="center">
-                <p><a href="earthwallet.html"><img class="max-width" src="assets/earthwallet.png" alt="earthwallet"></a>
-            </section>
-        </section>
-    </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2024 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <!-- project3 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify">
-                <h3 class="main-title padding-top"><b>Automated Data Collection & Reporting</b></h3>
-                <p>Optimized data collection and reporting processes for <b>Global Mangrove Trust</b> by automating workflows 
-                    using Python with Kobotoolbox API and Google Cloud Platform, reducing manual workload 
-                    by 70% and enhancing data accuracy.</p>
-                <p class="padding-top"><a href="kobotoolbox.html" class="button-outline">More info</a></p>
-            </section>
-            <section class="center">
-                <p><a href="kobotoolbox.html"><img class="max-width" src="assets/kobotoolbox.png" alt="kobotoolbox"></a>
-            </section>
-        </section>
-    </div>
-    
-    <!-- project4 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify">
-                <h3 class="main-title padding-top"><b>Dositrace 4.0</b></h3>
-                <p>Led the application enhancement and digital transformation at <b>Biomediqa</b>, focusing on UX/UI design, 
-                    process optimization, and product management to improve medical software usability and operational 
-                    efficiency.</p>
-                <p class="padding-top"><a href="dositrace.html" class="button-outline">More info</a></p>
-            </section>
-            <section class="center">
-                <p><a href="dositrace.html"><img class="max-width" src="assets/dositrace.png" alt="dositrace"></a>
-            </section>
-        </section>
-    </div>
-    
-    <!-- project5 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify">
-                <h3 class="main-title padding-top"><b>Start-Up Sherpa</b></h3>
-                <p>Developed and managed the product strategy for Start-Up Sherpa, a digital platform supporting 
-                    early-stage entrepreneurs by providing diagnostic tools, expert guidance, and networking 
-                    opportunities. Led cross-functional collaboration to ensure a seamless and scalable solution.</p>
-                <p class="padding-top"><a href="sherpa.html" class="button-outline">More info</a></p>
-            </section>
-            <section class="center">
-                <p><a href="sherpa.html"><img class="max-width" src="assets/sherpa.png" alt="sherpa"></a>
-            </section>
-        </section>
-    </div>
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+  </script>
 
-
-    <!-- project6 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify">
-                <h3 class="main-title padding-top"><b>Schoolaboration</b></h3>
-                <p>Spearheaded <b>La Cordée</b>’s digital transformation by implementing a volunteer management tool, 
-                    optimizing workflows, boosting student participation, and improving accessibility with an 
-                    intuitive and scalable solution.</p>
-                <p class="padding-top"><a href="schoolaboration.html" class="button-outline">More info</a></p>
-            </section>
-            <section class="center">
-                <p><a href="schoolaboration.html"><img class="max-width" src="assets/schoolaboration.png" alt="schoolaboration"></a>
-            </section>
-        </section>
-    </div>
-
-    <!-- project7 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify">
-                <h3 class="main-title padding-top"><b>Booster SME</b></h3>
-                <p>Led the digital transformation and business growth strategy for <b>Videoportrait</b>, enhancing market 
-                    presence through sales optimization, branding refinement, and operational efficiency. Managed 
-                    cross-functional collaboration to implement structured project management methodologies and digital 
-                    tools, ensuring scalable and sustainable business expansion.</p>
-                <p class="padding-top"><a href="booster.html" class="button-outline">More info</a></p>
-            </section>
-            <section class="center">
-                <p><a href="booster.html"><img class="max-width" src="assets/booster.png" alt="booster"></a>
-            </section>
-        </section>
-    </div>
-
-    
 </body>
-
 </html>

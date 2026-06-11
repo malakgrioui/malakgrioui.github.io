@@ -1,136 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Dositrace</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dositrace 4.0 — Malak Grioui</title>
+  <meta name="description" content="UX/UI enhancement and product management for a next-generation dose management software at Biomediqa.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Language">
+          <option value="/">EN</option>
+          <option value="/fr/">FR</option>
+        </select>
+        <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
-            </div>
-
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/">English</option>
-                    <option value="/fr/">Français</option>
-                </select>
-            </div>
+  <header class="project-hero">
+    <div class="project-hero-inner">
+      <a href="portfolio.html" class="project-back">← Back to all projects</a>
+      <div class="project-hero-meta">
+        <span class="company-badge-dark">Biomediqa</span>
+        <div class="tags tags-dark">
+          <span>HealthTech</span>
+          <span>UX / UI Design</span>
+          <span>Product Management</span>
+          <span>Medical Software</span>
         </div>
+      </div>
+      <h1>Dositrace 4.0</h1>
+      <p class="tagline">Next-generation dose management software for medical imaging — upgraded UX/UI, streamlined workflows, and enhanced device interoperability.</p>
+    </div>
+  </header>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+  <main class="project-content">
+    <div class="project-content-inner">
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Contact me</a></li>
+      <div class="project-section">
+        <h2>Company</h2>
+        <p><strong>Biomediqa</strong> is a leader in radiation protection, medical physics, and internal quality control — providing innovative solutions for medical imaging, research, and compliance to ensure patient safety and operational excellence.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Context &amp; Challenge</h2>
+        <p>The project focused on a comprehensive upgrade of Dositrace, enhancing its UX/UI for a more intuitive clinical experience, streamlining workflow automation to reduce manual tasks for radiologists and technicians, and integrating advanced data interoperability for seamless communication between imaging devices and hospital information systems.</p>
+      </div>
+
+      <div class="project-two-col">
+        <div class="detail-card">
+          <h3>Key Contributions</h3>
+          <ul>
+            <li><strong>Product Roadmap &amp; Strategy</strong> Defined and executed the Dositrace 4.0 roadmap incorporating user feedback, compliance updates, and technical constraints.</li>
+            <li><strong>Cross-functional Coordination</strong> Managed collaboration between developers, healthcare professionals, and QA teams across the release cycle.</li>
+            <li><strong>UX/UI Design</strong> Created user-friendly wireframes and interactive prototypes to improve interface intuitiveness for clinical users.</li>
+            <li><strong>Process Optimization</strong> Redesigned user workflows, improving efficiency in ionizing dose management and reporting.</li>
+            <li><strong>Medical Device Integration</strong> Ensured seamless connection of Dositrace with over 20 medical imaging devices via HL7 protocols.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Methodology &amp; Tools</h3>
+          <ul>
+            <li><strong>Approach</strong> Agile (Scrum) — iterative sprints and backlog refinement.</li>
+            <li><strong>UX/UI Design</strong> Figma</li>
+            <li><strong>Project Management</strong> Miro</li>
+            <li><strong>Collaboration</strong> Microsoft Workspace</li>
+            <li><strong>Integration</strong> Linux, SQL, HL7</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lessons-card">
+        <h2>Lessons Learned</h2>
+        <ul>
+          <li>UX/UI improvements are the highest-leverage driver of software adoption — especially in regulated environments where users can't simply switch tools.</li>
+          <li>Interdisciplinary collaboration between healthcare professionals and software teams is not optional; the domain knowledge gap requires active bridging.</li>
+          <li>Medical data integration demands rigorous validation before and after deployment — patient safety stakes leave no room for assumption.</li>
         </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="portfolio.html" class="btn-outline">← Back to All Projects</a>
+      </div>
 
     </div>
-</nav>
+  </main>
 
+  <footer class="site-footer">
+    <p>© 2024 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <!-- project name -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">Dositrace</h2>
-        <p class="center italic">Next-Generation Dose Management Software for Medical Imaging.</p>
-    </section>
-
-    <!-- about this project -->
-    <section class="w-900 padding center">
-        <h3 class="main-title">Company</h3>
-        <section>
-            <p class="justify"><b>Biomediqa</b> – A leader in Radiation Protection, Medical Physics, and Internal 
-              Quality Control, providing innovative solutions for medical imaging, research, and compliance to 
-              ensure patient safety and operational excellence.</p>
-        </section>
-    </section>
-
-    <section class="w-900 padding">
-        <h3 class="main-title center">Context</h3>
-        <p class="justify">The project focused on a comprehensive upgrade of Dositrace, enhancing its UX/UI for a 
-          more intuitive experience, streamlining workflow automation to reduce manual tasks, and integrating advanced 
-          data interoperability for seamless communication between medical imaging devices and hospital systems.</p>
-    </section>
-    <section class="wrapper">
-        <section class="column card">
-            <p class="bold center">Key Contributions</p>
-            <ul class="justify padding-list-10">
-                <!-- if you take the span-s out, the fonts won't be that colorful -->
-                <li><span class="colorful-letter"><b>Product Roadmap & Strategy:</b> Defined and executed the roadmap for Dositrace 4.0, incorporating user feedback and compliance updates to enhance functionality.</span></li>
-                <li><span class="colorful-letter"><b>Cross-functional Team Coordination:</b> Managed collaboration between developers, healthcare professionals, and quality assurance teams.</span></li>
-                <li><span class="colorful-letter"><b>UX/UI Design:</b> Created user-friendly wireframes and interactive prototypes to enhance interface intuitiveness.</span></li>
-                <li><span class="colorful-letter"><b>Process Optimization:</b> Redesigned user workflows, improving efficiency in ionizing dose management.</span></li>
-                <li><span class="colorful-letter"><b>Medical Device Integration:</b> Ensured seamless connection of Dositrace with over 20 medical imaging devices.</span></li>
-              
-            </ul>
-        </section>
-        <section class="column card">
-            <p class="bold center">Methodology & Tools</p>
-            <ul class="justify padding-list-10">
-                <li><span class="colorful-letter"><b>Approach:</b> Agile (Scrum) – Implemented iterative sprints and backlog refinement.</span></li>
-                <br>
-                <li><span class="colorful-letter"><b>Tools Used:</b></span></li>
-                <ul class="justify padding-list-10">
-                    <li><span class="colorful-letter"><b>Project Management:</b> Miro</span></li>
-                    <li><span class="colorful-letter"><b>Collaboration:</b> Microsoft Workspace</span></li>
-                    <li><span class="colorful-letter"><b>Medical Data & Compliance:  </b> Linux, SQL, HL7 Integration</span></li>
-                    <li><span class="colorful-letter"><b>UX/UI:</b> Figma</span></li>
-                    
-                </ul>
-            </ul>
-        </section>
-    </section>
-
-    <!-- what did i learn -->
-    <section class="w-900 padding center grey">
-            <h3 class="main-title">Lessons Learned</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item"><b>UX/UI improvements drive software adoption</b>, making usability a key priority in medical applications.</li>
-                <li class="no-padding-list-item"><b>Interdisciplinary collaboration is crucial</b>, ensuring alignment between healthcare professionals and software developers.</li>
-                <li class="no-padding-list-item"><b>Medical data integration requires rigorous validation</b>, ensuring seamless and secure interoperability.</li>
-            </ul>
-    </section>
-
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Back to portfolio</a></p>
-
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 </body>
-
 </html>

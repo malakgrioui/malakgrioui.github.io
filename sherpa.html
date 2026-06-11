@@ -1,134 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Start-up Sherpa</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start-Up Sherpa — Malak Grioui</title>
+  <meta name="description" content="AI-powered platform democratizing entrepreneurial support for early-stage startups, built with The Sustainable Grid.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Language">
+          <option value="/">EN</option>
+          <option value="/fr/">FR</option>
+        </select>
+        <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
-            </div>
-
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/">English</option>
-                    <option value="/fr/">Français</option>
-                </select>
-            </div>
+  <header class="project-hero">
+    <div class="project-hero-inner">
+      <a href="portfolio.html" class="project-back">← Back to all projects</a>
+      <div class="project-hero-meta">
+        <span class="company-badge-dark">The Sustainable Grid</span>
+        <div class="tags tags-dark">
+          <span>Product Strategy</span>
+          <span>AI / Automation</span>
+          <span>Entrepreneurship</span>
+          <span>Platform</span>
         </div>
+      </div>
+      <h1>Start-Up Sherpa</h1>
+      <p class="tagline">An AI-powered platform democratizing entrepreneurial support — diagnostics, expert guidance, and networking for early-stage founders.</p>
+    </div>
+  </header>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+  <main class="project-content">
+    <div class="project-content-inner">
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Contact me</a></li>
+      <div class="project-section">
+        <h2>Company</h2>
+        <p>Built in collaboration with <strong>The Sustainable Grid (TSG)</strong>, a cutting-edge initiative providing smart energy and digital infrastructure solutions to drive sustainable business growth and innovation.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Context &amp; Challenge</h2>
+        <p>The majority of early-stage startups fail not from lack of ambition, but from lack of access to the right guidance at the right time. Start-Up Sherpa was conceived to address this gap — providing accessible resources, personalized diagnostics, and expert connections to help entrepreneurs refine and scale their ideas before they run out of runway.</p>
+      </div>
+
+      <div class="project-two-col">
+        <div class="detail-card">
+          <h3>Key Contributions</h3>
+          <ul>
+            <li><strong>Product Roadmap &amp; Strategy</strong> Developed a structured roadmap aligned with startup needs, market trends, and platform constraints.</li>
+            <li><strong>User Experience &amp; Engagement</strong> Conducted research to understand founder pain points and shaped features around real workflows.</li>
+            <li><strong>AI &amp; Automation Design</strong> Defined AI-driven diagnostics and automated business analysis reports to assist entrepreneurs at scale.</li>
+            <li><strong>UX/UI Design</strong> Created platform wireframes and interactive prototypes to optimize user experience and interface clarity.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Methodology &amp; Tools</h3>
+          <ul>
+            <li><strong>Approach</strong> Agile (Scrum) — iterative sprints and backlog refinement.</li>
+            <li><strong>UX/UI Design</strong> Figma</li>
+            <li><strong>AI Integration</strong> OpenAI API</li>
+            <li><strong>Project Management</strong> Miro</li>
+            <li><strong>Collaboration</strong> Microsoft Workspace</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lessons-card">
+        <h2>Lessons Learned</h2>
+        <ul>
+          <li>AI-driven tools can dramatically accelerate business diagnostics — but only if the underlying data models reflect real founder challenges, not theoretical ones.</li>
+          <li>Building a mentor and investor network early is a growth multiplier for platform engagement and trust.</li>
+          <li>Cross-functional collaboration accelerates innovation — technical feasibility and business strategy must be co-developed, not handed off sequentially.</li>
         </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="portfolio.html" class="btn-outline">← Back to All Projects</a>
+      </div>
 
     </div>
-</nav>
-    
-    <!-- project name -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">Start-Up Sherpa</h2>
-        <p class="center italic">An AI-powered platform democratizing entrepreneurial support.</p>
-    </section>
+  </main>
 
-    <!-- about this project -->
-    <section class="w-900 padding center">
-        <h3 class="main-title">Company</h3>
-        <section>
-            <p class="justify">In collaboration with <b>The Sustainable Grid</b> (TSG), 
-              a cutting-edge initiative providing smart energy and digital infrastructure 
-              solutions to drive sustainable business growth and innovation.</p>
-        </section>
-    </section>
+  <footer class="site-footer">
+    <p>© 2024 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <section class="w-900 padding">
-        <h3 class="main-title center">Context</h3>
-        <p class="justify">The project aimed to address the high failure rate of startups by providing 
-          accessible resources, personalized diagnostics, and expert connections to help entrepreneurs 
-          refine and scale their business ideas.</p>
-    </section>
-    <section class="wrapper">
-        <section class="column card">
-            <p class="bold center">Key Contributions</p>
-            <ul class="justify padding-list-10">
-                <!-- if you take the span-s out, the fonts won't be that colorful -->
-                <li><span class="colorful-letter"><b>Product Roadmap & Strategy:</b> Developed a structured roadmap aligned with startup needs and market trends.</span></li>
-                <li><span class="colorful-letter"><b>User Experience & Engagement:</b> Conducted research to understand user pain points and refine platform features.</span></li>
-                <li><span class="colorful-letter"><b>AI & Automation:</b> Defined AI-driven diagnostics and automated business analysis reports to assist entrepreneurs.</span></li>
-                <li><span class="colorful-letter"><b>UX/UI Design:</b> Created platform wireframes and interactive prototypes to enhance user experience and interface intuitiveness. </span></li>
-              
-            </ul>
-        </section>
-        <section class="column card">
-            <p class="bold center">Methodology & Tools</p>
-            <ul class="justify padding-list-10">
-                <li><span class="colorful-letter"><b>Approach:</b> Agile (Scrum) – Implemented iterative sprints and backlog refinement.</span></li>
-                <br>
-                <li><span class="colorful-letter"><b>Tools Used:</b></span></li>
-                <ul class="justify padding-list-10">
-                    <li><span class="colorful-letter"><b>Project Management:</b> Miro</span></li>
-                    <li><span class="colorful-letter"><b>Collaboration:</b> Microsoft Workspace</span></li>
-                    <li><span class="colorful-letter"><b>Data & AI: </b> OpenAI</span></li>
-                    <li><span class="colorful-letter"><b>UX/UI:</b> Figma</span></li>
-                    
-                </ul>
-            </ul>
-        </section>
-    </section>
-
-    <!-- what did i learn -->
-    <section class="w-900 padding center grey">
-            <h3 class="main-title">Lessons Learned</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item"><b>AI-driven tools can significantly enhance business analysis</b>, providing fast and actionable insights for entrepreneurs.</li>
-                <li class="no-padding-list-item"><b>Building a strong network of mentors and investors is key</b> to driving user engagement and long-term platform success.</li>
-                <li class="no-padding-list-item"><b>Cross-functional collaboration accelerates innovation</b>, ensuring technical feasibility aligns with business strategy.</li>
-            </ul>
-    </section>
-
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Back to portfolio</a></p>
-
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 </body>
-
 </html>

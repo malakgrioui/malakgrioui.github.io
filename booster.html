@@ -1,132 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Booster SME</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booster SME — Malak Grioui</title>
+  <meta name="description" content="Digital transformation and growth strategy for Videoportrait — branding, sales optimization, and structured project management.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Language">
+          <option value="/">EN</option>
+          <option value="/fr/">FR</option>
+        </select>
+        <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="assets/CV Malak GRIOUI ENG.pdf" download class="button-outline">Download my CV here</a>
-            </div>
-
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/">English</option>
-                    <option value="/fr/">Français</option>
-                </select>
-            </div>
+  <header class="project-hero">
+    <div class="project-hero-inner">
+      <a href="portfolio.html" class="project-back">← Back to all projects</a>
+      <div class="project-hero-meta">
+        <span class="company-badge-dark">Videoportrait</span>
+        <div class="tags tags-dark">
+          <span>Business Strategy</span>
+          <span>Digital Transformation</span>
+          <span>SME Growth</span>
+          <span>Branding</span>
         </div>
+      </div>
+      <h1>Booster SME</h1>
+      <p class="tagline">Digital transformation and business growth strategy for a local video production company — from brand identity to sales optimization and digital tooling.</p>
+    </div>
+  </header>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+  <main class="project-content">
+    <div class="project-content-inner">
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/index.html#contact-me">Contact me</a></li>
+      <div class="project-section">
+        <h2>Company</h2>
+        <p><strong>Videoportrait</strong> is a company specializing in professional video solutions. As a growing SME, it needed a structured approach to modernize its brand, expand its market reach, and build sustainable operational processes.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Context &amp; Challenge</h2>
+        <p>The project aimed to expand Videoportrait's market reach by refining sales strategies, strengthening brand identity, implementing a structured communication plan, and optimizing digital tools — all to drive long-term customer growth, engagement, and operational scalability from a lean starting point.</p>
+      </div>
+
+      <div class="project-two-col">
+        <div class="detail-card">
+          <h3>Key Contributions</h3>
+          <ul>
+            <li><strong>Business Development &amp; Sales Strategy</strong> Designed and implemented a sales growth plan to strengthen Videoportrait's local market presence.</li>
+            <li><strong>Brand Identity</strong> Developed a cohesive brand identity — aligning visual elements and messaging to improve market differentiation.</li>
+            <li><strong>Strategic Communication</strong> Created a structured communication strategy to improve customer outreach and engagement quality.</li>
+            <li><strong>Website &amp; UX Optimization</strong> Designed an intuitive, conversion-focused website to improve customer retention and digital first impressions.</li>
+            <li><strong>Project Management</strong> Oversaw cross-functional alignment between sales, marketing, and development efforts toward shared goals.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Methodology &amp; Tools</h3>
+          <ul>
+            <li><strong>Approach</strong> Agile (Scrum) — iterative cycles with continuous feedback integration.</li>
+            <li><strong>Project Management</strong> Miro, Trello</li>
+            <li><strong>Design &amp; Branding</strong> Figma, Canva</li>
+            <li><strong>Collaboration</strong> Google Workspace</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lessons-card">
+        <h2>Lessons Learned</h2>
+        <ul>
+          <li>Strategic sales planning is most effective when grounded in specific customer segments — broad strategies dilute effort and impact.</li>
+          <li>A compelling, consistent brand identity builds customer trust faster than any individual marketing campaign.</li>
+          <li>For SMEs, digital transformation succeeds when tools are selected for adoption ease, not feature count — simplicity is a competitive advantage.</li>
         </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="portfolio.html" class="btn-outline">← Back to All Projects</a>
+      </div>
 
     </div>
-</nav>
-    
-    <!-- project name -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">Booster SME</h2>
-        <p class="center italic">Business Development & Digital Strategy</p>
-    </section>
+  </main>
 
-    <!-- about this project -->
-    <section class="w-900 padding center">
-        <h3 class="main-title">Company</h3>
-        <section>
-            <p class="justify"><b>Videoportrait</b> – A company specializing in professional video solutions.</p>
-        </section>
-    </section>
+  <footer class="site-footer">
+    <p>© 2024 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <section class="w-900 padding">
-        <h3 class="main-title center">Context</h3>
-        <p class="justify">The project aimed to expand Videoportrait’s market reach by refining sales strategies, 
-          strengthening brand identity, implementing a structured communication plan, and optimizing digital tools 
-          to drive long-term growth, customer engagement, and operational scalability.</p>
-    </section>
-    <section class="wrapper">
-        <section class="column card">
-            <p class="bold center">Key Contributions</p>
-            <ul class="justify padding-list-10">
-                <!-- if you take the span-s out, the fonts won't be that colorful -->
-                <li><span class="colorful-letter"><b>Business Development & Sales Strategy:</b> Designed and implemented a sales growth plan to strengthen Videoportrait’s presence in the local  market.</span></li>
-                <li><span class="colorful-letter"><b>Brand Identity Creation:</b> Developed a fresh and cohesive brand identity, aligning visual and messaging elements to enhance market differentiation.</span></li>
-                <li><span class="colorful-letter"><b>Strategic Communication Planning:</b> Created and executed a structured communication strategy to improve customer outreach and engagement.</span></li>
-                <li><span class="colorful-letter"><b>Website Development & UX Optimization:</b> Designed an intuitive, conversion-driven website improving customer experience and retention.</span></li>
-                <li><span class="colorful-letter"><b>Project Management:</b> Oversaw cross-functional collaboration to align sales, marketing, and development efforts with company goals.</span></li>
-
-            </ul>
-        </section>
-        <section class="column card">
-            <p class="bold center">Methodology & Tools</p>
-            <ul class="justify padding-list-10">
-                <li><span class="colorful-letter"><b>Approach:</b> Agile (Scrum) – Iterative development cycles and continuous user feedback integration.</span></li>
-                <br>
-                <li><span class="colorful-letter"><b>Tools Used:</b></span></li>
-                <ul class="justify padding-list-10">
-                    <li><span class="colorful-letter"><b>Project Management:</b> Miro, Trello</span></li>
-                    <li><span class="colorful-letter"><b>Design & Branding:</b> Figma, Canva</span></li>
-                    <li><span class="colorful-letter"><b>Collaboration & Documentation:</b> Google Workspace</span></li>
-                    
-                </ul>
-            </ul>
-        </section>
-    </section>
-
-    <!-- what did i learn -->
-    <section class="w-900 padding center grey">
-            <h3 class="main-title">Lessons Learned</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item"><b>Strategic sales planning drives business expansion</b>, ensuring sustainable market penetration.</li>
-                <li class="no-padding-list-item"><b>A compelling brand identity enhances customer trust</b>, improving competitive positioning.</li>
-                <li class="no-padding-list-item"><b>Effective communication plans improve engagement</b>, enabling stronger connections with target audiences.</li>
-            </ul>
-    </section>
-
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Back to portfolio</a></p>
-
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 </body>
-
 </html>
