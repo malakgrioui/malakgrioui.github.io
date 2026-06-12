@@ -8,20 +8,6 @@
       <stop offset="0%" style="stop-color:#134e4a"/>
       <stop offset="100%" style="stop-color:#0f3d3a"/>
     </linearGradient>
-    <linearGradient id="stepGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d9488"/>
-      <stop offset="100%" style="stop-color:#0a7a6f"/>
-    </linearGradient>
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
-    </filter>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
   <!-- Background -->
@@ -45,181 +31,144 @@
   </g>
 
   <!-- ===== TOP LABEL ===== -->
-  <text x="600" y="52" text-anchor="middle" fill="#2dd4bf" font-family="monospace" font-size="13" opacity="0.45" letter-spacing="4">GMT RETOOLING · DELIVERY BACKBONE · GLOBAL MANGROVE TRUST</text>
+  <text x="600" y="46" text-anchor="middle" fill="#2dd4bf" font-family="monospace" font-size="12" opacity="0.45" letter-spacing="4">GMT RETOOLING · DELIVERY BACKBONE · GLOBAL MANGROVE TRUST</text>
 
-  <!-- ===== AIRTABLE-STYLE CENTRAL TABLE ===== -->
-  <g filter="url(#shadow)" transform="translate(280, 105)">
-    <!-- Table background -->
-    <rect x="0" y="0" width="640" height="310" rx="10" fill="#0a1e1d" stroke="#1f5e58" stroke-width="1.5"/>
+  <!-- ===== TABLE ===== -->
+  <!-- Table card -->
+  <rect x="60" y="66" width="1080" height="510" rx="12" fill="#0a1e1d" stroke="#1f5e58" stroke-width="1.5"/>
 
-    <!-- Table header row -->
-    <rect x="0" y="0" width="640" height="38" rx="10" fill="url(#tableHeader)"/>
-    <rect x="0" y="20" width="640" height="18" fill="url(#tableHeader)"/>
+  <!-- Header row -->
+  <rect x="60" y="66" width="1080" height="48" rx="12" fill="url(#tableHeader)"/>
+  <rect x="60" y="90" width="1080" height="24" fill="url(#tableHeader)"/>
 
-    <!-- Column headers -->
-    <g font-family="monospace" font-size="10" font-weight="700" fill="#5eead4">
-      <text x="18" y="24">Work Unit</text>
-      <text x="145" y="24">Partner</text>
-      <text x="260" y="24">Status</text>
-      <text x="370" y="24">QC</text>
-      <text x="450" y="24">Evidence</text>
-      <text x="565" y="24">Quarter</text>
-    </g>
-
-    <!-- Col dividers -->
-    <g stroke="#1f5e58" stroke-width="0.8" opacity="0.6">
-      <line x1="138" y1="38" x2="138" y2="310"/>
-      <line x1="253" y1="38" x2="253" y2="310"/>
-      <line x1="363" y1="38" x2="363" y2="310"/>
-      <line x1="443" y1="38" x2="443" y2="310"/>
-      <line x1="558" y1="38" x2="558" y2="310"/>
-    </g>
-
-    <!-- Row 1 -->
-    <rect x="1" y="38" width="638" height="34" fill="#0d1f1e" opacity="0.5"/>
-    <g font-family="monospace" font-size="9" fill="#94a3b8">
-      <text x="18" y="59">Mangrove Planting</text>
-      <text x="145" y="59">Yagasu</text>
-    </g>
-    <rect x="263" y="47" width="68" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
-    <text x="297" y="59" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">Delivered</text>
-    <rect x="373" y="47" width="50" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
-    <text x="398" y="59" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">✓ Pass</text>
-    <text x="450" y="59" font-family="monospace" font-size="9" fill="#0d9488">📎 3 files</text>
-    <text x="565" y="59" font-family="monospace" font-size="9" fill="#64748b">Q1 2025</text>
-
-    <!-- Row 2 -->
-    <rect x="1" y="72" width="638" height="34" fill="#0a1a19" opacity="0.3"/>
-    <g font-family="monospace" font-size="9" fill="#94a3b8">
-      <text x="18" y="93">Community Training</text>
-      <text x="145" y="93">KOICA</text>
-    </g>
-    <rect x="263" y="81" width="68" height="16" rx="8" fill="#1c3158" stroke="#3b82f6" stroke-width="0.5"/>
-    <text x="297" y="93" text-anchor="middle" font-family="monospace" font-size="9" fill="#60a5fa">In Review</text>
-    <rect x="373" y="81" width="50" height="16" rx="8" fill="#422006" stroke="#d97706" stroke-width="0.5"/>
-    <text x="398" y="93" text-anchor="middle" font-family="monospace" font-size="9" fill="#fbbf24">Pending</text>
-    <text x="450" y="93" font-family="monospace" font-size="9" fill="#0d9488">📎 1 file</text>
-    <text x="565" y="93" font-family="monospace" font-size="9" fill="#64748b">Q1 2025</text>
-
-    <!-- Row 3 -->
-    <rect x="1" y="106" width="638" height="34" fill="#0d1f1e" opacity="0.5"/>
-    <g font-family="monospace" font-size="9" fill="#94a3b8">
-      <text x="18" y="127">Nursery Setup</text>
-      <text x="145" y="127">Yagasu</text>
-    </g>
-    <rect x="263" y="115" width="68" height="16" rx="8" fill="#4c0519" stroke="#f43f5e" stroke-width="0.5"/>
-    <text x="297" y="127" text-anchor="middle" font-family="monospace" font-size="9" fill="#fb7185">Backlog</text>
-    <rect x="373" y="115" width="50" height="16" rx="8" fill="#1e1a2e" stroke="#6366f1" stroke-width="0.5"/>
-    <text x="398" y="127" text-anchor="middle" font-family="monospace" font-size="9" fill="#a5b4fc">—</text>
-    <text x="450" y="127" font-family="monospace" font-size="9" fill="#334155">No file</text>
-    <text x="565" y="127" font-family="monospace" font-size="9" fill="#64748b">→ Q2</text>
-
-    <!-- Row 4 -->
-    <rect x="1" y="140" width="638" height="34" fill="#0a1a19" opacity="0.3"/>
-    <g font-family="monospace" font-size="9" fill="#94a3b8">
-      <text x="18" y="161">Impact Measurement</text>
-      <text x="145" y="161">GMT Core</text>
-    </g>
-    <rect x="263" y="149" width="68" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
-    <text x="297" y="161" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">Delivered</text>
-    <rect x="373" y="149" width="50" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
-    <text x="398" y="161" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">✓ Pass</text>
-    <text x="450" y="161" font-family="monospace" font-size="9" fill="#0d9488">📎 5 files</text>
-    <text x="565" y="161" font-family="monospace" font-size="9" fill="#64748b">Q1 2025</text>
-
-    <!-- Row 5 -->
-    <rect x="1" y="174" width="638" height="34" fill="#0d1f1e" opacity="0.5"/>
-    <g font-family="monospace" font-size="9" fill="#94a3b8">
-      <text x="18" y="195">Carbon MRV Report</text>
-      <text x="145" y="195">Verra</text>
-    </g>
-    <rect x="263" y="183" width="68" height="16" rx="8" fill="#1c3158" stroke="#3b82f6" stroke-width="0.5"/>
-    <text x="297" y="195" text-anchor="middle" font-family="monospace" font-size="9" fill="#60a5fa">In Review</text>
-    <rect x="373" y="183" width="50" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
-    <text x="398" y="195" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">✓ Pass</text>
-    <text x="450" y="195" font-family="monospace" font-size="9" fill="#0d9488">📎 7 files</text>
-    <text x="565" y="195" font-family="monospace" font-size="9" fill="#64748b">Q1 2025</text>
-
-    <!-- Row fade-out -->
-    <rect x="1" y="208" width="638" height="100" rx="0" fill="url(#bg)" opacity="0.85"/>
-    <text x="320" y="275" text-anchor="middle" fill="#1f5e58" font-family="monospace" font-size="11" opacity="0.6">··· more work units ···</text>
+  <!-- Column headers -->
+  <g font-family="monospace" font-size="13" font-weight="700" fill="#5eead4">
+    <text x="90"  y="97">Work Unit</text>
+    <text x="290" y="97">Partner</text>
+    <text x="470" y="97">Status</text>
+    <text x="640" y="97">QC</text>
+    <text x="790" y="97">Evidence</text>
+    <text x="1010" y="97">Quarter</text>
   </g>
 
-  <!-- ===== QUARTERLY CYCLE FLOW (bottom) ===== -->
-  <!-- Step boxes -->
-  <!-- 1. Work Orders -->
-  <g transform="translate(68, 468)">
-    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#0d9488" stroke-width="1.5"/>
-    <rect x="0" y="0" width="150" height="22" rx="8" fill="url(#stepGrad)" opacity="0.9"/>
-    <rect x="0" y="12" width="150" height="10" fill="url(#stepGrad)" opacity="0.9"/>
-    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">WORK ORDERS</text>
-    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Define deliverables</text>
-    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">per partner + budget</text>
-  </g>
-  <!-- Arrow 1→2 -->
-  <line x1="218" y1="500" x2="248" y2="500" stroke="#0d9488" stroke-width="1.5" opacity="0.7"/>
-  <polygon points="248,495 258,500 248,505" fill="#0d9488" opacity="0.7"/>
-
-  <!-- 2. Partner Reports -->
-  <g transform="translate(260, 468)">
-    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#0d9488" stroke-width="1.5"/>
-    <rect x="0" y="0" width="150" height="22" rx="8" fill="url(#stepGrad)" opacity="0.8"/>
-    <rect x="0" y="12" width="150" height="10" fill="url(#stepGrad)" opacity="0.8"/>
-    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">PARTNER REPORTS</text>
-    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Field submissions</text>
-    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">via KoboToolbox</text>
-  </g>
-  <!-- Arrow 2→3 -->
-  <line x1="410" y1="500" x2="440" y2="500" stroke="#0d9488" stroke-width="1.5" opacity="0.7"/>
-  <polygon points="440,495 450,500 440,505" fill="#0d9488" opacity="0.7"/>
-
-  <!-- 3. QC Review -->
-  <g transform="translate(452, 468)">
-    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#14b8a6" stroke-width="1.5"/>
-    <rect x="0" y="0" width="150" height="22" rx="8" fill="#0f766e" opacity="0.9"/>
-    <rect x="0" y="12" width="150" height="10" fill="#0f766e" opacity="0.9"/>
-    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">QC REVIEW</text>
-    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Pass / Fail / Backlog</text>
-    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">evidence check</text>
-  </g>
-  <!-- Arrow 3→4 -->
-  <line x1="602" y1="500" x2="632" y2="500" stroke="#14b8a6" stroke-width="1.5" opacity="0.7"/>
-  <polygon points="632,495 642,500 632,505" fill="#14b8a6" opacity="0.7"/>
-
-  <!-- 4. Impact Data -->
-  <g transform="translate(644, 468)">
-    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#14b8a6" stroke-width="1.5"/>
-    <rect x="0" y="0" width="150" height="22" rx="8" fill="#0f766e" opacity="0.85"/>
-    <rect x="0" y="12" width="150" height="10" fill="#0f766e" opacity="0.85"/>
-    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">IMPACT DATA</text>
-    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Carbon MRV update</text>
-    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">investor reporting</text>
-  </g>
-  <!-- Arrow 4→5 -->
-  <line x1="794" y1="500" x2="824" y2="500" stroke="#14b8a6" stroke-width="1.5" opacity="0.7"/>
-  <polygon points="824,495 834,500 824,505" fill="#14b8a6" opacity="0.7"/>
-
-  <!-- 5. Next Quarter -->
-  <g transform="translate(836, 468)">
-    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="5,3"/>
-    <rect x="0" y="0" width="150" height="22" rx="8" fill="#134e4a" opacity="0.7"/>
-    <rect x="0" y="12" width="150" height="10" fill="#134e4a" opacity="0.7"/>
-    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">NEXT QUARTER</text>
-    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Backlog re-planning</text>
-    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">+ new work orders</text>
+  <!-- Column dividers -->
+  <g stroke="#1f5e58" stroke-width="0.8" opacity="0.6">
+    <line x1="270" y1="114" x2="270" y2="576"/>
+    <line x1="450" y1="114" x2="450" y2="576"/>
+    <line x1="620" y1="114" x2="620" y2="576"/>
+    <line x1="770" y1="114" x2="770" y2="576"/>
+    <line x1="980" y1="114" x2="980" y2="576"/>
   </g>
 
-  <!-- Backlog feedback arc (from step 5 back to step 1) -->
-  <path d="M 986 532 Q 600 590 68 532" fill="none" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
-  <polygon points="68,527 60,532 68,537" fill="#f43f5e" opacity="0.5"/>
-  <text x="527" y="590" text-anchor="middle" fill="#fb7185" font-family="monospace" font-size="9" opacity="0.6">backlog loop</text>
+  <!-- ===== ROW 1 ===== -->
+  <rect x="61" y="114" width="1078" height="60" fill="#0d1f1e" opacity="0.6"/>
+  <text x="90"  y="150" font-family="monospace" font-size="12" fill="#b2f5ea">Work Unit 1</text>
+  <text x="290" y="150" font-family="monospace" font-size="12" fill="#94a3b8">Partner 1</text>
+  <!-- Status: Delivered -->
+  <rect x="465" y="134" width="100" height="24" rx="12" fill="#065f46" stroke="#059669" stroke-width="0.8"/>
+  <text x="515" y="151" text-anchor="middle" font-family="monospace" font-size="11" fill="#34d399">Delivered</text>
+  <!-- QC: Pass -->
+  <rect x="638" y="134" width="80" height="24" rx="12" fill="#065f46" stroke="#059669" stroke-width="0.8"/>
+  <text x="678" y="151" text-anchor="middle" font-family="monospace" font-size="11" fill="#34d399">✓ Pass</text>
+  <text x="790" y="150" font-family="monospace" font-size="12" fill="#0d9488">📎 3 files</text>
+  <text x="1010" y="150" font-family="monospace" font-size="12" fill="#64748b">Q1 2025</text>
 
-  <!-- Airtable label bottom right -->
-  <g transform="translate(1060, 440)">
-    <rect x="0" y="0" width="100" height="22" rx="4" fill="#0a1e1d" stroke="#1f5e58" stroke-width="1"/>
-    <text x="50" y="15" text-anchor="middle" fill="#0d9488" font-family="monospace" font-size="9" font-weight="700">Airtable DB</text>
-  </g>
+  <!-- Row divider -->
+  <line x1="61" y1="174" x2="1139" y2="174" stroke="#1f5e58" stroke-width="0.5" opacity="0.5"/>
 
-  <!-- Bottom label -->
-  <text x="600" y="620" text-anchor="middle" fill="#0d9488" font-family="monospace" font-size="10" opacity="0.45" letter-spacing="2">WORK UNITS · QC LOOP · EVIDENCE · IMPACT REPORTING · QUARTERLY CYCLE</text>
+  <!-- ===== ROW 2 ===== -->
+  <rect x="61" y="174" width="1078" height="60" fill="#0a1a19" opacity="0.3"/>
+  <text x="90"  y="210" font-family="monospace" font-size="12" fill="#b2f5ea">Work Unit 2</text>
+  <text x="290" y="210" font-family="monospace" font-size="12" fill="#94a3b8">Partner 2</text>
+  <!-- Status: In Review -->
+  <rect x="465" y="194" width="100" height="24" rx="12" fill="#1c3158" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="515" y="211" text-anchor="middle" font-family="monospace" font-size="11" fill="#60a5fa">In Review</text>
+  <!-- QC: Pending -->
+  <rect x="638" y="194" width="80" height="24" rx="12" fill="#422006" stroke="#d97706" stroke-width="0.8"/>
+  <text x="678" y="211" text-anchor="middle" font-family="monospace" font-size="11" fill="#fbbf24">Pending</text>
+  <text x="790" y="210" font-family="monospace" font-size="12" fill="#0d9488">📎 1 file</text>
+  <text x="1010" y="210" font-family="monospace" font-size="12" fill="#64748b">Q1 2025</text>
+
+  <line x1="61" y1="234" x2="1139" y2="234" stroke="#1f5e58" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- ===== ROW 3 ===== -->
+  <rect x="61" y="234" width="1078" height="60" fill="#0d1f1e" opacity="0.6"/>
+  <text x="90"  y="270" font-family="monospace" font-size="12" fill="#b2f5ea">Work Unit 3</text>
+  <text x="290" y="270" font-family="monospace" font-size="12" fill="#94a3b8">Partner 1</text>
+  <!-- Status: Backlog -->
+  <rect x="465" y="254" width="100" height="24" rx="12" fill="#4c0519" stroke="#f43f5e" stroke-width="0.8"/>
+  <text x="515" y="271" text-anchor="middle" font-family="monospace" font-size="11" fill="#fb7185">Backlog</text>
+  <!-- QC: — -->
+  <rect x="638" y="254" width="80" height="24" rx="12" fill="#1e1a2e" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="678" y="271" text-anchor="middle" font-family="monospace" font-size="11" fill="#a5b4fc">—</text>
+  <text x="790" y="270" font-family="monospace" font-size="12" fill="#334155">No file</text>
+  <text x="1010" y="270" font-family="monospace" font-size="12" fill="#64748b">→ Q2</text>
+
+  <line x1="61" y1="294" x2="1139" y2="294" stroke="#1f5e58" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- ===== ROW 4 ===== -->
+  <rect x="61" y="294" width="1078" height="60" fill="#0a1a19" opacity="0.3"/>
+  <text x="90"  y="330" font-family="monospace" font-size="12" fill="#b2f5ea">Work Unit 4</text>
+  <text x="290" y="330" font-family="monospace" font-size="12" fill="#94a3b8">Partner 3</text>
+  <!-- Status: Delivered -->
+  <rect x="465" y="314" width="100" height="24" rx="12" fill="#065f46" stroke="#059669" stroke-width="0.8"/>
+  <text x="515" y="331" text-anchor="middle" font-family="monospace" font-size="11" fill="#34d399">Delivered</text>
+  <!-- QC: Pass -->
+  <rect x="638" y="314" width="80" height="24" rx="12" fill="#065f46" stroke="#059669" stroke-width="0.8"/>
+  <text x="678" y="331" text-anchor="middle" font-family="monospace" font-size="11" fill="#34d399">✓ Pass</text>
+  <text x="790" y="330" font-family="monospace" font-size="12" fill="#0d9488">📎 5 files</text>
+  <text x="1010" y="330" font-family="monospace" font-size="12" fill="#64748b">Q1 2025</text>
+
+  <line x1="61" y1="354" x2="1139" y2="354" stroke="#1f5e58" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- ===== ROW 5 ===== -->
+  <rect x="61" y="354" width="1078" height="60" fill="#0d1f1e" opacity="0.6"/>
+  <text x="90"  y="390" font-family="monospace" font-size="12" fill="#b2f5ea">Work Unit 5</text>
+  <text x="290" y="390" font-family="monospace" font-size="12" fill="#94a3b8">Partner 2</text>
+  <!-- Status: In Review -->
+  <rect x="465" y="374" width="100" height="24" rx="12" fill="#1c3158" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="515" y="391" text-anchor="middle" font-family="monospace" font-size="11" fill="#60a5fa">In Review</text>
+  <!-- QC: Pass -->
+  <rect x="638" y="374" width="80" height="24" rx="12" fill="#065f46" stroke="#059669" stroke-width="0.8"/>
+  <text x="678" y="391" text-anchor="middle" font-family="monospace" font-size="11" fill="#34d399">✓ Pass</text>
+  <text x="790" y="390" font-family="monospace" font-size="12" fill="#0d9488">📎 7 files</text>
+  <text x="1010" y="390" font-family="monospace" font-size="12" fill="#64748b">Q1 2025</text>
+
+  <line x1="61" y1="414" x2="1139" y2="414" stroke="#1f5e58" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- ===== ROW 6 ===== -->
+  <rect x="61" y="414" width="1078" height="60" fill="#0a1a19" opacity="0.3"/>
+  <text x="90"  y="450" font-family="monospace" font-size="12" fill="#b2f5ea">Work Unit 6</text>
+  <text x="290" y="450" font-family="monospace" font-size="12" fill="#94a3b8">Partner 4</text>
+  <!-- Status: Delivered -->
+  <rect x="465" y="434" width="100" height="24" rx="12" fill="#065f46" stroke="#059669" stroke-width="0.8"/>
+  <text x="515" y="451" text-anchor="middle" font-family="monospace" font-size="11" fill="#34d399">Delivered</text>
+  <!-- QC: Pass -->
+  <rect x="638" y="434" width="80" height="24" rx="12" fill="#065f46" stroke="#059669" stroke-width="0.8"/>
+  <text x="678" y="451" text-anchor="middle" font-family="monospace" font-size="11" fill="#34d399">✓ Pass</text>
+  <text x="790" y="450" font-family="monospace" font-size="12" fill="#0d9488">📎 2 files</text>
+  <text x="1010" y="450" font-family="monospace" font-size="12" fill="#64748b">Q1 2025</text>
+
+  <line x1="61" y1="474" x2="1139" y2="474" stroke="#1f5e58" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- ===== ROW 7 (fade) ===== -->
+  <rect x="61" y="474" width="1078" height="60" fill="#0d1f1e" opacity="0.6"/>
+  <text x="90"  y="510" font-family="monospace" font-size="12" fill="#b2f5ea" opacity="0.5">Work Unit 7</text>
+  <text x="290" y="510" font-family="monospace" font-size="12" fill="#94a3b8" opacity="0.5">Partner 3</text>
+  <rect x="465" y="494" width="100" height="24" rx="12" fill="#4c0519" stroke="#f43f5e" stroke-width="0.8" opacity="0.5"/>
+  <text x="515" y="511" text-anchor="middle" font-family="monospace" font-size="11" fill="#fb7185" opacity="0.5">Backlog</text>
+  <rect x="638" y="494" width="80" height="24" rx="12" fill="#1e1a2e" stroke="#6366f1" stroke-width="0.8" opacity="0.5"/>
+  <text x="678" y="511" text-anchor="middle" font-family="monospace" font-size="11" fill="#a5b4fc" opacity="0.5">—</text>
+  <text x="790" y="510" font-family="monospace" font-size="12" fill="#334155" opacity="0.5">No file</text>
+  <text x="1010" y="510" font-family="monospace" font-size="12" fill="#64748b" opacity="0.5">→ Q2</text>
+
+  <!-- Fade-out gradient at bottom of table -->
+  <defs>
+    <linearGradient id="fadeOut" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1e1d;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#0a1e1d;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect x="61" y="510" width="1078" height="66" rx="0" fill="url(#fadeOut)"/>
+  <text x="600" y="558" text-anchor="middle" fill="#1f5e58" font-family="monospace" font-size="12" opacity="0.7">··· more work units ···</text>
 </svg>
