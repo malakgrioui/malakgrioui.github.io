@@ -1,172 +1,204 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Balises Méta SEO pour le référencement -->
-    <title>Malak GRIOUI | Cheffe de Produit & Transformation Digitale</title>
-    <meta name="description" content="Portfolio de Malak Grioui - Cheffe de produit passionnée par l'innovation, la transformation digitale et les solutions durables. Découvrez mes projets et réalisations.">
-    <meta name="keywords" content="Malak Grioui, Cheffe de Produit, Transformation Digitale, Innovation, Développement Durable, Product Management, Agile, Tech">
-    <meta name="author" content="Malak Grioui">
-
-    <!-- Balises SEO pour le multilingue -->
-    <link rel="alternate" href="https://malakgrioui.github.io/" hreflang="en">
-    <link rel="alternate" href="https://malakgrioui.github.io/fr/" hreflang="fr">
-    <link rel="canonical" href="https://malakgrioui.github.io/fr/">
-
-    <!-- Balises Open Graph (SEO + Réseaux Sociaux) -->
-    <meta property="og:title" content="Malak GRIOUI | Cheffe de Produit & Transformation Digitale">
-    <meta property="og:description" content="Découvrez mon portfolio : transformation digitale, innovation, et gestion de produit.">
-    <meta property="og:image" content="https://malakgrioui.github.io/assets/profile-pic.png">
-    <meta property="og:url" content="https://malakgrioui.github.io/fr/">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card pour un bon affichage sur Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Malak GRIOUI | Cheffe de Produit & Transformation Digitale">
-    <meta name="twitter:description" content="Découvrez mon portfolio : transformation digitale, innovation, et gestion de produit.">
-    <meta name="twitter:image" content="https://malakgrioui.github.io/assets/profile-pic.png">
-
-    <!-- Liens CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
-    <!-- Police pour la citation -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- Police pour le corps du texte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    
-    <!-- Police pour les titres -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malak Grioui | Product Manager & Innovation Digitale</title>
+  <meta name="description" content="Product Manager passionnée par la création de produits digitaux à impact, à l'intersection de la technologie, de l'IA et du développement durable.">
+  <meta name="keywords" content="Product Manager, Transformation Digitale, IA, Agile, Développement Durable, UX/UI">
+  <meta name="author" content="Malak Grioui">
+  <meta property="og:title" content="Malak Grioui | Product Manager">
+  <meta property="og:description" content="Construire des produits qui ont du sens — à l'intersection de la technologie, de l'impact et du développement durable.">
+  <meta property="og:image" content="https://malakgrioui.github.io/assets/profile-pic.png">
+  <meta property="og:url" content="https://malakgrioui.github.io/fr/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://malakgrioui.github.io/fr/">
+  <link rel="alternate" href="https://malakgrioui.github.io" hreflang="en">
+  <link rel="alternate" href="https://malakgrioui.github.io/fr/" hreflang="fr">
+  <link rel="stylesheet" href="../style.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Barre de navigation -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Langue">
+          <option value="../index.html">EN</option>
+          <option value="index.html" selected>FR</option>
+        </select>
+        <a href="../assets/CV Malak GRIOUI.pdf" download class="btn-outline-sm">CV</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="../assets/CV Malak GRIOUI.pdf" download class="button-outline">Téléchargez mon CV ici</a>
-            </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-label">Product Manager &amp; Innovation Digitale</span>
+        <h1>Malak<br><span class="text-accent">Grioui</span></h1>
+        <p class="hero-tagline">Construire des produits qui ont du sens — à l'intersection de la technologie, de l'IA et du développement durable.</p>
+        <div class="hero-actions">
+          <a href="portfolio.html" class="btn-primary">Voir mes projets</a>
+          <a href="../assets/CV Malak GRIOUI.pdf" download class="btn-outline-light">Télécharger mon CV</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo-wrap">
+          <img src="../assets/profile-pic.png" alt="Malak Grioui" class="hero-photo">
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="../assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="../assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/fr/">Français</option>
-                    <option value="/">English</option>
-                </select>
+  <!-- Bandeau expertises -->
+  <div class="expertise-strip">
+    <div class="expertise-strip-inner">
+      <span>Gestion de Produit</span>
+      <span class="sep">·</span>
+      <span>Agile &amp; Scrum</span>
+      <span class="sep">·</span>
+      <span>IA &amp; Automatisation</span>
+      <span class="sep">·</span>
+      <span>UX / UI Design</span>
+      <span class="sep">·</span>
+      <span>Transformation Digitale</span>
+      <span class="sep">·</span>
+      <span>Tech Durable</span>
+    </div>
+  </div>
+
+  <!-- À propos -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label">À propos</span>
+          <h2>L'ingénierie rencontre le business — avec l'impact comme boussole</h2>
+          <p>Diplômée du double cursus <strong>ITEEM – Centrale Lille</strong> et <strong>Skema Business School</strong>, je combine la rigueur de l'ingénieur avec une vision stratégique business. Cette double culture façonne ma manière d'aborder le produit : pilotée par la donnée, centrée utilisateur, et toujours connectée à des résultats concrets.</p>
+          <p>De la création d'un agent IA de reporting au <strong>hackathon Microsoft Hack Together</strong> à la conception d'infrastructures de données pour des ONG environnementales, en passant par des plateformes de finance durable, j'ai mené des équipes pluridisciplinaires dans la tech, le climat et la santé. Je m'épanouis là où la complexité technique rencontre la clarté stratégique.</p>
+          <div class="skill-tags">
+            <span>Jira</span>
+            <span>Figma</span>
+            <span>Miro</span>
+            <span>Python</span>
+            <span>Azure OpenAI</span>
+            <span>Google Cloud</span>
+            <span>Agile / Scrum</span>
+            <span>GitHub</span>
+            <span>Kobotoolbox</span>
+          </div>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-number">9+</span>
+            <span class="highlight-label">Projets livrés</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">4+</span>
+            <span class="highlight-label">Secteurs</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">Agile</span>
+            <span class="highlight-label">PM Certifiée</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">FR / EN</span>
+            <span class="highlight-label">Bilingue</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projets phares -->
+  <section class="featured-projects section-padding" id="work">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Projets phares</span>
+        <h2>Sélection de projets</h2>
+      </div>
+      <div class="featured-grid">
+
+        <div class="featured-card">
+          <div class="featured-card-img">
+            <img src="../assets/forestscan.png" alt="AI Analyst Agent — Hackathon Microsoft">
+          </div>
+          <div class="featured-card-content">
+            <div class="featured-card-meta">
+              <span class="company-badge">Microsoft Hack Together 2025</span>
+              <div class="tags">
+                <span>Agent IA</span>
+                <span>Python</span>
+                <span>Azure OpenAI</span>
+              </div>
             </div>
+            <h3>AI Analyst Agent</h3>
+            <p>Assistant de reporting basé sur l'IA qui analyse automatiquement des jeux de données et génère des rapports clairs avec KPIs, tendances, graphiques et recommandations en langage naturel. Développé pour le hackathon AI Agents de Microsoft.</p>
+            <a href="hackathon.html" class="card-link">Voir l'étude de cas →</a>
+          </div>
         </div>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+        <div class="featured-card">
+          <div class="featured-card-img">
+            <img src="../assets/forestscan.png" alt="GMT Data Backbone">
+          </div>
+          <div class="featured-card-content">
+            <div class="featured-card-meta">
+              <span class="company-badge">Global Mangrove Trust</span>
+              <div class="tags">
+                <span>Architecture Système</span>
+                <span>Données</span>
+                <span>ClimTech</span>
+              </div>
+            </div>
+            <h3>GMT Data Backbone</h3>
+            <p>Conception de l'infrastructure de données centrale du Global Mangrove Trust — une architecture évolutive assurant un flux de données cohérent entre les opérations terrain, les systèmes de suivi et les processus de reporting.</p>
+            <a href="gmt-backbone.html" class="card-link">Voir l'étude de cas →</a>
+          </div>
+        </div>
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/fr/index.html#contact-me">Me contacter</a></li>
-        </ul>
-
+      </div>
+      <div class="see-all-wrap">
+        <a href="portfolio.html" class="btn-outline">Voir tous les projets</a>
+      </div>
     </div>
-</nav>
+  </section>
 
-    <!-- Introduction -->
-    <header class="grid-system-2 w-900 padding">
-        <section class="align-center">
-            <h1 class="medium-spacing">Bonjour, je suis</h1>
-            <h1 class="large">Malak GRIOUI</h1>
-            <p class="justify">Future <b>Cheffe de Produit</b> passionnée par l’exploitation de la technologie et 
-                de l’innovation pour impulser la <b>transformation digitale</b> et des <b>solutions durables</b>.</p>
-        </section>
-        <section class="center align-center">
-            <img class="header-img max-width max-height" src="../assets/profile-pic.png" alt="photo de profil">
-        </section>
-    </header>
+  <!-- Contact -->
+  <section class="contact section-padding" id="contact">
+    <div class="container contact-inner">
+      <span class="section-label light">Contact</span>
+      <h2>Construisons quelque chose<br>d'utile, ensemble.</h2>
+      <p>Stratégie produit, collaboration ou simple bonjour — n'hésitez pas à me contacter.</p>
+      <div class="contact-links">
+        <a href="mailto:malak.grioui@hotmail.fr" class="btn-primary">Envoyer un email</a>
+        <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener" class="btn-outline-light">Me retrouver sur LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Citation -->
-    <article class="steel-blue">
-        <p class="quote uppercase"></p>
-        <p></p>
-    </article>
+  <footer class="site-footer">
+    <p>© 2025 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <!-- À propos de moi -->
-    <section class="wrapper">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="../assets/about-me.png" alt="logo à propos de moi">
-        </section>
-        <section class="justify align-center">
-            <p class="bold">À propos de moi</p>
-            <p>Passionnée par <b>l’innovation</b>, la <b>transformation digitale</b> et la <b>durabilité</b>, j’évolue à 
-                l’intersection de la technologie et des solutions à impact. Diplômée en <b>ingénierie</b> 
-                de <b>ITEEM - Centrale Lille et SKEMA Business School</b>, j’ai acquis une expérience en <b>gestion de projet 
-                tech</b>, <b>développement de produits</b>, <b>management agile</b> et <b>stratégie business</b>.</p>
-            
-            <p>De l’optimisation d’<b>applications healthtech</b> à la conception de <b>solutions bancaires durables</b>, 
-                je cherche à façonner l’avenir en exploitant l’<b>innovation</b> et la réflexion stratégique 
-                pour résoudre des défis concrets.</p>
-            
-            <p>Entrons en contact ! 🚀</p>
-        </section>
-    </section>
-
-    <!-- Projets -->
-    <section>
-        <h3 class="main-title center padding">Projets</h3>
-    </section>
-    <section class="wrapper">
-        
-        <section class="column card justify flex">
-            <img class="box" src="../assets/forestscan.png" alt="Forest Scan">
-            <p class="padding bold center">Forest Scan</p>
-            <p>Pilotage du cadre Scrum chez <b>Global Mangrove Trust</b>, définition de la direction stratégique, 
-                gestion des partenariats et suivi des cycles de développement agile.</p>
-            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
-        </section>
-
-        <section class="column card justify flex">
-            <img class="box" src="../assets/earthwallet.png" alt="EarthWallet">
-            <p class="padding bold center">EarthWallet</p>
-            <p>Développement d'une plateforme de finance durable B2B2C chez <b>Handprint.Tech</b>, gestion 
-                des équipes transversales et intégration de cartes de paiement éco-responsables.</p>
-            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
-        </section>
-
-    </section>
-
-    <p class="padding-top bottom center"><a href="portfolio.html" class="button-outline">Voir plus de projets</a></p>
-
-    <!-- Contact -->
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="../assets/Contact-me-img.png" alt="illustration contact">
-        </section>
-        <section class="margin-auto align-center">
-            <h1 class="medium-spacing center">Restons en contact !</h1>
-            <h4 class="subtitle center">N’hésitez pas à me contacter via LinkedIn ou Email !</h4>
-        </section>
-    </section>
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 
 </body>
-
 </html>

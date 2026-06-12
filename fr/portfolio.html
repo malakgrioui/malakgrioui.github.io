@@ -1,152 +1,220 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Cette page utilise le style principal et le style de la page "À propos de moi" -->
-    <link rel="stylesheet" type="text/css" href="style-about-me.css">
-    <link rel="stylesheet" type="text/css" href="style-portfolio.css">
-    <!-- Police pour la citation -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- Police pour le corps du texte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- Police pour les titres -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets — Malak Grioui</title>
+  <meta name="description" content="Projets de gestion de produit et d'innovation digitale par Malak Grioui — agents IA, ClimTech, FinTech, HealthTech et plus.">
+  <meta name="author" content="Malak Grioui">
+  <link rel="canonical" href="https://malakgrioui.github.io/fr/portfolio.html">
+  <link rel="alternate" href="https://malakgrioui.github.io/portfolio.html" hreflang="en">
+  <link rel="alternate" href="https://malakgrioui.github.io/fr/portfolio.html" hreflang="fr">
+  <link rel="stylesheet" href="../style.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Barre de navigation -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Projets</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Langue">
+          <option value="../portfolio.html">EN</option>
+          <option value="portfolio.html" selected>FR</option>
+        </select>
+        <a href="../assets/CV Malak GRIOUI.pdf" download class="btn-outline-sm">CV</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="../assets/CV Malak GRIOUI.pdf" download class="button-outline">Télécharger mon CV ici</a>
-            </div>
+  <header class="portfolio-header">
+    <div class="container">
+      <span class="section-label">Portfolio</span>
+      <h1>Mes Projets</h1>
+      <p>Des projets couvrant les agents IA, la gestion de produit, l'ingénierie des données et la transformation digitale.</p>
+    </div>
+  </header>
 
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="../assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="../assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/fr/">Français</option>
-                    <option value="/">English</option>
-                </select>
+  <section class="portfolio-grid-section">
+    <div class="container">
+      <div class="projects-grid">
+
+        <!-- AI Analyst Agent -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="../assets/forestscan.png" alt="AI Analyst Agent">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Microsoft Hack Together 2025</span>
+              <div class="tags">
+                <span>Agent IA</span>
+                <span>Python</span>
+                <span>Azure OpenAI</span>
+                <span>Hackathon</span>
+              </div>
             </div>
+            <h3>AI Analyst Agent</h3>
+            <p>Agent de reporting basé sur l'IA qui transforme des données brutes en rapports clairs avec KPIs, graphiques et recommandations en langage naturel. Développé avec Python, pandas et Azure OpenAI pour le hackathon AI Agents de Microsoft.</p>
+            <a href="hackathon.html" class="card-link">Voir l'étude de cas →</a>
+          </div>
         </div>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+        <!-- GMT Backbone -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="../assets/forestscan.png" alt="GMT Data Backbone">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Global Mangrove Trust</span>
+              <div class="tags">
+                <span>Architecture Système</span>
+                <span>Données</span>
+                <span>ClimTech</span>
+              </div>
+            </div>
+            <h3>GMT Data Backbone</h3>
+            <p>Conception de l'infrastructure de données centrale de GMT — une architecture évolutive reliant les opérations terrain, le suivi satellite et les processus de reporting des projets de conservation.</p>
+            <a href="gmt-backbone.html" class="card-link">Voir l'étude de cas →</a>
+          </div>
+        </div>
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/fr/index.html#contact-me">Me contacter</a></li>
-        </ul>
+        <!-- Forest Scan -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="../assets/forestscan.png" alt="Forest Scan">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Global Mangrove Trust</span>
+              <div class="tags">
+                <span>Gestion de Produit</span>
+                <span>IA / ML</span>
+                <span>ClimTech</span>
+              </div>
+            </div>
+            <h3>Forest Scan</h3>
+            <p>Outil d'analyse satellite basé sur l'IA pour évaluer la faisabilité des projets de carbone bleu. Pilotage complet du framework Scrum — de l'alignement des parties prenantes à la livraison itérative en sprints.</p>
+            <a href="forestscan.html" class="card-link">Voir l'étude de cas →</a>
+          </div>
+        </div>
 
-    </div>
-</nav>
+        <!-- EarthWallet -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="../assets/earthwallet.png" alt="EarthWallet">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Handprint.Tech</span>
+              <div class="tags">
+                <span>FinTech</span>
+                <span>Développement Durable</span>
+                <span>B2B2C</span>
+              </div>
+            </div>
+            <h3>EarthWallet</h3>
+            <p>Plateforme B2B2C de cartes de paiement durables permettant aux banques de financer des projets environnementaux. Responsable de la roadmap produit de l'idéation au lancement, en coordination avec les équipes techniques et les partenaires bancaires.</p>
+            <a href="earthwallet.html" class="card-link">Voir l'étude de cas →</a>
+          </div>
+        </div>
 
-    <!-- Projet 1 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify align-center">
-                <h3 class="main-title padding-top"><b>Forest Scan</b></h3>
-                <p>Développement et gestion de la méthodologie Scrum pour <b>Global Mangrove Trust</b>, définissant l’orientation stratégique, 
-                    favorisant les partenariats et supervisant les cycles de développement agile. Coordination interfonctionnelle 
-                    pour assurer une exécution fluide tout en alignant les jalons techniques avec les objectifs environnementaux.</p>
-                
-                <p class="padding-top"><a href="forestscan.html" class="button-outline">Plus d'infos</a></p>
-            </section>
-            <section class="center padding-top align-center">
-                <p><a href="forestscan.html"><img class="max-width" src="../assets/forestscan.png" alt="forestscan"></a></p>
-            </section>
-        </section>
-    </div>
+        <!-- Collecte de données automatisée -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="../assets/kobotoolbox.png" alt="Collecte de données automatisée">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Global Mangrove Trust</span>
+              <div class="tags">
+                <span>Python</span>
+                <span>Automatisation</span>
+                <span>Ingénierie de Données</span>
+              </div>
+            </div>
+            <h3>Collecte &amp; Reporting Automatisés</h3>
+            <p>Automatisation de la collecte de données terrain et du reporting via Python, l'API Kobotoolbox et Google Cloud Platform — réduisant la charge de travail manuelle de 70&nbsp;% pour les évaluations de restauration de mangroves.</p>
+            <a href="kobotoolbox.html" class="card-link">Voir l'étude de cas →</a>
+          </div>
+        </div>
 
-    <!-- Projet 2 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify align-center">
-                <h3 class="main-title padding-top"><b>EarthWallet</b></h3>
-                <p>Direction du développement produit et de la feuille de route pour une application de finance durable B2B2C chez <b>Handprint.Tech</b>, 
-                    coordination des équipes interfonctionnelles pour concevoir, construire et déployer une solution numérique permettant 
-                    aux banques d’émettre des cartes de paiement finançant des projets environnementaux.</p>
-                <p class="padding-top"><a href="earthwallet.html" class="button-outline">Plus d'infos</a></p>
-            </section>
-            <section class="center">
-                <p><a href="earthwallet.html"><img class="max-width" src="../assets/earthwallet.png" alt="earthwallet"></a>
-            </section>
-        </section>
-    </div>
+        <!-- Dositrace -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="../assets/dositrace.png" alt="Dositrace 4.0">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Biomediqa</span>
+              <div class="tags">
+                <span>HealthTech</span>
+                <span>UX / UI</span>
+                <span>Gestion de Produit</span>
+              </div>
+            </div>
+            <h3>Dositrace 4.0</h3>
+            <p>Refonte UX/UI et gestion produit d'un logiciel médical de gestion de doses. Amélioration de l'ergonomie clinique, intégration de plus de 20 dispositifs d'imagerie et optimisation des workflows pour les équipes médicales.</p>
+            <a href="dositrace.html" class="card-link">Voir l'étude de cas →</a>
+          </div>
+        </div>
 
-    <!-- Projet 3 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify">
-                <h3 class="main-title padding-top"><b>Collecte et Reporting Automatisés des Données</b></h3>
-                <p>Optimisation des processus de collecte et de reporting des données pour <b>Global Mangrove Trust</b> en automatisant les flux 
-                    de travail via Python avec l’API Kobotoolbox et Google Cloud Platform, réduisant la charge de travail manuelle 
-                    de 70 % et améliorant la précision des données.</p>
-                <p class="padding-top"><a href="kobotoolbox.html" class="button-outline">Plus d'infos</a></p>
-            </section>
-            <section class="center">
-                <p><a href="kobotoolbox.html"><img class="max-width" src="../assets/kobotoolbox.png" alt="kobotoolbox"></a>
-            </section>
-        </section>
-    </div>
-    
-    <!-- Projet 4 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify">
-                <h3 class="main-title padding-top"><b>Dositrace 4.0</b></h3>
-                <p>Amélioration de l’application et transformation numérique chez <b>Biomediqa</b>, en mettant l’accent sur la conception UX/UI, 
-                    l’optimisation des processus et la gestion produit pour améliorer l’expérience utilisateur et l’efficacité opérationnelle.</p>
-                <p class="padding-top"><a href="dositrace.html" class="button-outline">Plus d'infos</a></p>
-            </section>
-            <section class="center">
-                <p><a href="dositrace.html"><img class="max-width" src="../assets/dositrace.png" alt="dositrace"></a>
-            </section>
-        </section>
-    </div>
+        <!-- Schoolaboration -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="../assets/schoolaboration.png" alt="Schoolaboration">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">La Cordée</span>
+              <div class="tags">
+                <span>Associatif</span>
+                <span>Transformation Digitale</span>
+                <span>Conception Système</span>
+              </div>
+            </div>
+            <h3>Schoolaboration</h3>
+            <p>Plateforme de gestion des bénévoles qui a digitalisé les processus de coordination d'une école associative — remplacement du système existant, restructuration de la base de données et amélioration de l'engagement des bénévoles.</p>
+            <a href="schoolaboration.html" class="card-link">Voir l'étude de cas →</a>
+          </div>
+        </div>
 
-    <!-- Projet 5 -->
-    <div class="project-card">
-        <section class="grid-system-2 w-900 padding">
-            <section class="justify">
-                <h3 class="main-title padding-top"><b>Start-Up Sherpa</b></h3>
-                <p>Développement et gestion de la stratégie produit pour Start-Up Sherpa, une plateforme numérique soutenant 
-                    les entrepreneurs en phase de démarrage grâce à des outils de diagnostic, des conseils d’experts et des opportunités de réseautage.</p>
-                <p class="padding-top"><a href="sherpa.html" class="button-outline">Plus d'infos</a></p>
-            </section>
-            <section class="center">
-                <p><a href="sherpa.html"><img class="max-width" src="../assets/sherpa.png" alt="sherpa"></a>
-            </section>
-        </section>
+      </div>
     </div>
+  </section>
+
+  <section class="contact section-padding" id="contact">
+    <div class="container contact-inner">
+      <span class="section-label light">Contact</span>
+      <h2>Envie de travailler ensemble ?</h2>
+      <p>Toujours partante pour échanger autour du produit, de la technologie et de l'impact.</p>
+      <div class="contact-links">
+        <a href="mailto:malak.grioui@hotmail.fr" class="btn-primary">Envoyer un email</a>
+        <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener" class="btn-outline-light">Me retrouver sur LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 
 </body>
-
 </html>

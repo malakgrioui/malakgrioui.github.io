@@ -1,132 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Informations SEO -->
-    <title>Forest Scan</title>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-project.css">
-    <!-- Police pour la citation -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- Police pour le corps du texte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- Police pour les titres -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forest Scan — Malak Grioui</title>
+  <meta name="description" content="Outil d'analyse satellite basé sur l'IA pour l'évaluation de faisabilité des projets de carbone bleu, piloté par Malak Grioui au Global Mangrove Trust.">
+  <link rel="canonical" href="https://malakgrioui.github.io/fr/forestscan.html">
+  <link rel="alternate" href="https://malakgrioui.github.io/forestscan.html" hreflang="en">
+  <link rel="alternate" href="https://malakgrioui.github.io/fr/forestscan.html" hreflang="fr">
+  <link rel="stylesheet" href="../style.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Barre de navigation -->
-    <nav class="sticky">
+
+  <nav class="site-nav">
     <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Projets</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Langue">
+          <option value="../forestscan.html">EN</option>
+          <option value="forestscan.html" selected>FR</option>
+        </select>
+        <a href="../assets/CV Malak GRIOUI.pdf" download class="btn-outline-sm">CV</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <div class="top-row">
-            <!-- Bouton à gauche -->
-            <div class="nav-left">
-                <a href="../assets/CV Malak GRIOUI.pdf" download class="button-outline">Télécharger mon CV ici</a>
-            </div>
-
-            <!-- Icônes à droite -->
-            <div class="nav-icons">
-                <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank">
-                    <img src="../assets/linkedin-brands.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:malak.grioui@hotmail.fr" target="_blank">
-                    <img src="../assets/square-envelope-solid.png" alt="Email">
-                </a>
-                <select class="language-select" onchange="location = this.value;">
-                    <option value="/fr/">Français</option>
-                    <option value="/">English</option>
-                </select>
-            </div>
+  <header class="project-hero">
+    <div class="project-hero-inner">
+      <a href="portfolio.html" class="project-back">← Retour aux projets</a>
+      <div class="project-hero-meta">
+        <span class="company-badge-dark">Global Mangrove Trust</span>
+        <div class="tags tags-dark">
+          <span>Gestion de Produit</span>
+          <span>Agile / Scrum</span>
+          <span>IA / ML</span>
+          <span>ClimTech</span>
         </div>
+      </div>
+      <h1>Forest Scan</h1>
+      <p class="tagline">Un outil économique basé sur l'IA exploitant les données satellite pour soutenir les études de faisabilité des projets de carbone bleu en phase initiale.</p>
+    </div>
+  </header>
 
-        <!-- Menu burger pour mobile -->
-        <label for="drop" class="toggle" id="main-toggle">☰</label>
-        <input type="checkbox" id="drop">
+  <main class="project-content">
+    <div class="project-content-inner">
 
-        <!-- Menu de navigation -->
-        <ul class="main-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="https://malakgrioui.github.io/fr/index.html#contact-me">Me contacter</a></li>
+      <div class="project-section">
+        <h2>Organisation</h2>
+        <p><strong>Global Mangrove Trust</strong> est une ONG qui exploite les technologies de pointe et la data science pour mener la restauration environnementale à grande échelle, avec un focus sur la séquestration de carbone et la conservation de la biodiversité.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Contexte &amp; Enjeu</h2>
+        <p>Évaluer la faisabilité des projets de carbone bleu est coûteux et chronophage. L'initiative visait à construire un système basé sur l'IA exploitant des données satellite open source pour analyser les tendances de déforestation et classifier les types de terrain — permettant une évaluation plus rapide, moins chère et plus évolutive des projets de crédits carbone et de conservation.</p>
+      </div>
+
+      <div class="project-two-col">
+        <div class="detail-card">
+          <h3>Contributions Clés</h3>
+          <ul>
+            <li><strong>Mise en Place de l'Agilité</strong> Instauration et maintien des bonnes pratiques Scrum — animation des sprint plannings, rétrospectives et daily stand-ups.</li>
+            <li><strong>Coordination Pluridisciplinaire</strong> Coordination entre data scientists, développeurs et chercheurs en environnement.</li>
+            <li><strong>Backlog &amp; Roadmap</strong> Structuration des priorités de développement pour aligner les livraisons sur les objectifs du projet.</li>
+            <li><strong>Engagement des Parties Prenantes</strong> Obtention d'un partenariat universitaire intégrant la recherche environnementale, renforçant la crédibilité des données.</li>
+            <li><strong>Optimisation Produit</strong> Facilitation d'itérations et de déploiements rapides pour améliorer continuellement l'application.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Méthodologie &amp; Outils</h3>
+          <ul>
+            <li><strong>Approche</strong> Agile (Scrum) — sprints itératifs et affinage du backlog.</li>
+            <li><strong>Gestion de Projet</strong> Monday.com</li>
+            <li><strong>Collaboration</strong> Miro, Google Workspace</li>
+            <li><strong>Développement</strong> Google Cloud Platform, GitHub</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lessons-card">
+        <h2>Enseignements</h2>
+        <ul>
+          <li>Les méthodologies agiles optimisent le développement itératif, garantissant un déploiement plus rapide des fonctionnalités et un alignement continu des parties prenantes.</li>
+          <li>La collaboration pluridisciplinaire est essentielle pour intégrer expertise technique et expertise métier comme les sciences environnementales.</li>
+          <li>Des sprints structurés et un backlog bien priorisé améliorent l'allocation des ressources et réduisent significativement les retards.</li>
         </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="portfolio.html" class="btn-outline">← Retour aux projets</a>
+      </div>
 
     </div>
-</nav>
+  </main>
 
-    <!-- Nom du projet -->
-    <section class="w-900 padding center">
-        <h2 class="medium-spacing-halfsize">Forest Scan</h2>
-        <p class="center italic">Un outil IA économique exploitant les données satellitaires pour évaluer la faisabilité des projets de carbone bleu.</p>
-    </section>
+  <footer class="site-footer">
+    <p>© 2025 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
 
-    <!-- À propos de ce projet -->
-    <section class="w-900 padding center">
-        <h3 class="main-title">Entreprise</h3>
-        <section>
-            <p class="justify"><b>Global Mangrove Trust</b> – Une organisation à but non lucratif exploitant les technologies de pointe et la science des données 
-                pour mener des projets de restauration environnementale à grande échelle, axés sur la séquestration du carbone et la conservation de la biodiversité.</p>
-        </section>
-    </section>
-
-    <section class="w-900 padding">
-        <h3 class="main-title center">Contexte</h3>
-        <p class="justify">L’initiative visait à développer un système basé sur l’IA utilisant des données satellitaires open-source pour analyser les tendances de la déforestation 
-            et classifier les types de terrains, facilitant ainsi les projets de crédits carbone et les efforts de conservation.</p>
-    </section>
-    <section class="wrapper">
-        <section class="column card">
-            <p class="bold center">Contributions Clés</p>
-            <ul class="justify padding-list-10">
-                <li><span class="colorful-letter"><b>Implémentation du Processus Agile :</b> Mise en place et maintien des meilleures pratiques Scrum, facilitant la planification des sprints, les rétrospectives et les réunions quotidiennes.</span></li>
-                <li><span class="colorful-letter"><b>Gestion d’Équipe Interfonctionnelle :</b> Coordination du travail entre les data scientists et les développeurs.</span></li>
-                <li><span class="colorful-letter"><b>Gestion du Backlog & de la Feuille de Route :</b> Structuration des priorités de développement et garantie que la livraison des fonctionnalités est alignée sur les objectifs du projet.</span></li>
-                <li><span class="colorful-letter"><b>Engagement des Parties Prenantes :</b> Collaboration avec les parties prenantes et obtention d’un partenariat universitaire pour intégrer la recherche environnementale et renforcer la crédibilité des données.</span></li>
-                <li><span class="colorful-letter"><b>Optimisation du Produit :</b> Facilitation des itérations rapides et des déploiements successifs pour améliorer l’application.</span></li>
-            </ul>
-        </section>
-        <section class="column card">
-            <p class="bold center">Méthodologie & Outils</p>
-            <ul class="justify padding-list-10">
-                <li><span class="colorful-letter"><b>Approche :</b> Agile (Scrum) – Implémentation de sprints itératifs et affinage du backlog.</span></li>
-                <br>
-                <li><span class="colorful-letter"><b>Outils Utilisés :</b></span></li>
-                <ul class="justify padding-list-10">
-                    <li><span class="colorful-letter"><b>Gestion de Projet :</b> Monday</span></li>
-                    <li><span class="colorful-letter"><b>Collaboration :</b> Miro, Google Workspace</span></li>
-                    <li><span class="colorful-letter"><b>Développement :</b> Google Cloud Platform, GitHub</span></li>
-                </ul>
-            </ul>
-        </section>
-    </section>
-
-    <!-- Ce que j'ai appris -->
-    <section class="w-900 padding center grey">
-            <h3 class="main-title">Leçons Retenues</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item"><b>Les méthodologies agiles optimisent le développement itératif</b>, garantissant une livraison plus rapide des fonctionnalités et un alignement constant avec les parties prenantes.</li>
-                <li class="no-padding-list-item"><b>La collaboration interfonctionnelle</b> est essentielle pour intégrer l’expertise technique et environnementale.</li>
-                <li class="no-padding-list-item"><b>Une planification structurée des sprints et la priorisation du backlog améliorent l’allocation des ressources</b>, réduisant ainsi les retards du projet.</li>
-            </ul>
-    </section>
-
-    <p class="wrapper justify-content"><a href="portfolio.html" class="link-no-scale colorful-letter">Retour au portfolio</a></p>
-
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
 </body>
-
 </html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Analyst Agent — Malak Grioui</title>
+  <meta name="description" content="Agent d'analyse de données et de reporting basé sur l'IA, développé pour le hackathon Microsoft Hack Together : AI Agents 2025.">
+  <link rel="canonical" href="https://malakgrioui.github.io/fr/hackathon.html">
+  <link rel="alternate" href="https://malakgrioui.github.io/hackathon.html" hreflang="en">
+  <link rel="alternate" href="https://malakgrioui.github.io/fr/hackathon.html" hreflang="fr">
+  <link rel="stylesheet" href="../style.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Projets</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select class="language-select" onchange="location = this.value;" aria-label="Langue">
+          <option value="../hackathon.html">EN</option>
+          <option value="hackathon.html" selected>FR</option>
+        </select>
+        <a href="../assets/CV Malak GRIOUI.pdf" download class="btn-outline-sm">CV</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="project-hero">
+    <div class="project-hero-inner">
+      <a href="portfolio.html" class="project-back">← Retour aux projets</a>
+      <div class="project-hero-meta">
+        <span class="company-badge-dark">Microsoft Hack Together 2025</span>
+        <div class="tags tags-dark">
+          <span>Agent IA</span>
+          <span>Python</span>
+          <span>Azure OpenAI</span>
+          <span>Hackathon</span>
+          <span>GPT-4</span>
+        </div>
+      </div>
+      <h1>AI Analyst Agent</h1>
+      <p class="tagline">Un outil d'analyse de données basé sur l'IA qui transforme des jeux de données bruts en rapports clairs et exploitables — avec KPIs, visualisations, analyses en langage naturel et un Q&amp;R interactif façon Copilot.</p>
+    </div>
+  </header>
+
+  <main class="project-content">
+    <div class="project-content-inner">
+
+      <div class="project-section">
+        <h2>Contexte</h2>
+        <p>Développé pour le <strong>hackathon Microsoft Hack Together : AI Agents 2025</strong>, ce projet répond à un vrai problème des équipes métier : transformer rapidement des données brutes en insights exploitables, sans avoir besoin d'un data analyst. La solution automatise l'intégralité du pipeline — de l'upload à l'insight — rendant l'analyse de données accessible à tout utilisateur métier.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>La Solution</h2>
+        <p>L'AI Analyst Agent accepte des fichiers Excel, CSV ou des tableaux PDF. Il nettoie ensuite automatiquement les données, extrait les indicateurs clés de performance, identifie les tendances, génère des visualisations et produit un rapport prêt à l'emploi en PDF ou HTML. L'utilisateur peut ensuite poser des questions en langage naturel via une interface de type Copilot — l'expérience se rapproche d'une conversation avec un analyste plutôt que de l'exécution de requêtes.</p>
+        <p style="margin-top: 14px;">L'architecture a été pensée pour une intégration Microsoft 365, permettant un déploiement dans Copilot Studio, Teams ou Excel — pour amener le reporting intelligent directement dans les outils que les équipes utilisent déjà.</p>
+      </div>
+
+      <div class="project-two-col">
+        <div class="detail-card">
+          <h3>Contributions Clés</h3>
+          <ul>
+            <li><strong>Architecture Système</strong> Conception d'un pipeline modulaire séparant l'ingestion de données, le calcul des KPIs, la visualisation, la génération de rapports, les insights IA et le Q&amp;R en composants indépendants.</li>
+            <li><strong>Intégration IA</strong> Intégration d'Azure OpenAI / GPT-4 pour traduire les résultats numériques en analyses, recommandations et réponses conversationnelles en langage naturel.</li>
+            <li><strong>Reporting Automatisé</strong> Moteur de génération de rapports basé sur des templates Jinja2, produisant des sorties PDF et HTML structurées avec graphiques et synthèses.</li>
+            <li><strong>Pipeline de Traitement</strong> Nettoyage de données, extraction de KPIs et analyses statistiques avec pandas pour des jeux de données structurés et semi-structurés.</li>
+            <li><strong>Visualisations</strong> Génération automatique de graphiques matplotlib/Plotly selon les caractéristiques du dataset et les tendances détectées.</li>
+            <li><strong>Conception Évolutive</strong> Architecture prête pour le futur : vérificateur de fiabilité des données, couche mémoire par base vectorielle pour un Q&amp;R contextuel, et journal de feedback pour l'amélioration continue.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Méthodologie &amp; Stack</h3>
+          <ul>
+            <li><strong>Langage</strong> Python</li>
+            <li><strong>Traitement des Données</strong> pandas, NumPy</li>
+            <li><strong>Visualisations</strong> matplotlib, Plotly</li>
+            <li><strong>IA / LLM</strong> Azure OpenAI, GPT-4</li>
+            <li><strong>Génération de Rapports</strong> Jinja2 (PDF &amp; HTML)</li>
+            <li><strong>Cibles d'Intégration</strong> Microsoft Copilot Studio, Teams, Excel</li>
+            <li><strong>Architecture</strong> Pipeline d'agent modulaire avec couches d'ingestion, d'analyse, de génération et de Q&amp;R séparées</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lessons-card">
+        <h2>Enseignements</h2>
+        <ul>
+          <li>L'architecture modulaire vaut l'investissement initial — pouvoir remplacer la couche LLM ou le moteur de reporting indépendamment a considérablement accéléré les itérations pendant le hackathon.</li>
+          <li>La qualité des insights générés par l'IA dépend entièrement de la pré-structuration des résultats numériques avant leur passage au modèle — le prompt engineering seul ne suffit pas.</li>
+          <li>Concevoir pour l'intégration (Copilot Studio, Teams, Excel) dès le premier jour change profondément les décisions produit : l'interface doit sembler native, pas greffée.</li>
+          <li>La validation de la qualité des données est l'étape ingrate mais critique — des données médiocres produisent des conclusions médiocres, énoncées avec assurance.</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="portfolio.html" class="btn-outline">← Retour aux projets</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
+  </script>
+</body>
+</html>
