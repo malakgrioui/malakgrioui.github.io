@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GMT Data Backbone — Malak Grioui</title>
-  <meta name="description" content="Core data infrastructure design for Global Mangrove Trust — a scalable backbone for field operations, monitoring, and conservation reporting.">
+  <title>GMT Delivery Backbone — Malak Grioui</title>
+  <meta name="description" content="Design and implementation of GMT's Retooling / Delivery Backbone — a project management and reporting system improving accountability, traceability, and QC across conservation projects.">
+  <link rel="canonical" href="https://malakgrioui.github.io/gmt-backbone.html">
+  <link rel="alternate" href="https://malakgrioui.github.io/gmt-backbone.html" hreflang="en">
+  <link rel="alternate" href="https://malakgrioui.github.io/fr/gmt-backbone.html" hreflang="fr">
   <link rel="stylesheet" href="style.css?v=3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +25,7 @@
       </ul>
       <div class="nav-actions">
         <select class="language-select" onchange="location = this.value;" aria-label="Language">
-          <option value="/">EN</option>
+          <option value="gmt-backbone.html" selected>EN</option>
           <option value="fr/gmt-backbone.html">FR</option>
         </select>
         <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
@@ -40,13 +43,13 @@
         <span class="company-badge-dark">Global Mangrove Trust</span>
         <div class="tags tags-dark">
           <span>System Design</span>
-          <span>Data Architecture</span>
+          <span>Project Management</span>
+          <span>Airtable</span>
           <span>ClimTech</span>
-          <span>Infrastructure</span>
         </div>
       </div>
-      <h1>GMT Data Backbone</h1>
-      <p class="tagline">Designed the core data infrastructure for Global Mangrove Trust — a scalable backbone enabling consistent, reliable data flow across field operations, satellite monitoring, and conservation reporting.</p>
+      <h1>GMT Delivery Backbone</h1>
+      <p class="tagline">Design and implementation of GMT's Retooling — a project management and reporting system that transforms scattered work plans, budgets, partner reports, and impact data into one structured delivery backbone for conservation projects.</p>
     </div>
   </header>
 
@@ -55,33 +58,33 @@
 
       <div class="project-section">
         <h2>Organisation</h2>
-        <p><strong>Global Mangrove Trust</strong> is a mission-driven non-profit using technology and data science to drive large-scale environmental restoration. As the organisation scaled its operations across multiple geographies, it needed a robust, unified data foundation to connect field teams, satellite data, and decision-makers.</p>
+        <p><strong>Global Mangrove Trust</strong> is a mission-driven non-profit using technology and data science to drive large-scale environmental restoration. As the organisation scaled its operations across multiple geographies and partners, it needed a reliable, structured system to make project delivery visible, accountable, and easy to manage.</p>
       </div>
 
       <div class="project-section">
         <h2>Context &amp; Challenge</h2>
-        <p>GMT's data was fragmented across tools and teams: field data collected via Kobotoolbox, satellite analysis outputs from Forest Scan, manually maintained reports, and stakeholder dashboards that were disconnected from live data. The challenge was to design a coherent backbone that unified these sources, ensured data integrity, and made information accessible to both technical teams and non-technical stakeholders in real time.</p>
+        <p>GMT faced growing operational complexity: fragmented reporting across partners, backlog accumulation, and insufficient accountability toward investors, communities, and registry partners. Work plans, budgets, quality checks, and impact data existed in silos with no clear thread between them. The challenge was to design a coherent delivery backbone — one that could track every activity from planning through evidence submission, QC review, and impact reporting, and that would give teams and stakeholders a shared, reliable view of what was delivered and what was not.</p>
       </div>
 
       <div class="project-two-col">
         <div class="detail-card">
           <h3>Key Contributions</h3>
           <ul>
-            <li><strong>Architecture Design</strong> Mapped existing data flows and designed a unified backbone connecting field collection, remote sensing, and reporting layers.</li>
-            <li><strong>Data Model Definition</strong> Defined standardised schemas and data models to ensure consistency across sources — field surveys, satellite outputs, and carbon credit data.</li>
-            <li><strong>Integration Planning</strong> Specified integration points between Kobotoolbox, Google Cloud Platform, Forest Scan outputs, and reporting interfaces.</li>
-            <li><strong>Scalability Design</strong> Designed the infrastructure to scale across new geographies and project types without requiring architectural rework.</li>
-            <li><strong>Stakeholder Alignment</strong> Facilitated workshops with technical leads, field teams, and management to validate the design against operational realities.</li>
-            <li><strong>Documentation</strong> Produced full technical documentation and data flow diagrams to support implementation and onboarding.</li>
+            <li><strong>Operational Model Design</strong> Structured GMT's delivery operations around standardized Work Units — trackable activity blocks connecting planned work, budgets, partner reports, and impact data.</li>
+            <li><strong>Quarterly Delivery Cycle</strong> Designed the end-to-end cycle: defining work orders, collecting partner progress reports, running QC checks, updating impact data, and routing unfinished work into a structured backlog for the next quarter.</li>
+            <li><strong>Quality Control Process</strong> Built a QC framework to distinguish between delivered, incomplete, and backlog work — with clear evidence requirements and review checkpoints at each stage.</li>
+            <li><strong>Airtable Data Architecture</strong> Designed the Airtable-based data structure to track work units, partner submissions, delivery status, evidence links, and budget use in one coherent system.</li>
+            <li><strong>Partner Reporting Adaptation</strong> Co-designed structured reporting templates with field partners (e.g. Yagasu quarterly prototype), capturing activities by category, units, participant data, village details, and evidence links.</li>
+            <li><strong>Documentation &amp; Onboarding</strong> Produced process documentation and workflow diagrams to support team adoption and stakeholder communication.</li>
           </ul>
         </div>
         <div class="detail-card">
           <h3>Methodology &amp; Tools</h3>
           <ul>
-            <li><strong>Approach</strong> Design thinking combined with iterative stakeholder validation cycles.</li>
-            <li><strong>Diagramming</strong> Miro, Figma</li>
-            <li><strong>Cloud Infrastructure</strong> Google Cloud Platform</li>
-            <li><strong>Data Collection Layer</strong> Kobotoolbox</li>
+            <li><strong>Approach</strong> Iterative design with continuous stakeholder validation — from operational mapping to prototype testing with field teams.</li>
+            <li><strong>Data Architecture</strong> Airtable</li>
+            <li><strong>Field Data Collection</strong> KoboToolbox</li>
+            <li><strong>Diagramming &amp; Process Design</strong> Miro, Figma</li>
             <li><strong>Collaboration</strong> Google Workspace</li>
           </ul>
         </div>
@@ -90,9 +93,9 @@
       <div class="lessons-card">
         <h2>Lessons Learned</h2>
         <ul>
-          <li>Data infrastructure design is fundamentally a communication problem — the hardest part is aligning diverse stakeholders on a single model of reality before writing a single line of code.</li>
-          <li>Standardising schemas early is the highest-leverage investment in a data system — it reduces rework downstream more than any other single decision.</li>
-          <li>Field realities always complicate clean architectures — designing in flexibility for partial data, connectivity gaps, and varied device types is not optional in conservation contexts.</li>
+          <li>Accountability in field operations starts with a clear, shared definition of what "delivered" means — without that, every system built on top will reflect the same ambiguity.</li>
+          <li>Structured backlog logic is not a failure mechanism — it's a quality mechanism. Moving unfinished work forward with visibility is far more useful than discarding it or hiding it in narrative reports.</li>
+          <li>Adapting partner-facing tools to local field realities is as important as designing the internal system — if the reporting side is too complex, the whole delivery loop breaks down at the source.</li>
         </ul>
       </div>
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GMT Data Backbone — Malak Grioui</title>
-  <meta name="description" content="Conception de l'infrastructure de données centrale du Global Mangrove Trust — une architecture évolutive pour les opérations terrain, le suivi et le reporting de conservation.">
+  <title>GMT Delivery Backbone — Malak Grioui</title>
+  <meta name="description" content="Conception et mise en œuvre du Delivery Backbone de GMT — un système de gestion de projet et de reporting améliorant la redevabilité, la traçabilité et le contrôle qualité des projets de conservation.">
   <link rel="canonical" href="https://malakgrioui.github.io/fr/gmt-backbone.html">
   <link rel="alternate" href="https://malakgrioui.github.io/gmt-backbone.html" hreflang="en">
   <link rel="alternate" href="https://malakgrioui.github.io/fr/gmt-backbone.html" hreflang="fr">
@@ -42,14 +42,14 @@
       <div class="project-hero-meta">
         <span class="company-badge-dark">Global Mangrove Trust</span>
         <div class="tags tags-dark">
-          <span>Architecture Système</span>
-          <span>Architecture de Données</span>
+          <span>Conception Système</span>
+          <span>Gestion de Projet</span>
+          <span>Airtable</span>
           <span>ClimTech</span>
-          <span>Infrastructure</span>
         </div>
       </div>
-      <h1>GMT Data Backbone</h1>
-      <p class="tagline">Conception de l'infrastructure de données centrale du Global Mangrove Trust — une architecture évolutive assurant un flux de données fiable et cohérent entre les opérations terrain, le suivi satellite et le reporting de conservation.</p>
+      <h1>GMT Delivery Backbone</h1>
+      <p class="tagline">Conception et mise en œuvre du Retooling de GMT — un système de gestion de projet et de reporting qui transforme des plans de travail, budgets, rapports partenaires et données d'impact dispersés en un backbone de livraison structuré pour les projets de conservation.</p>
     </div>
   </header>
 
@@ -58,33 +58,33 @@
 
       <div class="project-section">
         <h2>Organisation</h2>
-        <p><strong>Global Mangrove Trust</strong> est une ONG qui s'appuie sur la technologie et la data science pour mener des projets de restauration environnementale à grande échelle. Avec l'expansion de ses opérations sur plusieurs géographies, l'organisation avait besoin d'une fondation de données unifiée et robuste pour connecter équipes terrain, données satellite et décideurs.</p>
+        <p><strong>Global Mangrove Trust</strong> est une ONG qui exploite la technologie et la data science pour mener des projets de restauration environnementale à grande échelle. Avec l'expansion des opérations sur plusieurs géographies et partenaires, l'organisation avait besoin d'un système fiable et structuré pour rendre la livraison des projets visible, redevable et facile à piloter.</p>
       </div>
 
       <div class="project-section">
         <h2>Contexte &amp; Enjeu</h2>
-        <p>Les données de GMT étaient fragmentées entre outils et équipes : données terrain collectées via Kobotoolbox, sorties d'analyse satellite de Forest Scan, rapports maintenus manuellement, et tableaux de bord déconnectés des données en temps réel. L'enjeu : concevoir une architecture cohérente unifiant ces sources, garantissant l'intégrité des données et rendant l'information accessible aussi bien aux équipes techniques qu'aux parties prenantes non techniques.</p>
+        <p>GMT faisait face à une complexité opérationnelle croissante : reporting fragmenté entre partenaires, accumulation de retards, et redevabilité insuffisante envers les investisseurs, les communautés et les registres carbone. Plans de travail, budgets, contrôles qualité et données d'impact existaient en silos sans lien clair entre eux. L'enjeu était de concevoir un backbone de livraison cohérent — capable de suivre chaque activité du planning jusqu'à la soumission de preuves, la revue qualité et le reporting d'impact, tout en offrant aux équipes et parties prenantes une vision partagée et fiable de ce qui avait été livré.</p>
       </div>
 
       <div class="project-two-col">
         <div class="detail-card">
           <h3>Contributions Clés</h3>
           <ul>
-            <li><strong>Conception de l'Architecture</strong> Cartographie des flux de données existants et conception d'une infrastructure unifiée reliant collecte terrain, télédétection et couches de reporting.</li>
-            <li><strong>Modélisation des Données</strong> Définition de schémas et modèles de données standardisés pour assurer la cohérence entre les sources — enquêtes terrain, données satellite et crédits carbone.</li>
-            <li><strong>Plan d'Intégration</strong> Spécification des points d'intégration entre Kobotoolbox, Google Cloud Platform, les sorties Forest Scan et les interfaces de reporting.</li>
-            <li><strong>Conception Évolutive</strong> Architecture pensée pour s'étendre à de nouvelles géographies et types de projets sans refonte structurelle.</li>
-            <li><strong>Alignement des Parties Prenantes</strong> Animation d'ateliers avec les leads techniques, les équipes terrain et la direction pour valider la conception face aux réalités opérationnelles.</li>
-            <li><strong>Documentation</strong> Production d'une documentation technique complète et de diagrammes de flux de données pour faciliter l'implémentation et l'onboarding.</li>
+            <li><strong>Conception du Modèle Opérationnel</strong> Structuration des opérations de livraison de GMT autour d'Unités de Travail standardisées — des blocs d'activité traçables reliant travail planifié, budgets, rapports partenaires et données d'impact.</li>
+            <li><strong>Cycle de Livraison Trimestriel</strong> Conception du cycle bout en bout : définition des ordres de travail, collecte des rapports d'avancement, contrôles QC, mise à jour des données d'impact et bascule des travaux non terminés dans un backlog structuré.</li>
+            <li><strong>Processus de Contrôle Qualité</strong> Création d'un framework QC distinguant travaux livrés, incomplets et en backlog — avec des exigences de preuves et des points de revue clairs à chaque étape.</li>
+            <li><strong>Architecture de Données Airtable</strong> Conception de la structure Airtable pour suivre les unités de travail, soumissions partenaires, statuts de livraison, liens de preuves et utilisation des budgets en un système cohérent.</li>
+            <li><strong>Adaptation du Reporting Partenaires</strong> Co-conception de modèles de reporting structurés avec les partenaires terrain (ex. prototype trimestriel Yagasu), capturant activités, unités, données participants, détails par village et liens de preuves.</li>
+            <li><strong>Documentation &amp; Onboarding</strong> Production de documentation processus et diagrammes de flux pour faciliter l'adoption par les équipes et la communication avec les parties prenantes.</li>
           </ul>
         </div>
         <div class="detail-card">
           <h3>Méthodologie &amp; Outils</h3>
           <ul>
-            <li><strong>Approche</strong> Design thinking combiné à des cycles itératifs de validation avec les parties prenantes.</li>
-            <li><strong>Diagrammes</strong> Miro, Figma</li>
-            <li><strong>Infrastructure Cloud</strong> Google Cloud Platform</li>
-            <li><strong>Couche de Collecte</strong> Kobotoolbox</li>
+            <li><strong>Approche</strong> Conception itérative avec validation continue des parties prenantes — de la cartographie opérationnelle aux tests prototype avec les équipes terrain.</li>
+            <li><strong>Architecture de Données</strong> Airtable</li>
+            <li><strong>Collecte Terrain</strong> KoboToolbox</li>
+            <li><strong>Diagrammes &amp; Conception de Processus</strong> Miro, Figma</li>
             <li><strong>Collaboration</strong> Google Workspace</li>
           </ul>
         </div>
@@ -93,9 +93,9 @@
       <div class="lessons-card">
         <h2>Enseignements</h2>
         <ul>
-          <li>La conception d'infrastructure de données est avant tout un problème de communication — le plus difficile est d'aligner des parties prenantes diverses sur un modèle commun de la réalité avant d'écrire la moindre ligne de code.</li>
-          <li>Standardiser les schémas tôt est l'investissement le plus rentable dans un système de données — aucune autre décision ne réduit autant le travail de reprise en aval.</li>
-          <li>Les réalités du terrain compliquent toujours les architectures propres — prévoir de la flexibilité pour les données partielles, les coupures de connectivité et la diversité des appareils n'est pas optionnel dans la conservation.</li>
+          <li>La redevabilité dans les opérations terrain commence par une définition claire et partagée de ce que signifie "livré" — sans cela, chaque système construit par-dessus reflétera la même ambiguïté.</li>
+          <li>La logique de backlog structuré n'est pas un mécanisme d'échec — c'est un mécanisme de qualité. Faire avancer les travaux inachevés avec visibilité est bien plus utile que de les ignorer ou les noyer dans des rapports narratifs.</li>
+          <li>Adapter les outils côté partenaires aux réalités terrain est aussi important que de concevoir le système interne — si le reporting est trop complexe, tout le cycle de livraison se brise à la source.</li>
         </ul>
       </div>
 

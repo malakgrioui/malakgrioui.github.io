@@ -1,26 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0c1f1e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0d2b2a;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0c1f1e"/>
+      <stop offset="100%" style="stop-color:#0d2b2a"/>
     </linearGradient>
-    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0a7a6f;stop-opacity:1" />
+    <linearGradient id="tableHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#134e4a"/>
+      <stop offset="100%" style="stop-color:#0f3d3a"/>
     </linearGradient>
-    <linearGradient id="nodeGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    <linearGradient id="stepGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488"/>
+      <stop offset="100%" style="stop-color:#0a7a6f"/>
     </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="softglow">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -31,134 +27,199 @@
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <!-- Subtle grid lines -->
-  <g stroke="#0d9488" stroke-width="0.4" opacity="0.08">
-    <line x1="0" y1="105" x2="1200" y2="105"/>
-    <line x1="0" y1="210" x2="1200" y2="210"/>
-    <line x1="0" y1="315" x2="1200" y2="315"/>
-    <line x1="0" y1="420" x2="1200" y2="420"/>
-    <line x1="0" y1="525" x2="1200" y2="525"/>
-    <line x1="200" y1="0" x2="200" y2="630"/>
-    <line x1="400" y1="0" x2="400" y2="630"/>
+  <!-- Subtle grid -->
+  <g stroke="#0d9488" stroke-width="0.3" opacity="0.07">
+    <line x1="0" y1="90" x2="1200" y2="90"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
     <line x1="600" y1="0" x2="600" y2="630"/>
-    <line x1="800" y1="0" x2="800" y2="630"/>
-    <line x1="1000" y1="0" x2="1000" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
   </g>
 
-  <!-- Connection lines between nodes -->
-  <!-- Field → Central Hub -->
-  <line x1="220" y1="200" x2="540" y2="315" stroke="#0d9488" stroke-width="2" opacity="0.5" stroke-dasharray="6,4"/>
-  <!-- Satellite → Central Hub -->
-  <line x1="220" y1="430" x2="540" y2="315" stroke="#0d9488" stroke-width="2" opacity="0.5" stroke-dasharray="6,4"/>
-  <!-- Central Hub → Reporting -->
-  <line x1="660" y1="315" x2="870" y2="200" stroke="#14b8a6" stroke-width="2.5" opacity="0.6" stroke-dasharray="6,4"/>
-  <!-- Central Hub → Carbon Credits -->
-  <line x1="660" y1="315" x2="870" y2="430" stroke="#14b8a6" stroke-width="2.5" opacity="0.6" stroke-dasharray="6,4"/>
-  <!-- Reporting → Dashboard -->
-  <line x1="970" y1="200" x2="1070" y2="270" stroke="#14b8a6" stroke-width="1.5" opacity="0.4" stroke-dasharray="4,3"/>
-  <!-- Carbon → Dashboard -->
-  <line x1="970" y1="430" x2="1070" y2="360" stroke="#14b8a6" stroke-width="1.5" opacity="0.4" stroke-dasharray="4,3"/>
+  <!-- ===== TOP LABEL ===== -->
+  <text x="600" y="52" text-anchor="middle" fill="#2dd4bf" font-family="monospace" font-size="13" opacity="0.45" letter-spacing="4">GMT RETOOLING · DELIVERY BACKBONE · GLOBAL MANGROVE TRUST</text>
 
-  <!-- Animated data packets on lines -->
-  <circle r="4" fill="#5eead4" opacity="0.9" filter="url(#glow)">
-    <animateMotion dur="3s" repeatCount="indefinite" path="M220,200 L540,315"/>
-  </circle>
-  <circle r="4" fill="#5eead4" opacity="0.9" filter="url(#glow)">
-    <animateMotion dur="4s" repeatCount="indefinite" path="M220,430 L540,315"/>
-  </circle>
-  <circle r="4" fill="#2dd4bf" opacity="0.9" filter="url(#glow)">
-    <animateMotion dur="2.5s" repeatCount="indefinite" path="M660,315 L870,200"/>
-  </circle>
-  <circle r="4" fill="#2dd4bf" opacity="0.9" filter="url(#glow)">
-    <animateMotion dur="3.5s" repeatCount="indefinite" path="M660,315 L870,430"/>
-  </circle>
+  <!-- ===== AIRTABLE-STYLE CENTRAL TABLE ===== -->
+  <g filter="url(#shadow)" transform="translate(280, 105)">
+    <!-- Table background -->
+    <rect x="0" y="0" width="640" height="310" rx="10" fill="#0a1e1d" stroke="#1f5e58" stroke-width="1.5"/>
 
-  <!-- ===== NODE 1: Field Data (left top) ===== -->
-  <g transform="translate(120, 200)" filter="url(#glow)">
-    <!-- DB cylinder body -->
-    <ellipse cx="50" cy="16" rx="50" ry="14" fill="#0d9488" opacity="0.9"/>
-    <rect x="0" y="16" width="100" height="60" fill="url(#nodeGrad)" opacity="0.9"/>
-    <ellipse cx="50" cy="76" rx="50" ry="14" fill="#0a7a6f" opacity="0.9"/>
-    <!-- Stripe -->
-    <rect x="0" y="28" width="100" height="4" fill="#14b8a6" opacity="0.4"/>
-    <rect x="0" y="40" width="100" height="4" fill="#14b8a6" opacity="0.3"/>
-    <!-- Label -->
-    <text x="50" y="108" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="11" font-weight="600">FIELD DATA</text>
-    <text x="50" y="122" text-anchor="middle" fill="#99f6e4" font-family="monospace" font-size="9" opacity="0.7">KoboToolbox</text>
+    <!-- Table header row -->
+    <rect x="0" y="0" width="640" height="38" rx="10" fill="url(#tableHeader)"/>
+    <rect x="0" y="20" width="640" height="18" fill="url(#tableHeader)"/>
+
+    <!-- Column headers -->
+    <g font-family="monospace" font-size="10" font-weight="700" fill="#5eead4">
+      <text x="18" y="24">Work Unit</text>
+      <text x="145" y="24">Partner</text>
+      <text x="260" y="24">Status</text>
+      <text x="370" y="24">QC</text>
+      <text x="450" y="24">Evidence</text>
+      <text x="565" y="24">Quarter</text>
+    </g>
+
+    <!-- Col dividers -->
+    <g stroke="#1f5e58" stroke-width="0.8" opacity="0.6">
+      <line x1="138" y1="38" x2="138" y2="310"/>
+      <line x1="253" y1="38" x2="253" y2="310"/>
+      <line x1="363" y1="38" x2="363" y2="310"/>
+      <line x1="443" y1="38" x2="443" y2="310"/>
+      <line x1="558" y1="38" x2="558" y2="310"/>
+    </g>
+
+    <!-- Row 1 -->
+    <rect x="1" y="38" width="638" height="34" fill="#0d1f1e" opacity="0.5"/>
+    <g font-family="monospace" font-size="9" fill="#94a3b8">
+      <text x="18" y="59">Mangrove Planting</text>
+      <text x="145" y="59">Yagasu</text>
+    </g>
+    <rect x="263" y="47" width="68" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
+    <text x="297" y="59" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">Delivered</text>
+    <rect x="373" y="47" width="50" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
+    <text x="398" y="59" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">✓ Pass</text>
+    <text x="450" y="59" font-family="monospace" font-size="9" fill="#0d9488">📎 3 files</text>
+    <text x="565" y="59" font-family="monospace" font-size="9" fill="#64748b">Q1 2025</text>
+
+    <!-- Row 2 -->
+    <rect x="1" y="72" width="638" height="34" fill="#0a1a19" opacity="0.3"/>
+    <g font-family="monospace" font-size="9" fill="#94a3b8">
+      <text x="18" y="93">Community Training</text>
+      <text x="145" y="93">KOICA</text>
+    </g>
+    <rect x="263" y="81" width="68" height="16" rx="8" fill="#1c3158" stroke="#3b82f6" stroke-width="0.5"/>
+    <text x="297" y="93" text-anchor="middle" font-family="monospace" font-size="9" fill="#60a5fa">In Review</text>
+    <rect x="373" y="81" width="50" height="16" rx="8" fill="#422006" stroke="#d97706" stroke-width="0.5"/>
+    <text x="398" y="93" text-anchor="middle" font-family="monospace" font-size="9" fill="#fbbf24">Pending</text>
+    <text x="450" y="93" font-family="monospace" font-size="9" fill="#0d9488">📎 1 file</text>
+    <text x="565" y="93" font-family="monospace" font-size="9" fill="#64748b">Q1 2025</text>
+
+    <!-- Row 3 -->
+    <rect x="1" y="106" width="638" height="34" fill="#0d1f1e" opacity="0.5"/>
+    <g font-family="monospace" font-size="9" fill="#94a3b8">
+      <text x="18" y="127">Nursery Setup</text>
+      <text x="145" y="127">Yagasu</text>
+    </g>
+    <rect x="263" y="115" width="68" height="16" rx="8" fill="#4c0519" stroke="#f43f5e" stroke-width="0.5"/>
+    <text x="297" y="127" text-anchor="middle" font-family="monospace" font-size="9" fill="#fb7185">Backlog</text>
+    <rect x="373" y="115" width="50" height="16" rx="8" fill="#1e1a2e" stroke="#6366f1" stroke-width="0.5"/>
+    <text x="398" y="127" text-anchor="middle" font-family="monospace" font-size="9" fill="#a5b4fc">—</text>
+    <text x="450" y="127" font-family="monospace" font-size="9" fill="#334155">No file</text>
+    <text x="565" y="127" font-family="monospace" font-size="9" fill="#64748b">→ Q2</text>
+
+    <!-- Row 4 -->
+    <rect x="1" y="140" width="638" height="34" fill="#0a1a19" opacity="0.3"/>
+    <g font-family="monospace" font-size="9" fill="#94a3b8">
+      <text x="18" y="161">Impact Measurement</text>
+      <text x="145" y="161">GMT Core</text>
+    </g>
+    <rect x="263" y="149" width="68" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
+    <text x="297" y="161" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">Delivered</text>
+    <rect x="373" y="149" width="50" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
+    <text x="398" y="161" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">✓ Pass</text>
+    <text x="450" y="161" font-family="monospace" font-size="9" fill="#0d9488">📎 5 files</text>
+    <text x="565" y="161" font-family="monospace" font-size="9" fill="#64748b">Q1 2025</text>
+
+    <!-- Row 5 -->
+    <rect x="1" y="174" width="638" height="34" fill="#0d1f1e" opacity="0.5"/>
+    <g font-family="monospace" font-size="9" fill="#94a3b8">
+      <text x="18" y="195">Carbon MRV Report</text>
+      <text x="145" y="195">Verra</text>
+    </g>
+    <rect x="263" y="183" width="68" height="16" rx="8" fill="#1c3158" stroke="#3b82f6" stroke-width="0.5"/>
+    <text x="297" y="195" text-anchor="middle" font-family="monospace" font-size="9" fill="#60a5fa">In Review</text>
+    <rect x="373" y="183" width="50" height="16" rx="8" fill="#065f46" stroke="#059669" stroke-width="0.5"/>
+    <text x="398" y="195" text-anchor="middle" font-family="monospace" font-size="9" fill="#34d399">✓ Pass</text>
+    <text x="450" y="195" font-family="monospace" font-size="9" fill="#0d9488">📎 7 files</text>
+    <text x="565" y="195" font-family="monospace" font-size="9" fill="#64748b">Q1 2025</text>
+
+    <!-- Row fade-out -->
+    <rect x="1" y="208" width="638" height="100" rx="0" fill="url(#bg)" opacity="0.85"/>
+    <text x="320" y="275" text-anchor="middle" fill="#1f5e58" font-family="monospace" font-size="11" opacity="0.6">··· more work units ···</text>
   </g>
 
-  <!-- ===== NODE 2: Satellite Data (left bottom) ===== -->
-  <g transform="translate(120, 400)" filter="url(#glow)">
-    <ellipse cx="50" cy="16" rx="50" ry="14" fill="#0d9488" opacity="0.85"/>
-    <rect x="0" y="16" width="100" height="60" fill="url(#nodeGrad)" opacity="0.85"/>
-    <ellipse cx="50" cy="76" rx="50" ry="14" fill="#0a7a6f" opacity="0.85"/>
-    <rect x="0" y="28" width="100" height="4" fill="#14b8a6" opacity="0.4"/>
-    <rect x="0" y="40" width="100" height="4" fill="#14b8a6" opacity="0.3"/>
-    <!-- Satellite icon hint -->
-    <text x="50" y="108" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="11" font-weight="600">SATELLITE</text>
-    <text x="50" y="122" text-anchor="middle" fill="#99f6e4" font-family="monospace" font-size="9" opacity="0.7">Remote Sensing</text>
+  <!-- ===== QUARTERLY CYCLE FLOW (bottom) ===== -->
+  <!-- Step boxes -->
+  <!-- 1. Work Orders -->
+  <g transform="translate(68, 468)">
+    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#0d9488" stroke-width="1.5"/>
+    <rect x="0" y="0" width="150" height="22" rx="8" fill="url(#stepGrad)" opacity="0.9"/>
+    <rect x="0" y="12" width="150" height="10" fill="url(#stepGrad)" opacity="0.9"/>
+    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">WORK ORDERS</text>
+    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Define deliverables</text>
+    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">per partner + budget</text>
+  </g>
+  <!-- Arrow 1→2 -->
+  <line x1="218" y1="500" x2="248" y2="500" stroke="#0d9488" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="248,495 258,500 248,505" fill="#0d9488" opacity="0.7"/>
+
+  <!-- 2. Partner Reports -->
+  <g transform="translate(260, 468)">
+    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#0d9488" stroke-width="1.5"/>
+    <rect x="0" y="0" width="150" height="22" rx="8" fill="url(#stepGrad)" opacity="0.8"/>
+    <rect x="0" y="12" width="150" height="10" fill="url(#stepGrad)" opacity="0.8"/>
+    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">PARTNER REPORTS</text>
+    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Field submissions</text>
+    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">via KoboToolbox</text>
+  </g>
+  <!-- Arrow 2→3 -->
+  <line x1="410" y1="500" x2="440" y2="500" stroke="#0d9488" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="440,495 450,500 440,505" fill="#0d9488" opacity="0.7"/>
+
+  <!-- 3. QC Review -->
+  <g transform="translate(452, 468)">
+    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#14b8a6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="150" height="22" rx="8" fill="#0f766e" opacity="0.9"/>
+    <rect x="0" y="12" width="150" height="10" fill="#0f766e" opacity="0.9"/>
+    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">QC REVIEW</text>
+    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Pass / Fail / Backlog</text>
+    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">evidence check</text>
+  </g>
+  <!-- Arrow 3→4 -->
+  <line x1="602" y1="500" x2="632" y2="500" stroke="#14b8a6" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="632,495 642,500 632,505" fill="#14b8a6" opacity="0.7"/>
+
+  <!-- 4. Impact Data -->
+  <g transform="translate(644, 468)">
+    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#14b8a6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="150" height="22" rx="8" fill="#0f766e" opacity="0.85"/>
+    <rect x="0" y="12" width="150" height="10" fill="#0f766e" opacity="0.85"/>
+    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">IMPACT DATA</text>
+    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Carbon MRV update</text>
+    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">investor reporting</text>
+  </g>
+  <!-- Arrow 4→5 -->
+  <line x1="794" y1="500" x2="824" y2="500" stroke="#14b8a6" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="824,495 834,500 824,505" fill="#14b8a6" opacity="0.7"/>
+
+  <!-- 5. Next Quarter -->
+  <g transform="translate(836, 468)">
+    <rect x="0" y="0" width="150" height="64" rx="8" fill="#0d1f1e" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <rect x="0" y="0" width="150" height="22" rx="8" fill="#134e4a" opacity="0.7"/>
+    <rect x="0" y="12" width="150" height="10" fill="#134e4a" opacity="0.7"/>
+    <text x="75" y="15" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="9" font-weight="700">NEXT QUARTER</text>
+    <text x="75" y="38" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">Backlog re-planning</text>
+    <text x="75" y="51" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="8">+ new work orders</text>
   </g>
 
-  <!-- ===== CENTRAL HUB: Google Cloud Platform ===== -->
-  <g transform="translate(480, 255)">
-    <!-- Glow circle background -->
-    <circle cx="100" cy="60" r="80" fill="#0d9488" opacity="0.08"/>
-    <circle cx="100" cy="60" r="60" fill="#0d9488" opacity="0.12"/>
-    <!-- Main DB (larger) -->
-    <ellipse cx="100" cy="20" rx="70" ry="18" fill="#14b8a6" opacity="0.95" filter="url(#glow)"/>
-    <rect x="30" y="20" width="140" height="80" fill="url(#nodeGrad2)" opacity="0.95"/>
-    <ellipse cx="100" cy="100" rx="70" ry="18" fill="#0d9488" opacity="0.95"/>
-    <!-- Stripes -->
-    <rect x="30" y="35" width="140" height="5" fill="#5eead4" opacity="0.4"/>
-    <rect x="30" y="50" width="140" height="5" fill="#5eead4" opacity="0.3"/>
-    <rect x="30" y="65" width="140" height="5" fill="#5eead4" opacity="0.2"/>
-    <!-- Label -->
-    <text x="100" y="135" text-anchor="middle" fill="#2dd4bf" font-family="monospace" font-size="13" font-weight="700">DATA BACKBONE</text>
-    <text x="100" y="151" text-anchor="middle" fill="#99f6e4" font-family="monospace" font-size="10" opacity="0.8">Google Cloud Platform</text>
-  </g>
+  <!-- Backlog feedback arc (from step 5 back to step 1) -->
+  <path d="M 986 532 Q 600 590 68 532" fill="none" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
+  <polygon points="68,527 60,532 68,537" fill="#f43f5e" opacity="0.5"/>
+  <text x="527" y="590" text-anchor="middle" fill="#fb7185" font-family="monospace" font-size="9" opacity="0.6">backlog loop</text>
 
-  <!-- ===== NODE 3: Reporting Layer (right top) ===== -->
-  <g transform="translate(820, 155)" filter="url(#glow)">
-    <ellipse cx="50" cy="16" rx="50" ry="14" fill="#0d9488" opacity="0.9"/>
-    <rect x="0" y="16" width="100" height="60" fill="url(#nodeGrad)" opacity="0.9"/>
-    <ellipse cx="50" cy="76" rx="50" ry="14" fill="#0a7a6f" opacity="0.9"/>
-    <rect x="0" y="28" width="100" height="4" fill="#14b8a6" opacity="0.4"/>
-    <rect x="0" y="40" width="100" height="4" fill="#14b8a6" opacity="0.3"/>
-    <text x="50" y="108" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="11" font-weight="600">REPORTING</text>
-    <text x="50" y="122" text-anchor="middle" fill="#99f6e4" font-family="monospace" font-size="9" opacity="0.7">Dashboards</text>
+  <!-- Airtable label bottom right -->
+  <g transform="translate(1060, 440)">
+    <rect x="0" y="0" width="100" height="22" rx="4" fill="#0a1e1d" stroke="#1f5e58" stroke-width="1"/>
+    <text x="50" y="15" text-anchor="middle" fill="#0d9488" font-family="monospace" font-size="9" font-weight="700">Airtable DB</text>
   </g>
-
-  <!-- ===== NODE 4: Carbon Credits (right bottom) ===== -->
-  <g transform="translate(820, 395)" filter="url(#glow)">
-    <ellipse cx="50" cy="16" rx="50" ry="14" fill="#0d9488" opacity="0.9"/>
-    <rect x="0" y="16" width="100" height="60" fill="url(#nodeGrad)" opacity="0.9"/>
-    <ellipse cx="50" cy="76" rx="50" ry="14" fill="#0a7a6f" opacity="0.9"/>
-    <rect x="0" y="28" width="100" height="4" fill="#14b8a6" opacity="0.4"/>
-    <rect x="0" y="40" width="100" height="4" fill="#14b8a6" opacity="0.3"/>
-    <text x="50" y="108" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="11" font-weight="600">CARBON CREDITS</text>
-    <text x="50" y="122" text-anchor="middle" fill="#99f6e4" font-family="monospace" font-size="9" opacity="0.7">MRV Data</text>
-  </g>
-
-  <!-- ===== Output/Dashboard node (far right) ===== -->
-  <g transform="translate(1035, 280)">
-    <rect x="0" y="0" width="90" height="90" rx="12" fill="#0d9488" opacity="0.25" stroke="#14b8a6" stroke-width="1.5"/>
-    <!-- Monitor icon -->
-    <rect x="15" y="15" width="60" height="40" rx="4" fill="#14b8a6" opacity="0.7"/>
-    <rect x="25" y="22" width="40" height="26" rx="2" fill="#0c1f1e" opacity="0.8"/>
-    <!-- Screen content bars -->
-    <rect x="28" y="26" width="20" height="3" rx="1" fill="#5eead4" opacity="0.8"/>
-    <rect x="28" y="32" width="30" height="2" rx="1" fill="#5eead4" opacity="0.5"/>
-    <rect x="28" y="37" width="24" height="2" rx="1" fill="#5eead4" opacity="0.4"/>
-    <rect x="28" y="42" width="28" height="2" rx="1" fill="#5eead4" opacity="0.3"/>
-    <!-- Stand -->
-    <rect x="40" y="55" width="10" height="10" fill="#14b8a6" opacity="0.5"/>
-    <rect x="32" y="65" width="26" height="4" rx="2" fill="#14b8a6" opacity="0.5"/>
-    <text x="45" y="85" text-anchor="middle" fill="#5eead4" font-family="monospace" font-size="9" opacity="0.7">OUTPUT</text>
-  </g>
-
-  <!-- Floating label top -->
-  <text x="600" y="55" text-anchor="middle" fill="#2dd4bf" font-family="monospace" font-size="14" opacity="0.4" letter-spacing="4">DATA INFRASTRUCTURE · GLOBAL MANGROVE TRUST</text>
 
   <!-- Bottom label -->
-  <text x="600" y="590" text-anchor="middle" fill="#0d9488" font-family="monospace" font-size="11" opacity="0.5" letter-spacing="2">FIELD OPS · SATELLITE · CLOUD · REPORTING · CARBON MRV</text>
+  <text x="600" y="620" text-anchor="middle" fill="#0d9488" font-family="monospace" font-size="10" opacity="0.45" letter-spacing="2">WORK UNITS · QC LOOP · EVIDENCE · IMPACT REPORTING · QUARTERLY CYCLE</text>
 </svg>
