@@ -1,5 +1,11 @@
 # Portfolio Design Review — Apple Design Lens
 
+> **Status: all findings in this document have been implemented.** This file is kept as the
+> record of what was wrong and why each fix was made. One additional defect was found while
+> testing the fixes and is noted at the end: at 320px the nav bar overflowed and the
+> hamburger button was clipped off-screen, making the mobile menu unreachable on small
+> phones. That was pre-existing and is now fixed.
+
 A full pass over all 22 pages (11 EN, 10 FR, plus `style.css`) against Apple's interface
 design and motion principles: response, direct manipulation, interruptibility, spring
 behaviour, spatial consistency, materials and depth, typography, reduced motion, and the
@@ -643,3 +649,22 @@ design as one thing ("you shouldn't be able to tell where one ends and the other
 and this site currently has only the visual half. The first four items on that list add the
 missing half in about two hours, and items 1 and 2 alone move it from *fails accessibility
 audit on the primary CTA* to *clean*.
+
+---
+
+## Addendum — found while testing the fixes
+
+**The mobile menu was unreachable at 320px.** A responsive sweep across 8 viewport widths
+found that `.nav-container` overflowed below ~360px: brand + language switcher + Resume
+button + hamburger do not fit in 272px of usable width. The hamburger rendered at
+`left: 347px` in a 320px viewport — entirely off-screen — and `overflow-x` on `<body>`
+clipped it silently rather than producing a scrollbar. On an iPhone SE or any 320px-wide
+device, the navigation menu could not be opened at all.
+
+This predates this review and the original code had it too; it only surfaced under
+automated testing because the symptom is invisible (no scrollbar, no error, just a missing
+button).
+
+Fixed by moving the CV/Resume link into the mobile panel as a `.nav-cv` list item, hiding
+the nav-bar button below 640px, and tightening container padding below 480px. Verified at
+320 / 360 / 390 / 414 / 640 / 768 / 1024 / 1440px in both themes.

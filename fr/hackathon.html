@@ -5,15 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Analyst Agent — Malak Grioui</title>
   <meta name="description" content="Agent d'analyse de données et de reporting basé sur l'IA, développé pour le hackathon Microsoft Hack Together : AI Agents 2025.">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1120">
+  <link rel="stylesheet" href="../style.css?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://malakgrioui.github.io/fr/hackathon.html">
   <link rel="alternate" href="https://malakgrioui.github.io/hackathon.html" hreflang="en">
   <link rel="alternate" href="https://malakgrioui.github.io/fr/hackathon.html" hreflang="fr">
-  <link rel="stylesheet" href="../style.css?v=3">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="alternate" href="https://malakgrioui.github.io/hackathon.html" hreflang="x-default">
+  <meta property="og:title" content="AI Analyst Agent — Malak Grioui">
+  <meta property="og:description" content="Agent d'analyse de données et de reporting basé sur l'IA, développé pour le hackathon Microsoft Hack Together : AI Agents 2025.">
+  <meta property="og:image" content="https://malakgrioui.github.io/assets/og-hackathon.jpg">
+  <meta property="og:url" content="https://malakgrioui.github.io/fr/hackathon.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Analyst Agent — Malak Grioui">
+  <meta name="twitter:description" content="Agent d'analyse de données et de reporting basé sur l'IA, développé pour le hackathon Microsoft Hack Together : AI Agents 2025.">
+  <meta name="twitter:image" content="https://malakgrioui.github.io/assets/og-hackathon.jpg">
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
   <nav class="site-nav">
     <div class="nav-container">
@@ -22,23 +37,27 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="portfolio.html">Projets</a></li>
         <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-cv"><a href="../assets/CV Malak GRIOUI.pdf" download>CV</a></li>
       </ul>
       <div class="nav-actions">
-        <select class="language-select" onchange="location = this.value;" aria-label="Langue">
-          <option value="../hackathon.html">EN</option>
-          <option value="hackathon.html" selected>FR</option>
-        </select>
+        <div class="lang-switch" role="group" aria-label="Langue">
+          <a href="../hackathon.html" hreflang="en" lang="en">EN</a>
+          <a href="hackathon.html" hreflang="fr" lang="fr" aria-current="true">FR</a>
+        </div>
         <a href="../assets/CV Malak GRIOUI.pdf" download class="btn-outline-sm">CV</a>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu">
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <main id="main">
+
   <header class="project-hero">
     <div class="project-hero-inner">
-      <a href="portfolio.html" class="project-back">← Retour aux projets</a>
+      <a href="portfolio.html" class="project-back"><span class="arrow" aria-hidden="true">←</span> Retour aux projets</a>
       <div class="project-hero-meta">
         <span class="company-badge-dark">Microsoft Hack Together 2025</span>
         <div class="tags tags-dark">
@@ -54,7 +73,7 @@
     </div>
   </header>
 
-  <main class="project-content">
+  <div class="project-content">
     <div class="project-content-inner">
 
       <div class="project-section">
@@ -65,7 +84,7 @@
       <div class="project-section">
         <h2>La Solution</h2>
         <p>L'AI Analyst Agent accepte des fichiers Excel, CSV ou des tableaux PDF. Il nettoie ensuite automatiquement les données, extrait les indicateurs clés de performance, identifie les tendances, génère des visualisations et produit un rapport prêt à l'emploi en PDF ou HTML. L'utilisateur peut ensuite poser des questions en langage naturel via une interface de type Copilot — l'expérience se rapproche d'une conversation avec un analyste plutôt que de l'exécution de requêtes.</p>
-        <p style="margin-top: 14px;">L'architecture a été pensée pour une intégration Microsoft 365, permettant un déploiement dans Copilot Studio, Teams ou Excel — pour amener le reporting intelligent directement dans les outils que les équipes utilisent déjà.</p>
+        <p>L'architecture a été pensée pour une intégration Microsoft 365, permettant un déploiement dans Copilot Studio, Teams ou Excel — pour amener le reporting intelligent directement dans les outils que les équipes utilisent déjà.</p>
       </div>
 
       <div class="project-two-col">
@@ -104,21 +123,18 @@
         </ul>
       </div>
 
-      <div style="text-align: center;">
-        <a href="portfolio.html" class="btn-outline">← Retour aux projets</a>
+      <div class="project-cta">
+        <a href="portfolio.html" class="btn-outline"><span class="arrow" aria-hidden="true">←</span> Retour aux projets</a>
       </div>
 
     </div>
+  </div>
+
   </main>
 
   <footer class="site-footer">
     <p>© 2025 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
   </footer>
-
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
-  </script>
+  <script defer src="../nav.js"></script>
 </body>
 </html>

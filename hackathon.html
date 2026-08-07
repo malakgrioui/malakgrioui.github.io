@@ -5,12 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Analyst Agent — Malak Grioui</title>
   <meta name="description" content="AI-powered data analysis and business reporting agent built for the Microsoft Hack Together: AI Agents Hackathon 2025.">
-  <link rel="stylesheet" href="style.css?v=3">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1120">
+  <link rel="stylesheet" href="style.css?v=4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://malakgrioui.github.io/hackathon.html">
+  <link rel="alternate" href="https://malakgrioui.github.io/hackathon.html" hreflang="en">
+  <link rel="alternate" href="https://malakgrioui.github.io/fr/hackathon.html" hreflang="fr">
+  <link rel="alternate" href="https://malakgrioui.github.io/hackathon.html" hreflang="x-default">
+  <meta property="og:title" content="AI Analyst Agent — Malak Grioui">
+  <meta property="og:description" content="AI-powered data analysis and business reporting agent built for the Microsoft Hack Together: AI Agents Hackathon 2025.">
+  <meta property="og:image" content="https://malakgrioui.github.io/assets/og-hackathon.jpg">
+  <meta property="og:url" content="https://malakgrioui.github.io/hackathon.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Analyst Agent — Malak Grioui">
+  <meta name="twitter:description" content="AI-powered data analysis and business reporting agent built for the Microsoft Hack Together: AI Agents Hackathon 2025.">
+  <meta name="twitter:image" content="https://malakgrioui.github.io/assets/og-hackathon.jpg">
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <nav class="site-nav">
     <div class="nav-container">
@@ -19,23 +37,27 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Work</a></li>
         <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-cv"><a href="assets/CV Malak GRIOUI ENG.pdf" download>Resume</a></li>
       </ul>
       <div class="nav-actions">
-        <select class="language-select" onchange="location = this.value;" aria-label="Language">
-          <option value="/">EN</option>
-          <option value="fr/hackathon.html">FR</option>
-        </select>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <a href="hackathon.html" hreflang="en" lang="en" aria-current="true">EN</a>
+          <a href="fr/hackathon.html" hreflang="fr" lang="fr">FR</a>
+        </div>
         <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <main id="main">
+
   <header class="project-hero">
     <div class="project-hero-inner">
-      <a href="portfolio.html" class="project-back">← Back to all projects</a>
+      <a href="portfolio.html" class="project-back"><span class="arrow" aria-hidden="true">←</span> Back to all projects</a>
       <div class="project-hero-meta">
         <span class="company-badge-dark">Microsoft Hack Together 2025</span>
         <div class="tags tags-dark">
@@ -51,7 +73,7 @@
     </div>
   </header>
 
-  <main class="project-content">
+  <div class="project-content">
     <div class="project-content-inner">
 
       <div class="project-section">
@@ -62,7 +84,7 @@
       <div class="project-section">
         <h2>The Solution</h2>
         <p>The AI Analyst Agent accepts Excel, CSV, or PDF table uploads. It then automatically cleans the data, extracts key performance indicators, identifies trends, generates visualizations, and produces a business-ready report in PDF or HTML format. Users can follow up with natural-language questions through a Copilot-style interface — making it feel more like talking to an analyst than running queries.</p>
-        <p style="margin-top: 14px;">The architecture was designed for Microsoft 365 integration, enabling deployment inside Copilot Studio, Teams, or Excel — bringing intelligent reporting directly into the tools people already use at work.</p>
+        <p>The architecture was designed for Microsoft 365 integration, enabling deployment inside Copilot Studio, Teams, or Excel — bringing intelligent reporting directly into the tools people already use at work.</p>
       </div>
 
       <div class="project-two-col">
@@ -101,21 +123,18 @@
         </ul>
       </div>
 
-      <div style="text-align: center;">
-        <a href="portfolio.html" class="btn-outline">← Back to All Projects</a>
+      <div class="project-cta">
+        <a href="portfolio.html" class="btn-outline"><span class="arrow" aria-hidden="true">←</span> Back to All Projects</a>
       </div>
 
     </div>
+  </div>
+
   </main>
 
   <footer class="site-footer">
     <p>© 2025 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
   </footer>
-
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
-  </script>
+  <script defer src="nav.js"></script>
 </body>
 </html>

@@ -1,106 +1,86 @@
-# Portfolio Website
+# malakgrioui.github.io
 
-A responsive portfolio website template that you can use to showcase your skills, projects, and future development plans. Feel free to use this template for your personal portfolio and customize it to suit your needs.
+Personal portfolio of **Malak Grioui** — Product Manager working at the intersection of
+technology, AI, and sustainability. Live at
+[malakgrioui.github.io](https://malakgrioui.github.io).
 
+Static site, no build step: hand-written HTML, one stylesheet, one script. Hosted on
+GitHub Pages from `main`.
 
+## Structure
 
-## Table of Contents
+```
+index.html              Home — hero, about, featured work, contact
+portfolio.html          All projects
+<project>.html          10 case studies (hackathon, gmt-backbone, gearbank,
+                        forestscan, earthwallet, kobotoolbox, dositrace,
+                        schoolaboration, sherpa, booster)
+404.html                Not-found page
+fr/                     Full French translation, same page-for-page structure
+style.css               Design tokens + all component styles
+nav.js                  Shared navigation behaviour (mobile menu, a11y state)
+assets/                 Images (WebP), OG share cards (JPEG), CV PDFs
+sitemap.xml, robots.txt
+```
 
-- [About the Project](#about-the-project)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Customization](#customization)
-- [Example Portfolios](#example-portfolios)
-- [Contributing](#contributing)
-- [License](#license)
-- [Attribution](#attribution-appreciated-but-not-required)
-- [Contact](#contact)
+Every English page has a French counterpart at the same filename under `fr/`, and the
+language switcher in the nav always maps a page to its own translation.
 
-## About the Project
+## Design system
 
-This template is a responsive portfolio website that can be used by developers, designers, or anyone who wants to showcase their skills and projects. It provides sections for an About Me page, a Skill Set page, a Portfolio page, and a future plans section.
+All values in `style.css` come from a scale rather than being set per component:
 
-## Project Structure
+- **Spacing** — 8pt scale (`--space-1` … `--space-9`), in `rem` so the layout scales with
+  the user's browser text-size setting.
+- **Type** — 6 steps (`--text-xs` … `--text-2xl`) plus `clamp()` for display headings.
+  Tracking is size-specific: negative on large headings, positive on small caps labels.
+- **Motion** — two easings. `--ease-standard` is critically damped (no overshoot) and
+  handles almost everything; `--ease-spring` carries a slight overshoot and is reserved
+  for motion that follows a physical gesture, like the project-card lift.
+- **Colour** — `--accent` is decorative only. `--accent-text` carries every piece of text
+  and every solid button fill, because the decorative teal does not clear WCAG AA at
+  small sizes.
+- **Radii** — concentric: nested corners step down so inner and outer curves stay
+  visually parallel.
 
-- `index.html`: The main page of the portfolio website.
-- `about-me.html`: The about me page.
-- `skill-set.html`: The skillset page.
-- `portfolio.html`: The portfolio page.
-- `style.css`: The main CSS file for styling.
-- `style-about-me.css`: CSS file specific to the about me page.
-- `style-portfolio.css`: CSS file specific to the portfolio page.
-- `assets/`: Directory containing project images and assets.
+## Accessibility
 
-## Getting Started
+Checked and maintained:
 
-1. Fork this repository to your GitHub account by clicking the "Fork" button in the top right corner.
-2. Clone your forked repository to your local machine using the following command:
+- All text meets WCAG 2.1 AA contrast in both light and dark themes.
+- Visible `:focus-visible` indicator on every interactive element; skip link on every page.
+- `:active` press states, so the interface gives feedback on touch and not only on hover.
+- `prefers-reduced-motion`, `prefers-reduced-transparency`, and `prefers-contrast` are all
+  honoured. Reduced motion keeps colour and shadow feedback and drops only the movement.
+- The mobile menu reports `aria-expanded`, closes on Escape and on outside click, and
+  returns focus to its toggle.
 
-   ```bash
-   git clone https://github.com/iluskaland/portfolio-template.git
+## Local development
 
-Now, you have your own fork of the repository, and you can make changes and contributions as described in the "Contributing" section.
+No dependencies. Serve the directory over HTTP so relative paths and the language
+switcher behave as they do in production:
 
-## Usage
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
 
-To view the live demonstration of this portfolio template, visit [this link](https://iluskaland.github.io/portfolio-template/index.html). You can customize the content and styles to create your own portfolio website. Feel free to replace the content with your information and add your projects.
+Editing `style.css` requires bumping the `?v=` query on the `<link>` in each page to bust
+the browser cache.
 
-## Customization
+## Images
 
-Customize this template by modifying the HTML and CSS files to match your personal information, skills, and projects. You can change the colors, fonts, and layout to create a unique portfolio.
-
-## Dark Mode Support
-
-Now featuring dark mode support! The portfolio website automatically adapts to your system's color scheme preference.
-
-![Dark Mode Support](/assets/github-portfolio-template-demo-dark.png)
-
-## Example Portfolios
-
-Check out this portfolio created using this template:
-
-1. [iluskaland-portfolio](https://iluskaland-portfolio.netlify.app/) - A showcase of what you can achieve with this template.
-
-*I intentionally did not enable the dark preference on my website, because I prefer the light mode.*
-
-## Contributing
-
-I welcome contributions from the open-source community to improve and enhance this project. Whether you're a developer, designer, or someone with new ideas, your contributions are valuable. Here are some guidelines to get you started:
-
-### How to Contribute
-
-1. Fork this repository to your GitHub account.
-2. Clone the forked repository to your local machine.
-3. Create a new branch for your contribution.
-4. Make your changes and ensure they adhere to our code and style standards.
-5. Test your changes thoroughly.
-6. Commit your changes with a descriptive commit message.
-7. Push your changes to your GitHub repository.
-8. Create a Pull Request (PR) to my `main` branch.
-9. I will review your contribution, and once approved, it will be merged.
-
-### Code and Style Guidelines
-
-- Maintain a consistent coding style with the existing codebase.
-- Use only HTML and CSS for any contributions. Avoid introducing other languages or technologies.
-- Comment your code for clarity and documentation.
-- Ensure that your changes do not introduce errors or break existing features.
-
-### Reporting Issues
-
-If you encounter any issues, have ideas for improvements, or would like to request new features, please open an issue on this repository. I appreciate your feedback and will address your concerns as soon as possible.
+Photographs are stored as WebP, sized to 2× their display box. Open Graph share cards are
+separate 1200×630 JPEGs (`assets/og-*.jpg`) because social scrapers do not reliably
+support WebP. Any new image should follow the same pattern, and every `<img>` needs
+`width`, `height`, and `loading="lazy"` unless it is above the fold.
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
-## Attribution (Appreciated, but Not Required)
-
-I've put a lot of effort into creating this portfolio template, and I'm thrilled if you find it useful for your personal projects. While it's not mandatory, I would greatly appreciate it if you could consider providing attribution to the original source. This could be a simple note in your website's footer or a dedicated "Credits" section, linking back to this repository. Your support helps others discover and benefit from this open-source project.
+Site content and case studies © Malak Grioui. The original HTML/CSS scaffold was adapted
+from the MIT-licensed [portfolio-template](https://github.com/iluskaland/portfolio-template)
+by iluskaland.
 
 ## Contact
 
-[Github](https://github.com/iluskaland)
-
-Feel free to reach out if you have any questions or feedback!
+[LinkedIn](https://www.linkedin.com/in/malak-grioui/) · malak.grioui@hotmail.fr

@@ -7,42 +7,55 @@
   <meta name="description" content="Product Manager building impactful digital products at the intersection of technology, AI, and sustainability.">
   <meta name="keywords" content="Product Manager, Digital Transformation, AI, Agile, Sustainability, UX/UI">
   <meta name="author" content="Malak Grioui">
-  <meta property="og:title" content="Malak Grioui | Product Manager">
-  <meta property="og:description" content="Building products that matter — at the intersection of technology, impact, and sustainability.">
-  <meta property="og:image" content="https://malakgrioui.github.io/assets/profile-pic.png">
-  <meta property="og:url" content="https://malakgrioui.github.io">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://malakgrioui.github.io">
-  <link rel="alternate" href="https://malakgrioui.github.io" hreflang="en">
-  <link rel="alternate" href="https://malakgrioui.github.io/fr/" hreflang="fr">
-  <link rel="stylesheet" href="style.css?v=3">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1120">
+  <link rel="stylesheet" href="style.css?v=4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://malakgrioui.github.io/">
+  <link rel="alternate" href="https://malakgrioui.github.io/" hreflang="en">
+  <link rel="alternate" href="https://malakgrioui.github.io/fr/" hreflang="fr">
+  <link rel="alternate" href="https://malakgrioui.github.io/" hreflang="x-default">
+  <meta property="og:title" content="Malak Grioui | Product Manager & Digital Innovator">
+  <meta property="og:description" content="Product Manager building impactful digital products at the intersection of technology, AI, and sustainability.">
+  <meta property="og:image" content="https://malakgrioui.github.io/assets/og-cover.jpg">
+  <meta property="og:url" content="https://malakgrioui.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Malak Grioui | Product Manager & Digital Innovator">
+  <meta name="twitter:description" content="Product Manager building impactful digital products at the intersection of technology, AI, and sustainability.">
+  <meta name="twitter:image" content="https://malakgrioui.github.io/assets/og-cover.jpg">
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <nav class="site-nav">
     <div class="nav-container">
       <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="portfolio.html">Work</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="nav-cv"><a href="assets/CV Malak GRIOUI ENG.pdf" download>Resume</a></li>
       </ul>
       <div class="nav-actions">
-        <select class="language-select" onchange="location = this.value;" aria-label="Language">
-          <option value="/">EN</option>
-          <option value="fr/index.html">FR</option>
-        </select>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <a href="index.html" hreflang="en" lang="en" aria-current="true">EN</a>
+          <a href="fr/index.html" hreflang="fr" lang="fr">FR</a>
+        </div>
         <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- Hero -->
   <section class="hero">
@@ -58,7 +71,7 @@
       </div>
       <div class="hero-visual">
         <div class="hero-photo-wrap">
-          <img src="assets/profile-pic.png" alt="Malak Grioui" class="hero-photo">
+          <img src="assets/profile-pic.webp" alt="Malak Grioui" class="hero-photo" width="527" height="597" decoding="async" loading="eager" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -104,7 +117,7 @@
         </div>
         <div class="about-highlights">
           <div class="highlight-card">
-            <span class="highlight-number">9+</span>
+            <span class="highlight-number">10</span>
             <span class="highlight-label">Projects Delivered</span>
           </div>
           <div class="highlight-card">
@@ -135,7 +148,7 @@
 
         <div class="featured-card">
           <div class="featured-card-img">
-            <img src="assets/hackathon.svg" alt="AI Analyst Agent — Microsoft Hackathon">
+            <img src="assets/hackathon.svg" alt="AI Analyst Agent — Microsoft Hackathon" width="1200" height="630" decoding="async" loading="lazy">
           </div>
           <div class="featured-card-content">
             <div class="featured-card-meta">
@@ -148,13 +161,13 @@
             </div>
             <h3>AI Analyst Agent</h3>
             <p>AI-powered reporting assistant that automatically analyzes uploaded datasets and generates business-friendly reports with KPIs, trends, charts, and natural-language insights. Built for Microsoft's AI Agents Hackathon.</p>
-            <a href="hackathon.html" class="card-link">View Case Study →</a>
+            <a href="hackathon.html" class="card-link">View Case Study <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <div class="featured-card">
           <div class="featured-card-img">
-            <img src="assets/gmt-backbone.svg" alt="GMT Data Backbone">
+            <img src="assets/gmt-backbone.svg" alt="GMT Data Backbone" width="1200" height="630" decoding="async" loading="lazy">
           </div>
           <div class="featured-card-content">
             <div class="featured-card-meta">
@@ -167,7 +180,7 @@
             </div>
             <h3>GMT Delivery Backbone</h3>
             <p>Designed GMT's Retooling system — standardising work units, QC loops, and Airtable-based data architecture to connect planning, delivery, evidence, and impact reporting across conservation projects.</p>
-            <a href="gmt-backbone.html" class="card-link">View Case Study →</a>
+            <a href="gmt-backbone.html" class="card-link">View Case Study <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
@@ -190,16 +203,12 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="site-footer">
     <p>© 2025 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
-  </script>
-
+  <script defer src="nav.js"></script>
 </body>
 </html>

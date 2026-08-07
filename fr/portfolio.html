@@ -6,36 +6,55 @@
   <title>Projets — Malak Grioui</title>
   <meta name="description" content="Projets de gestion de produit et d'innovation digitale par Malak Grioui — agents IA, ClimTech, FinTech, HealthTech et plus.">
   <meta name="author" content="Malak Grioui">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1120">
+  <link rel="stylesheet" href="../style.css?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://malakgrioui.github.io/fr/portfolio.html">
   <link rel="alternate" href="https://malakgrioui.github.io/portfolio.html" hreflang="en">
   <link rel="alternate" href="https://malakgrioui.github.io/fr/portfolio.html" hreflang="fr">
-  <link rel="stylesheet" href="../style.css?v=3">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="alternate" href="https://malakgrioui.github.io/portfolio.html" hreflang="x-default">
+  <meta property="og:title" content="Projets — Malak Grioui">
+  <meta property="og:description" content="Projets de gestion de produit et d'innovation digitale par Malak Grioui — agents IA, ClimTech, FinTech, HealthTech et plus.">
+  <meta property="og:image" content="https://malakgrioui.github.io/assets/og-cover.jpg">
+  <meta property="og:url" content="https://malakgrioui.github.io/fr/portfolio.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projets — Malak Grioui">
+  <meta name="twitter:description" content="Projets de gestion de produit et d'innovation digitale par Malak Grioui — agents IA, ClimTech, FinTech, HealthTech et plus.">
+  <meta name="twitter:image" content="https://malakgrioui.github.io/assets/og-cover.jpg">
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
   <nav class="site-nav">
     <div class="nav-container">
       <a href="index.html" class="nav-brand">Malak <span>Grioui</span></a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="portfolio.html">Projets</a></li>
+        <li><a href="portfolio.html" aria-current="page">Projets</a></li>
         <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-cv"><a href="../assets/CV Malak GRIOUI.pdf" download>CV</a></li>
       </ul>
       <div class="nav-actions">
-        <select class="language-select" onchange="location = this.value;" aria-label="Langue">
-          <option value="../portfolio.html">EN</option>
-          <option value="portfolio.html" selected>FR</option>
-        </select>
+        <div class="lang-switch" role="group" aria-label="Langue">
+          <a href="../portfolio.html" hreflang="en" lang="en">EN</a>
+          <a href="portfolio.html" hreflang="fr" lang="fr" aria-current="true">FR</a>
+        </div>
         <a href="../assets/CV Malak GRIOUI.pdf" download class="btn-outline-sm">CV</a>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu">
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+
+  <main id="main">
 
   <header class="portfolio-header">
     <div class="container">
@@ -47,12 +66,13 @@
 
   <section class="portfolio-grid-section">
     <div class="container">
+      <h2 class="visually-hidden">Tous les projets</h2>
       <div class="projects-grid">
 
         <!-- AI Analyst Agent -->
         <div class="project-card">
           <div class="project-card-img">
-            <img src="../assets/hackathon.svg" alt="AI Analyst Agent">
+            <img src="../assets/hackathon.svg" alt="AI Analyst Agent" width="1200" height="630" decoding="async" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-card-meta">
@@ -66,14 +86,14 @@
             </div>
             <h3>AI Analyst Agent</h3>
             <p>Agent de reporting basé sur l'IA qui transforme des données brutes en rapports clairs avec KPIs, graphiques et recommandations en langage naturel. Développé avec Python, pandas et Azure OpenAI pour le hackathon AI Agents de Microsoft.</p>
-            <a href="hackathon.html" class="card-link">Voir l'étude de cas →</a>
+            <a href="hackathon.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <!-- GMT Backbone -->
         <div class="project-card">
           <div class="project-card-img">
-            <img src="../assets/gmt-backbone.svg" alt="GMT Delivery Backbone">
+            <img src="../assets/gmt-backbone.svg" alt="GMT Delivery Backbone" width="1200" height="630" decoding="async" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-card-meta">
@@ -87,14 +107,14 @@
             </div>
             <h3>GMT Delivery Backbone</h3>
             <p>Conception du système de Retooling de GMT — standardisation des unités de travail, boucles QC, reporting partenaires et architecture Airtable pour relier planification, livraison, preuves et reporting d'impact.</p>
-            <a href="gmt-backbone.html" class="card-link">Voir l'étude de cas →</a>
+            <a href="gmt-backbone.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <!-- GearBank -->
         <div class="project-card">
           <div class="project-card-img">
-            <img src="../assets/gearbank.jpg" alt="Initiative GearBank">
+            <img src="../assets/gearbank.webp" alt="Initiative GearBank" width="1040" height="693" decoding="async" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-card-meta">
@@ -107,14 +127,14 @@
             </div>
             <h3>Initiative GearBank</h3>
             <p>Initiative de moyens de subsistance durables portée par les femmes à Sumatra du Nord — combinant conception coopérative, recherche terrain, développement de revenus alternatifs et systèmes de monitoring pour réduire la déforestation des mangroves.</p>
-            <a href="gearbank.html" class="card-link">Voir l'étude de cas →</a>
+            <a href="gearbank.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <!-- Forest Scan -->
         <div class="project-card">
           <div class="project-card-img">
-            <img src="../assets/forestscan.png" alt="Forest Scan">
+            <img src="../assets/forestscan.webp" alt="Forest Scan" width="1040" height="596" decoding="async" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-card-meta">
@@ -127,14 +147,14 @@
             </div>
             <h3>Forest Scan</h3>
             <p>Outil d'analyse satellite basé sur l'IA pour évaluer la faisabilité des projets de carbone bleu. Pilotage complet du framework Scrum — de l'alignement des parties prenantes à la livraison itérative en sprints.</p>
-            <a href="forestscan.html" class="card-link">Voir l'étude de cas →</a>
+            <a href="forestscan.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <!-- EarthWallet -->
         <div class="project-card">
           <div class="project-card-img">
-            <img src="../assets/earthwallet.png" alt="EarthWallet">
+            <img src="../assets/earthwallet.webp" alt="EarthWallet" width="1040" height="653" decoding="async" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-card-meta">
@@ -147,14 +167,14 @@
             </div>
             <h3>EarthWallet</h3>
             <p>Plateforme B2B2C de cartes de paiement durables permettant aux banques de financer des projets environnementaux. Responsable de la roadmap produit de l'idéation au lancement, en coordination avec les équipes techniques et les partenaires bancaires.</p>
-            <a href="earthwallet.html" class="card-link">Voir l'étude de cas →</a>
+            <a href="earthwallet.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <!-- Collecte de données automatisée -->
         <div class="project-card">
           <div class="project-card-img">
-            <img src="../assets/kobotoolbox.png" alt="Collecte de données automatisée">
+            <img src="../assets/kobotoolbox.webp" alt="Collecte de données automatisée" width="1040" height="586" decoding="async" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-card-meta">
@@ -167,14 +187,14 @@
             </div>
             <h3>Collecte &amp; Reporting Automatisés</h3>
             <p>Automatisation de la collecte de données terrain et du reporting via Python, l'API Kobotoolbox et Google Cloud Platform — réduisant la charge de travail manuelle de 70&nbsp;% pour les évaluations de restauration de mangroves.</p>
-            <a href="kobotoolbox.html" class="card-link">Voir l'étude de cas →</a>
+            <a href="kobotoolbox.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <!-- Dositrace -->
         <div class="project-card">
           <div class="project-card-img">
-            <img src="../assets/dositrace.png" alt="Dositrace 4.0">
+            <img src="../assets/dositrace.webp" alt="Dositrace 4.0" width="1040" height="780" decoding="async" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-card-meta">
@@ -187,14 +207,14 @@
             </div>
             <h3>Dositrace 4.0</h3>
             <p>Refonte UX/UI et gestion produit d'un logiciel médical de gestion de doses. Amélioration de l'ergonomie clinique, intégration de plus de 20 dispositifs d'imagerie et optimisation des workflows pour les équipes médicales.</p>
-            <a href="dositrace.html" class="card-link">Voir l'étude de cas →</a>
+            <a href="dositrace.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
         <!-- Schoolaboration -->
         <div class="project-card">
           <div class="project-card-img">
-            <img src="../assets/schoolaboration.png" alt="Schoolaboration">
+            <img src="../assets/schoolaboration.webp" alt="Schoolaboration" width="697" height="580" decoding="async" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-card-meta">
@@ -207,7 +227,47 @@
             </div>
             <h3>Schoolaboration</h3>
             <p>Plateforme de gestion des bénévoles qui a digitalisé les processus de coordination d'une école associative — remplacement du système existant, restructuration de la base de données et amélioration de l'engagement des bénévoles.</p>
-            <a href="schoolaboration.html" class="card-link">Voir l'étude de cas →</a>
+            <a href="schoolaboration.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <!-- Start-Up Sherpa -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="../assets/sherpa.webp" alt="Start-Up Sherpa" width="1040" height="494" decoding="async" loading="lazy">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">The Sustainable Grid</span>
+              <div class="tags">
+                <span>Stratégie Produit</span>
+                <span>IA / Automatisation</span>
+                <span>Entrepreneuriat</span>
+              </div>
+            </div>
+            <h3>Start-Up Sherpa</h3>
+            <p>Plateforme propulsée par l'IA qui démocratise l'accompagnement entrepreneurial — diagnostics personnalisés, analyses business automatisées et mise en relation avec des experts pour les fondateurs en phase d'amorçage.</p>
+            <a href="sherpa.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <!-- Booster SME -->
+        <div class="project-card">
+          <div class="project-card-img">
+            <img src="../assets/booster.webp" alt="Booster SME" width="1040" height="661" decoding="async" loading="lazy">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="company-badge">Videoportrait</span>
+              <div class="tags">
+                <span>Stratégie Business</span>
+                <span>Transformation Digitale</span>
+                <span>Image de Marque</span>
+              </div>
+            </div>
+            <h3>Booster SME</h3>
+            <p>Transformation digitale et stratégie de croissance pour une PME de production vidéo — identité de marque, plan de communication structuré, optimisation commerciale et refonte d'un site web orienté conversion.</p>
+            <a href="booster.html" class="card-link">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
 
@@ -226,16 +286,12 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="site-footer">
     <p>© 2025 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
-  </script>
-
+  <script defer src="../nav.js"></script>
 </body>
 </html>

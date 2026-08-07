@@ -5,15 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GMT Delivery Backbone — Malak Grioui</title>
   <meta name="description" content="Design and implementation of GMT's Retooling / Delivery Backbone — a project management and reporting system improving accountability, traceability, and QC across conservation projects.">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1120">
+  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://malakgrioui.github.io/gmt-backbone.html">
   <link rel="alternate" href="https://malakgrioui.github.io/gmt-backbone.html" hreflang="en">
   <link rel="alternate" href="https://malakgrioui.github.io/fr/gmt-backbone.html" hreflang="fr">
-  <link rel="stylesheet" href="style.css?v=3">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="alternate" href="https://malakgrioui.github.io/gmt-backbone.html" hreflang="x-default">
+  <meta property="og:title" content="GMT Delivery Backbone — Malak Grioui">
+  <meta property="og:description" content="Design and implementation of GMT's Retooling / Delivery Backbone — a project management and reporting system improving accountability, traceability, and QC across conservation projects.">
+  <meta property="og:image" content="https://malakgrioui.github.io/assets/og-cover.jpg">
+  <meta property="og:url" content="https://malakgrioui.github.io/gmt-backbone.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GMT Delivery Backbone — Malak Grioui">
+  <meta name="twitter:description" content="Design and implementation of GMT's Retooling / Delivery Backbone — a project management and reporting system improving accountability, traceability, and QC across conservation projects.">
+  <meta name="twitter:image" content="https://malakgrioui.github.io/assets/og-cover.jpg">
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <nav class="site-nav">
     <div class="nav-container">
@@ -22,23 +37,27 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Work</a></li>
         <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-cv"><a href="assets/CV Malak GRIOUI ENG.pdf" download>Resume</a></li>
       </ul>
       <div class="nav-actions">
-        <select class="language-select" onchange="location = this.value;" aria-label="Language">
-          <option value="gmt-backbone.html" selected>EN</option>
-          <option value="fr/gmt-backbone.html">FR</option>
-        </select>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <a href="gmt-backbone.html" hreflang="en" lang="en" aria-current="true">EN</a>
+          <a href="fr/gmt-backbone.html" hreflang="fr" lang="fr">FR</a>
+        </div>
         <a href="assets/CV Malak GRIOUI ENG.pdf" download class="btn-outline-sm">Resume</a>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <main id="main">
+
   <header class="project-hero">
     <div class="project-hero-inner">
-      <a href="portfolio.html" class="project-back">← Back to all projects</a>
+      <a href="portfolio.html" class="project-back"><span class="arrow" aria-hidden="true">←</span> Back to all projects</a>
       <div class="project-hero-meta">
         <span class="company-badge-dark">Global Mangrove Trust</span>
         <div class="tags tags-dark">
@@ -53,7 +72,7 @@
     </div>
   </header>
 
-  <main class="project-content">
+  <div class="project-content">
     <div class="project-content-inner">
 
       <div class="project-section">
@@ -99,21 +118,18 @@
         </ul>
       </div>
 
-      <div style="text-align: center;">
-        <a href="portfolio.html" class="btn-outline">← Back to All Projects</a>
+      <div class="project-cta">
+        <a href="portfolio.html" class="btn-outline"><span class="arrow" aria-hidden="true">←</span> Back to All Projects</a>
       </div>
 
     </div>
+  </div>
+
   </main>
 
   <footer class="site-footer">
     <p>© 2025 Malak Grioui · <a href="https://www.linkedin.com/in/malak-grioui/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:malak.grioui@hotmail.fr">malak.grioui@hotmail.fr</a></p>
   </footer>
-
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => { links.classList.toggle('open'); });
-  </script>
+  <script defer src="nav.js"></script>
 </body>
 </html>
