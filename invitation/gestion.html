@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Gestion des invités</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{--paper:#f4efe6;--ivory:#fbf8f2;--ink:#4b4a3f;--ink-soft:#7a7565;--sage:#6e7a5c;--gold:#a8854f;--line:#e2d9c8;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;line-height:1.5}
+main{max-width:860px;margin:0 auto;padding:32px 16px 64px;display:flex;flex-direction:column;gap:20px}
+h1{margin:0;font-size:32px;font-weight:600;color:var(--sage)}
+.note{margin:0;font-size:16px;color:var(--ink-soft)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.stat{background:var(--ivory);border:1px solid var(--line);border-radius:3px;padding:12px;text-align:center}
+.stat b{display:block;font-size:30px;line-height:1.1;color:var(--sage);font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--ivory)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:16px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+td.num{text-align:center;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:#e4e8da;color:var(--sage)}
+.chip.mairie{background:#efe5d0;color:#7d6435}
+.actions{display:flex;gap:6px;flex-wrap:wrap}
+.btn{font:inherit;font-size:14px;padding:6px 12px;border-radius:999px;border:1px solid var(--sage);background:transparent;color:var(--sage);cursor:pointer;white-space:nowrap;text-decoration:none}
+.btn.done{background:var(--sage);color:var(--ivory)}
+.ex{font-size:12px;font-style:italic;color:var(--gold)}
+code{font-size:14px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Gestion des invités</h1>
+  <p class="note">Chaque foyer reçoit son propre lien et ne voit que ses événements. Les foyers marqués « exemple » sont à remplacer dans <code>config.js</code>. Le bouton WhatsApp prépare un message avec le lien.</p>
+  <div class="stats" id="stats"></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Foyer</th><th>Pers.</th><th>Événements</th><th>Lien</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+</main>
+<script src="config.js"></script>
+<script>
+const base = location.href.replace(/[?#].*$/, "").replace(/gestion\.html$/, "");
+const linkFor = g => base + "#" + g.code;
+
+const stats = document.getElementById("stats");
+const total = document.createElement("div"); total.className = "stat";
+total.innerHTML = "<b></b><span></span>";
+total.querySelector("b").textContent = GUESTS.length;
+total.querySelector("span").textContent = "Foyers";
+stats.append(total);
+ORDER.forEach(key => {
+  const gs = GUESTS.filter(g => g.events.includes(key));
+  const d = document.createElement("div"); d.className = "stat";
+  d.innerHTML = "<b></b><span></span>";
+  d.querySelector("b").textContent = gs.reduce((s, g) => s + g.personnes, 0);
+  d.querySelector("span").textContent = EVENTS[key].lieu + " · " + gs.length + " foyer" + (gs.length > 1 ? "s" : "");
+  stats.append(d);
+});
+
+const tbody = document.getElementById("rows");
+GUESTS.forEach(g => {
+  const tr = document.createElement("tr");
+  tr.innerHTML = '<td></td><td class="num"></td><td></td><td><div class="actions"></div></td>';
+  tr.children[0].textContent = g.foyer;
+  if (g.exemple) { const s = document.createElement("div"); s.className = "ex"; s.textContent = "exemple"; tr.children[0].append(s); }
+  tr.children[1].textContent = g.personnes;
+  ORDER.filter(e => g.events.includes(e)).forEach(e => {
+    const c = document.createElement("span"); c.className = "chip " + e; c.textContent = EVENTS[e].lieu; tr.children[2].append(c);
+  });
+  const actions = tr.querySelector(".actions");
+
+  const copy = document.createElement("button"); copy.type = "button"; copy.className = "btn"; copy.textContent = "Copier";
+  copy.addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(linkFor(g)); copy.textContent = "Copié"; copy.classList.add("done"); }
+    catch (e) { copy.textContent = linkFor(g); }
+    setTimeout(() => { copy.textContent = "Copier"; copy.classList.remove("done"); }, 2200);
+  });
+
+  const open = document.createElement("a"); open.className = "btn"; open.textContent = "Voir";
+  open.href = linkFor(g); open.target = "_blank"; open.rel = "noopener";
+
+  const wa = document.createElement("a"); wa.className = "btn"; wa.textContent = "WhatsApp";
+  wa.target = "_blank"; wa.rel = "noopener";
+  wa.href = "https://wa.me/?text=" + encodeURIComponent(
+    "Assalamou alaykoum " + g.foyer + ",\nIbrahim et Malak ont la joie de vous inviter à leur mariage, in shaa Allah. Voici votre invitation :\n" + linkFor(g));
+
+  actions.append(copy, open, wa);
+  tbody.append(tr);
+});
+</script>
+</body>
+</html>
