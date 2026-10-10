@@ -10,9 +10,9 @@ const FORM_URL = "";
 const RSVP_DEADLINE = "";
 
 const EVENTS = {
-  mairie:  { titre: "Cérémonie civile",     ar: "عقد القران المدني", lieu: "Mairie",    heure: "À confirmer", adresse: "Adresse à confirmer", maps: "" },
-  repas:   { titre: "Repas de mariage",     ar: "حفل العشاء",        lieu: "Réception", heure: "À confirmer", adresse: "Lieu à confirmer",    maps: "" },
-  mosquee: { titre: "Cérémonie religieuse", ar: "عقد القران",        lieu: "Mosquée",   heure: "À confirmer", adresse: "Lieu à confirmer",    maps: "" }
+  mairie:  { titre: "Cérémonie civile",     lieu: "Mairie",    heure: "À confirmer", adresse: "Adresse à confirmer", maps: "" },
+  repas:   { titre: "Repas de mariage",     lieu: "Réception", heure: "À confirmer", adresse: "Lieu à confirmer",    maps: "" },
+  mosquee: { titre: "Cérémonie religieuse", lieu: "Mosquée",   heure: "À confirmer", adresse: "Lieu à confirmer",    maps: "" }
 };
 const ORDER = ["mairie", "repas", "mosquee"];
 
