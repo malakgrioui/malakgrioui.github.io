@@ -176,7 +176,7 @@ details[open] summary{margin-bottom:12px}
 <script src="config.js"></script>
 <script>
 const $ = id => document.getElementById(id);
-const BASE = location.href.replace(/[?#].*$/, "").replace(/gestion\.html$/, "");
+const BASE = new URL("./", location.href).href;  // dossier de la page, avec ou sans « .html » dans l'adresse
 const linkFor = f => BASE + "#" + f.code;
 const API = (SUPABASE_URL || "").replace(/\/+$/, "");
 
