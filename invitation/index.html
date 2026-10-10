@@ -34,6 +34,7 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 /* Damask ground, fixed behind everything, softened by an ivory veil */
@@ -126,8 +127,37 @@ h2{margin:0;font-family:var(--f-script);font-weight:400;font-size:clamp(40px,10v
 .rsvp p{margin:0;max-width:36ch;color:var(--ink-soft)}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 34px;border-radius:999px;border:1px solid var(--gold);background:var(--sage);color:var(--ivory);font-family:var(--f-body);font-size:16px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .2s}
 .btn:hover{transform:translateY(-1px);background:#5f6b4e}
-.btn[aria-disabled="true"]{opacity:.5;pointer-events:none}
-.soon,.deadline{font-size:15px;font-style:italic;color:var(--gold)}
+.btn:disabled{opacity:.6;cursor:progress;transform:none}
+.soon,.deadline{margin:0;font-size:15px;font-style:italic;color:var(--gold)}
+
+/* RSVP form: one quiet row per invited moment, pill choices, a stepper for the head count */
+.rsvp form{width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;gap:22px}
+.rsvp-rows{width:100%;display:flex;flex-direction:column}
+.rsvp-row{margin:0;padding:18px 0;border:0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px;text-align:left}
+.rsvp-row:last-child{border-bottom:1px solid var(--line)}
+.rsvp-row legend{float:left;width:100%;padding:0;font-size:21px;font-weight:600;line-height:1.2;color:var(--ink)}
+.rsvp-row legend small{display:block;font-size:15px;font-weight:400;font-style:italic;color:var(--ink-soft)}
+.choices{display:flex;gap:8px;flex-wrap:wrap}
+.choices label{flex:1 1 0;min-width:0;position:relative}
+.choices input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.choices span{display:block;padding:10px 12px;border:1px solid var(--gold-soft);border-radius:999px;background:rgba(251,248,242,.7);font-size:16px;text-align:center;color:var(--ink-soft);transition:background .2s,color .2s,border-color .2s}
+.choices input:checked+span{background:var(--sage);border-color:var(--sage);color:var(--ivory)}
+.choices input:focus-visible+span{outline:2px solid var(--gold);outline-offset:3px}
+.count{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:16px;color:var(--ink-soft)}
+.stepper{display:flex;align-items:center;gap:6px}
+.stepper button{width:38px;height:38px;border-radius:50%;border:1px solid var(--gold-soft);background:transparent;color:var(--sage);font:inherit;font-size:22px;line-height:1;cursor:pointer}
+.stepper button:disabled{opacity:.35;cursor:default}
+.stepper output{min-width:2ch;text-align:center;font-size:24px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.rsvp-error{margin:0;font-size:15px;color:#9a4a3a}
+.rsvp-done{display:flex;flex-direction:column;align-items:center;gap:14px}
+.rsvp-done .thanks{font-family:var(--f-script);font-size:34px;line-height:1.2;color:var(--sage)}
+.rsvp-summary{margin:0;padding:0;list-style:none;width:100%;max-width:360px}
+.rsvp-summary li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);text-align:left}
+.rsvp-summary li:last-child{border-bottom:1px solid var(--line)}
+.rsvp-summary b{font-weight:600;color:var(--ink)}
+.rsvp-summary span{color:var(--ink-soft);font-style:italic;white-space:nowrap}
+.rsvp-done .when{font-size:14px;color:var(--ink-soft)}
+.linkbtn{border:0;background:none;padding:4px;font:inherit;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--gold-soft);cursor:pointer}
 
 .closing{gap:10px}
 .closing .frise{margin-bottom:20px}
@@ -202,9 +232,20 @@ h2{margin:0;font-family:var(--f-script);font-weight:400;font-size:clamp(40px,10v
     <div class="eyebrow">Réponse souhaitée</div>
     <h2 id="rsvp-t">Serez-vous des nôtres&nbsp;?</h2>
     <p id="rsvp-text">Merci de nous indiquer votre présence pour chacun des moments auxquels vous êtes convié.</p>
-    <div class="deadline" id="rsvp-deadline" hidden></div>
-    <a class="btn" id="rsvp-btn" href="#" target="_blank" rel="noopener" aria-disabled="true">Répondre</a>
-    <div class="soon" id="rsvp-soon">Le formulaire de réponse sera bientôt disponible.</div>
+    <p class="deadline" id="rsvp-deadline" hidden></p>
+    <form id="rsvp-form" novalidate hidden>
+      <div class="rsvp-rows" id="rsvp-rows"></div>
+      <p class="rsvp-error" id="rsvp-error" role="alert" hidden></p>
+      <button class="btn" type="submit" id="rsvp-send">Envoyer ma réponse</button>
+    </form>
+    <div class="rsvp-done" id="rsvp-done" hidden>
+      <div class="thanks">Merci&nbsp;!</div>
+      <p>Votre réponse est bien enregistrée.</p>
+      <ul class="rsvp-summary" id="rsvp-summary"></ul>
+      <p class="when" id="rsvp-when"></p>
+      <button class="linkbtn" type="button" id="rsvp-edit">Modifier ma réponse</button>
+    </div>
+    <p class="soon" id="rsvp-nolink" hidden>Pour répondre, ouvrez le lien personnel que vous avez reçu.</p>
   </section>
 
   <section class="closing reveal">
@@ -219,53 +260,145 @@ h2{margin:0;font-family:var(--f-script);font-weight:400;font-size:clamp(40px,10v
 <script src="config.js"></script>
 <script>
 const code = (new URLSearchParams(location.search).get("code") || location.hash.replace(/^#/, "")).trim().toLowerCase();
-const guest = GUESTS.find(g => g.code.toLowerCase() === code) || null;
-const myEvents = guest ? ORDER.filter(e => guest.events.includes(e)) : ["mairie"];
+const $ = id => document.getElementById(id);
+const plural = (n, one, many) => n + " " + (n > 1 ? many : one);
+let invitation = null;
 
-if (guest) {
-  const g = document.getElementById("greeting");
-  g.append("Chère ");
-  const b = document.createElement("b"); b.textContent = guest.foyer; g.append(b, ",");
-  g.hidden = false;
+function renderProgramme(events) {
+  const list = $("events");
+  list.replaceChildren();
+  events.forEach(key => {
+    const e = EVENTS[key];
+    const row = document.createElement("div");
+    row.className = "moment";
+    row.innerHTML = '<div class="time"></div><div class="body"><div class="t"></div><div class="where"></div></div>';
+    row.querySelector(".time").textContent = e.heure;
+    row.querySelector(".t").textContent = e.titre;
+    row.querySelector(".where").textContent = e.lieu + " · " + e.adresse;
+    if (e.maps) {
+      const a = document.createElement("a");
+      a.className = "map"; a.href = e.maps; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Itinéraire";
+      row.querySelector(".body").append(a);
+    }
+    list.append(row);
+  });
 }
 
-const list = document.getElementById("events");
-myEvents.forEach(key => {
-  const e = EVENTS[key];
-  const row = document.createElement("div");
-  row.className = "moment";
-  row.innerHTML = '<div class="time"></div><div class="body"><div class="t"></div><div class="where"></div></div>';
-  row.querySelector(".time").textContent = e.heure;
-  row.querySelector(".t").textContent = e.titre;
-  row.querySelector(".where").textContent = e.lieu + " · " + e.adresse;
-  if (e.maps) {
-    const a = document.createElement("a");
-    a.className = "map"; a.href = e.maps; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Itinéraire";
-    row.querySelector(".body").append(a);
+function myEvents() { return invitation ? ORDER.filter(e => invitation.evenements.includes(e)) : ["mairie"]; }
+
+/* ---------- RSVP ---------- */
+function buildForm() {
+  const rows = $("rsvp-rows");
+  rows.replaceChildren();
+  const n = invitation.personnes, prev = invitation.reponse;
+  myEvents().forEach(key => {
+    const fs = document.createElement("fieldset");
+    fs.className = "rsvp-row"; fs.dataset.event = key;
+    fs.innerHTML =
+      '<legend></legend>' +
+      '<div class="choices">' +
+        '<label><input type="radio" value="oui"><span></span></label>' +
+        '<label><input type="radio" value="non"><span></span></label>' +
+      '</div>' +
+      '<div class="count" hidden><span>Nombre de personnes</span>' +
+        '<div class="stepper"><button type="button" data-step="-1" aria-label="Une personne de moins">−</button>' +
+        '<output aria-live="polite"></output>' +
+        '<button type="button" data-step="1" aria-label="Une personne de plus">+</button></div></div>';
+    const lg = fs.querySelector("legend");
+    lg.textContent = EVENTS[key].titre;
+    const sm = document.createElement("small"); sm.textContent = EVENTS[key].lieu; lg.append(sm);
+    const [yes, no] = fs.querySelectorAll("input");
+    yes.name = no.name = "rsvp-" + key;
+    yes.id = "rsvp-" + key + "-oui"; no.id = "rsvp-" + key + "-non";
+    yes.nextElementSibling.textContent = "Avec joie";
+    no.nextElementSibling.textContent = "Avec regret";
+    const count = fs.querySelector(".count"), out = fs.querySelector("output");
+    const [minus, plus] = fs.querySelectorAll(".stepper button");
+    const set = v => { out.value = v; out.textContent = v; minus.disabled = v <= 1; plus.disabled = v >= n; };
+    const was = prev ? prev[key] : null;
+    set(was > 0 ? was : n);
+    if (was > 0) yes.checked = true; else if (was === 0) no.checked = true;
+    if (n === 1) count.querySelector(".stepper").hidden = true;
+    const sync = () => { count.hidden = !yes.checked || n === 1; $("rsvp-error").hidden = true; };
+    yes.addEventListener("change", sync); no.addEventListener("change", sync); sync();
+    minus.addEventListener("click", () => set(Math.max(1, +out.value - 1)));
+    plus.addEventListener("click", () => set(Math.min(n, +out.value + 1)));
+    rows.append(fs);
+  });
+}
+
+function showDone() {
+  const r = invitation.reponse, ul = $("rsvp-summary");
+  ul.replaceChildren();
+  myEvents().forEach(key => {
+    const li = document.createElement("li"), b = document.createElement("b"), sp = document.createElement("span");
+    b.textContent = EVENTS[key].titre;
+    sp.textContent = r[key] > 0 ? (invitation.personnes > 1 ? plural(r[key], "personne", "personnes") : "Présent·e") : "Absent" + (invitation.personnes > 1 ? "s" : "");
+    li.append(b, sp); ul.append(li);
+  });
+  const d = r.updated_at ? new Date(r.updated_at) : null;
+  $("rsvp-when").textContent = d ? "Réponse du " + d.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "";
+  $("rsvp-form").hidden = true;
+  $("rsvp-done").hidden = false;
+}
+
+function showForm() {
+  buildForm();
+  $("rsvp-error").hidden = true;
+  $("rsvp-done").hidden = true;
+  $("rsvp-form").hidden = false;
+}
+
+$("rsvp-edit").addEventListener("click", () => { showForm(); $("rsvp-form").querySelector("input").focus(); });
+
+$("rsvp-form").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const counts = {};
+  let missing = false;
+  $("rsvp-rows").querySelectorAll(".rsvp-row").forEach(fs => {
+    const pick = fs.querySelector("input:checked");
+    if (!pick) { missing = true; return; }
+    counts[fs.dataset.event] = pick.value === "oui" ? +fs.querySelector("output").value : 0;
+  });
+  const err = $("rsvp-error"), send = $("rsvp-send");
+  if (missing) { err.textContent = "Merci de répondre pour chacun des moments."; err.hidden = false; return; }
+  err.hidden = true; send.disabled = true; send.textContent = "Envoi…";
+  try {
+    invitation = await sendReponse(invitation.code, counts);
+    showDone();
+  } catch (e) {
+    err.textContent = "La réponse n’a pas pu être envoyée. Vérifiez votre connexion et réessayez.";
+    err.hidden = false;
+  } finally {
+    send.disabled = false; send.textContent = "Envoyer ma réponse";
   }
-  list.append(row);
 });
 
-const btn = document.getElementById("rsvp-btn");
-if (guest) {
-  document.getElementById("rsvp-text").textContent =
-    "Votre invitation est prévue pour " + guest.personnes + (guest.personnes > 1 ? " personnes" : " personne") +
-    ". Merci de nous indiquer votre présence pour chacun des moments auxquels vous êtes convié.";
+if (RSVP_DEADLINE) { $("rsvp-deadline").textContent = "Avant le " + RSVP_DEADLINE; $("rsvp-deadline").hidden = false; }
+
+function render() {
+  renderProgramme(myEvents());
+  if (!invitation) {
+    $("rsvp-text").textContent = "Merci de nous indiquer votre présence.";
+    $("rsvp-nolink").hidden = false;
+    return;
+  }
+  const g = $("greeting");
+  g.replaceChildren("Chère ");
+  const b = document.createElement("b"); b.textContent = invitation.foyer; g.append(b, ",");
+  g.hidden = false;
+  $("rsvp-text").textContent = "Votre invitation est prévue pour " + plural(invitation.personnes, "personne", "personnes") +
+    ". Merci de nous indiquer votre présence pour chacun des moments auxquels vous êtes convié" + (invitation.personnes > 1 ? "s." : ".");
+  if (invitation.reponse) showDone(); else showForm();
 }
-if (RSVP_DEADLINE) {
-  const d = document.getElementById("rsvp-deadline");
-  d.textContent = "Avant le " + RSVP_DEADLINE; d.hidden = false;
-}
-if (FORM_URL) {
-  const u = new URL(FORM_URL);
-  u.searchParams.set("code", guest ? guest.code : "");
-  u.searchParams.set("foyer", guest ? guest.foyer : "");
-  u.searchParams.set("personnes", guest ? guest.personnes : "");
-  u.searchParams.set("evenements", myEvents.join(","));
-  btn.href = u.toString();
-  btn.removeAttribute("aria-disabled");
-  document.getElementById("rsvp-soon").hidden = true;
-}
+
+renderProgramme(["mairie"]);
+loadInvitation(code)
+  .then(inv => { invitation = inv; render(); })
+  .catch(() => {
+    render();
+    $("rsvp-nolink").textContent = "Votre invitation n’a pas pu être chargée. Vérifiez votre connexion puis rechargez la page.";
+  });
 
 const target = new Date("2027-03-27T00:00:00+01:00").getTime();
 function tick(){

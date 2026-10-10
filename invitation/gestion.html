@@ -7,94 +7,512 @@
 <title>Gestion des invités</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap">
 <style>
-:root{--paper:#f4efe6;--ivory:#fbf8f2;--ink:#4b4a3f;--ink-soft:#7a7565;--sage:#6e7a5c;--gold:#a8854f;--line:#e2d9c8;color-scheme:light}
+/* Same ivory stationery as the invitation, set as a working desk: summary tiles on top, the guest ledger below. */
+:root{
+  --paper:#f4efe6;--ivory:#fbf8f2;--ink:#4b4a3f;--ink-soft:#7a7565;--sage:#6e7a5c;--sage-deep:#5f6b4e;
+  --gold:#a8854f;--gold-soft:#cbb487;--line:#e2d9c8;--yes:#e4e8da;--no:#f1e1da;--no-ink:#9a4a3a;--wait:#efe5d0;
+  --f-script:"Pinyon Script","Snell Roundhand",cursive;
+  --f-body:"Cormorant Garamond","Garamond","Georgia",serif;
+  color-scheme:light;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;line-height:1.5}
-main{max-width:860px;margin:0 auto;padding:32px 16px 64px;display:flex;flex-direction:column;gap:20px}
-h1{margin:0;font-size:32px;font-weight:600;color:var(--sage)}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(244,239,230,.7),rgba(244,239,230,.7)),url("assets/damasse-flou.webp") center/cover var(--paper)}
+main{max-width:980px;margin:0 auto;padding-inline:16px;padding-block:32px 72px;display:flex;flex-direction:column;gap:28px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+h1{margin:0;font-family:var(--f-script);font-weight:400;font-size:clamp(40px,8vw,56px);line-height:1.1;color:var(--sage)}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+h2{margin:0;font-size:22px;font-weight:600;color:var(--ink)}
 .note{margin:0;font-size:16px;color:var(--ink-soft)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.stat{background:var(--ivory);border:1px solid var(--line);border-radius:3px;padding:12px;text-align:center}
-.stat b{display:block;font-size:30px;line-height:1.1;color:var(--sage);font-variant-numeric:tabular-nums}
-.stat span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
-.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--ivory)}
-table{border-collapse:collapse;width:100%;min-width:560px;font-size:16px}
+.panel{background:rgba(251,248,242,.85);border:1px solid var(--line);border-radius:4px;padding:22px;display:flex;flex-direction:column;gap:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 22px;border-radius:999px;border:1px solid var(--sage);background:var(--sage);color:var(--ivory);font:inherit;font-size:15px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--sage-deep)}
+.btn.ghost{background:transparent;color:var(--sage)}
+.btn.ghost:hover{background:var(--yes)}
+.btn:disabled{opacity:.6;cursor:progress}
+.mini{font:inherit;font-size:14px;padding:5px 12px;border-radius:999px;border:1px solid var(--gold-soft);background:transparent;color:var(--sage);cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block}
+.mini:hover{background:var(--yes)}
+.mini.done{background:var(--sage);border-color:var(--sage);color:var(--ivory)}
+.mini.danger{color:var(--no-ink);border-color:#dcb8ad}
+.mini.danger.armed{background:var(--no-ink);border-color:var(--no-ink);color:var(--ivory)}
+label.field{display:flex;flex-direction:column;gap:4px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+input[type=text],input[type=email],input[type=password],input[type=number],input[type=search],textarea{font:inherit;font-size:17px;letter-spacing:normal;text-transform:none;padding:9px 12px;border:1px solid var(--line);border-radius:4px;background:var(--ivory);color:var(--ink);width:100%}
+textarea{min-height:130px;resize:vertical;font-size:16px}
+.msg{margin:0;font-size:15px}
+.msg.err{color:var(--no-ink)}
+.msg.ok{color:var(--sage)}
+
+/* Login */
+.login{max-width:400px;margin:6vh auto 0;width:100%}
+.login form{display:flex;flex-direction:column;gap:14px}
+
+/* Summary tiles */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.stat{background:rgba(251,248,242,.85);border:1px solid var(--line);border-radius:4px;padding:16px 18px;display:flex;flex-direction:column;gap:2px}
+.stat .k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.stat b{font-size:40px;line-height:1.1;font-weight:500;color:var(--ink);font-variant-numeric:lining-nums tabular-nums}
+.stat b small{font-size:20px;color:var(--ink-soft);font-weight:400}
+.stat .sub{font-size:14px;color:var(--ink-soft);font-variant-numeric:lining-nums tabular-nums}
+.bar{height:4px;border-radius:2px;background:var(--line);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--sage)}
+
+/* Ledger */
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{font:inherit;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid var(--gold-soft);background:transparent;color:var(--ink-soft);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--sage);border-color:var(--sage);color:var(--ivory)}
+.toolbar input[type=search]{max-width:260px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:rgba(251,248,242,.9)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:16px}
 th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
-th{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
-td.num{text-align:center;font-variant-numeric:tabular-nums}
-.chip{display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:#e4e8da;color:var(--sage)}
-.chip.mairie{background:#efe5d0;color:#7d6435}
-.actions{display:flex;gap:6px;flex-wrap:wrap}
-.btn{font:inherit;font-size:14px;padding:6px 12px;border-radius:999px;border:1px solid var(--sage);background:transparent;color:var(--sage);cursor:pointer;white-space:nowrap;text-decoration:none}
-.btn.done{background:var(--sage);color:var(--ivory)}
-.ex{font-size:12px;font-style:italic;color:var(--gold)}
-code{font-size:14px;color:var(--ink-soft)}
+tbody tr:last-child td{border-bottom:0}
+th{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;white-space:nowrap}
+td.num,th.num{text-align:center;font-variant-numeric:lining-nums tabular-nums}
+td.name{min-width:170px}
+td .code{display:block;font-size:13px;color:var(--ink-soft)}
+.pill{display:inline-block;min-width:54px;padding:2px 10px;border-radius:999px;font-size:13px;text-align:center;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+.pill.yes{background:var(--yes);color:var(--sage-deep)}
+.pill.no{background:var(--no);color:var(--no-ink)}
+.pill.wait{background:var(--wait);color:#7d6435}
+.pill.none{color:#b9b09c}
+.actions{display:flex;gap:6px;flex-wrap:nowrap}
+.empty{padding:28px;text-align:center;color:var(--ink-soft);font-style:italic}
+
+/* Household editor */
+.grid2{display:grid;grid-template-columns:2fr 1fr;gap:12px}
+.events-pick{display:flex;gap:16px;flex-wrap:wrap;font-size:16px}
+.events-pick label{display:flex;align-items:center;gap:6px}
+.row-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+details summary{cursor:pointer;font-size:18px;font-weight:600}
+details[open] summary{margin-bottom:12px}
+@media (max-width:560px){.grid2{grid-template-columns:1fr}.toolbar input[type=search]{max-width:none}}
 </style>
 </head>
 <body>
 <main>
-  <h1>Gestion des invités</h1>
-  <p class="note">Chaque foyer reçoit son propre lien et ne voit que ses événements. Les foyers marqués « exemple » sont à remplacer dans <code>config.js</code>. Le bouton WhatsApp prépare un message avec le lien.</p>
-  <div class="stats" id="stats"></div>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Foyer</th><th>Pers.</th><th>Événements</th><th>Lien</th></tr></thead>
-      <tbody id="rows"></tbody>
-    </table>
+  <header>
+    <div>
+      <div class="eyebrow">Ibrahim &amp; Malak · 27 mars 2027</div>
+      <h1>Gestion des invités</h1>
+    </div>
+    <button class="btn ghost" type="button" id="logout" hidden>Se déconnecter</button>
+  </header>
+
+  <p class="note" id="demo-note" hidden>Mode démo : Supabase n’est pas encore configuré dans <code>config.js</code>. Les foyers ci-dessous sont des exemples, et les modifications ne sont pas enregistrées.</p>
+
+  <section class="panel login" id="login" hidden aria-labelledby="login-t">
+    <h2 id="login-t">Connexion</h2>
+    <form id="login-form">
+      <label class="field">E-mail<input type="email" id="login-email" autocomplete="username" required></label>
+      <label class="field">Mot de passe<input type="password" id="login-password" autocomplete="current-password" required></label>
+      <button class="btn" type="submit" id="login-btn">Se connecter</button>
+      <p class="msg err" id="login-msg" role="alert" hidden></p>
+    </form>
+  </section>
+
+  <div id="app" hidden>
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <div class="stats" id="stats"></div>
+
+      <section class="panel" aria-labelledby="list-t">
+        <div class="toolbar">
+          <h2 id="list-t">Foyers</h2>
+          <div class="filters" id="filters">
+            <button type="button" data-f="all" aria-pressed="true">Tous</button>
+            <button type="button" data-f="wait" aria-pressed="false">En attente</button>
+            <button type="button" data-f="done" aria-pressed="false">Ont répondu</button>
+          </div>
+          <input type="search" id="search" placeholder="Rechercher un foyer" aria-label="Rechercher un foyer">
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr id="thead"></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        <div class="row-actions">
+          <button class="btn ghost" type="button" id="export">Exporter (CSV)</button>
+          <span class="msg" id="list-msg" role="status"></span>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="edit-t" id="editor">
+        <h2 id="edit-t">Ajouter un foyer</h2>
+        <form id="edit-form">
+          <div class="grid2">
+            <label class="field">Nom affiché<input type="text" id="f-foyer" placeholder="ex. Famille Haddad" required maxlength="120"></label>
+            <label class="field">Personnes<input type="number" id="f-personnes" min="1" max="30" value="2" required></label>
+          </div>
+          <div class="events-pick" id="f-events" style="margin-top:14px"></div>
+          <p class="note" id="f-code" style="margin-top:10px"></p>
+          <div class="row-actions" style="margin-top:14px">
+            <button class="btn" type="submit" id="f-save">Ajouter</button>
+            <button class="btn ghost" type="button" id="f-cancel" hidden>Annuler</button>
+            <span class="msg" id="f-msg" role="status"></span>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <details>
+          <summary>Importer une liste</summary>
+          <p class="note">Une ligne par foyer : <em>Nom ; personnes ; événements</em>. La mairie est toujours incluse. Exemple :</p>
+          <p class="note"><code>Famille Ben Ali ; 4 ; repas, mosquee</code><br><code>M. et Mme Durand ; 2 ; mairie</code></p>
+          <textarea id="import-text" aria-label="Liste des foyers à importer"></textarea>
+          <div class="row-actions" style="margin-top:12px">
+            <button class="btn" type="button" id="import-btn">Importer</button>
+            <span class="msg" id="import-msg" role="status"></span>
+          </div>
+        </details>
+      </section>
+    </div>
   </div>
 </main>
+
 <script src="config.js"></script>
 <script>
-const base = location.href.replace(/[?#].*$/, "").replace(/gestion\.html$/, "");
-const linkFor = g => base + "#" + g.code;
+const $ = id => document.getElementById(id);
+const BASE = location.href.replace(/[?#].*$/, "").replace(/gestion\.html$/, "");
+const linkFor = f => BASE + "#" + f.code;
+const API = (SUPABASE_URL || "").replace(/\/+$/, "");
 
-const stats = document.getElementById("stats");
-const total = document.createElement("div"); total.className = "stat";
-total.innerHTML = "<b></b><span></span>";
-total.querySelector("b").textContent = GUESTS.length;
-total.querySelector("span").textContent = "Foyers";
-stats.append(total);
-ORDER.forEach(key => {
-  const gs = GUESTS.filter(g => g.events.includes(key));
-  const d = document.createElement("div"); d.className = "stat";
-  d.innerHTML = "<b></b><span></span>";
-  d.querySelector("b").textContent = gs.reduce((s, g) => s + g.personnes, 0);
-  d.querySelector("span").textContent = EVENTS[key].lieu + " · " + gs.length + " foyer" + (gs.length > 1 ? "s" : "");
-  stats.append(d);
+/* ---------- Session (Supabase Auth, mot de passe) ---------- */
+const SESSION_KEY = "gestion-session";
+let session = null;
+try { session = JSON.parse(localStorage.getItem(SESSION_KEY)); } catch (e) {}
+function saveSession(s) { session = s; try { s ? localStorage.setItem(SESSION_KEY, JSON.stringify(s)) : localStorage.removeItem(SESSION_KEY); } catch (e) {} }
+
+async function auth(grant, body) {
+  const res = await fetch(API + "/auth/v1/token?grant_type=" + grant, {
+    method: "POST", headers: { apikey: SUPABASE_ANON_KEY, "Content-Type": "application/json" }, body: JSON.stringify(body)
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error_description || data.msg || data.message || "Connexion refusée");
+  saveSession({ access_token: data.access_token, refresh_token: data.refresh_token, expires_at: Date.now() + (data.expires_in || 3600) * 1000 });
+}
+
+async function token() {
+  if (session && Date.now() > session.expires_at - 60000) {
+    try { await auth("refresh_token", { refresh_token: session.refresh_token }); } catch (e) { saveSession(null); }
+  }
+  if (!session) throw Object.assign(new Error("Session expirée"), { auth: true });
+  return session.access_token;
+}
+
+async function rest(method, path, body) {
+  const res = await fetch(API + "/rest/v1/" + path, {
+    method,
+    headers: { apikey: SUPABASE_ANON_KEY, Authorization: "Bearer " + await token(), "Content-Type": "application/json", Prefer: "return=representation" },
+    body: body === undefined ? undefined : JSON.stringify(body)
+  });
+  const data = await res.json().catch(() => null);
+  if (res.status === 401) { saveSession(null); throw Object.assign(new Error("Session expirée"), { auth: true }); }
+  if (!res.ok) throw new Error((data && (data.message || data.details)) || "Erreur " + res.status);
+  return data;
+}
+
+/* ---------- Données ---------- */
+let foyers = [];          // [{ code, foyer, personnes, evenements, created_at }]
+let reponses = {};        // code → { mairie, repas, mosquee, updated_at }
+let filter = "all";
+let editing = null;       // code du foyer en cours de modification
+
+async function loadAll() {
+  if (!DB_READY) {
+    foyers = DEMO_GUESTS.map(g => ({ ...g }));
+    reponses = {};
+    DEMO_GUESTS.forEach(g => { const r = demoStore(g.code); if (r) reponses[g.code] = r; });
+    return;
+  }
+  if (!await rest("POST", "rpc/is_admin", {})) throw new Error("Ce compte n’a pas accès à la liste des invités");
+  const [f, r] = await Promise.all([rest("GET", "foyers?select=*&order=foyer.asc"), rest("GET", "reponses?select=*")]);
+  foyers = f; reponses = Object.fromEntries(r.map(x => [x.code, x]));
+}
+
+function slug(s) {
+  return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60) || "foyer";
+}
+function newCode(name) {
+  const chars = "abcdefghjkmnpqrstuvwxyz23456789";
+  const rnd = crypto.getRandomValues(new Uint8Array(4));
+  return slug(name) + "-" + Array.from(rnd, b => chars[b % chars.length]).join("");
+}
+
+/* ---------- Affichage ---------- */
+const plural = (n, one, many) => n + " " + (n > 1 ? many : one);
+
+function renderStats() {
+  const answered = foyers.filter(f => reponses[f.code]).length;
+  const tiles = [{
+    k: "Réponses", big: answered, of: foyers.length,
+    sub: plural(foyers.length - answered, "foyer en attente", "foyers en attente"), ratio: foyers.length ? answered / foyers.length : 0
+  }];
+  ORDER.forEach(key => {
+    const inv = foyers.filter(f => f.evenements.includes(key));
+    const invited = inv.reduce((s, f) => s + f.personnes, 0);
+    let yes = 0, no = 0, waiting = 0;
+    inv.forEach(f => {
+      const r = reponses[f.code];
+      if (!r || r[key] == null) waiting += f.personnes; else if (r[key] > 0) yes += r[key]; else no += f.personnes;
+    });
+    tiles.push({ k: EVENTS[key].titre, big: yes, of: invited, sub: "présents · " + no + " absents · " + waiting + " en attente", ratio: invited ? yes / invited : 0 });
+  });
+  const box = $("stats");
+  box.replaceChildren();
+  tiles.forEach(t => {
+    const d = document.createElement("div");
+    d.className = "stat";
+    d.innerHTML = '<span class="k"></span><b></b><span class="sub"></span><div class="bar"><i></i></div>';
+    d.querySelector(".k").textContent = t.k;
+    d.querySelector("b").textContent = t.big;
+    const small = document.createElement("small"); small.textContent = " / " + t.of; d.querySelector("b").append(small);
+    d.querySelector(".sub").textContent = t.sub;
+    d.querySelector("i").style.width = Math.round(t.ratio * 100) + "%";
+    box.append(d);
+  });
+}
+
+function cell(f, key) {
+  const s = document.createElement("span");
+  const r = reponses[f.code];
+  if (!f.evenements.includes(key)) { s.className = "pill none"; s.textContent = "—"; }
+  else if (!r || r[key] == null) { s.className = "pill wait"; s.textContent = "en attente"; }
+  else if (r[key] > 0) { s.className = "pill yes"; s.textContent = "✓ " + r[key]; }
+  else { s.className = "pill no"; s.textContent = "✗ absent"; }
+  return s;
+}
+
+function renderTable() {
+  $("thead").innerHTML = "<th>Foyer</th><th class=num>Pers.</th>" + ORDER.map(k => "<th class=num></th>").join("") + "<th>Lien</th><th></th>";
+  ORDER.forEach((k, i) => { $("thead").children[2 + i].textContent = EVENTS[k].lieu; });
+  const q = $("search").value.trim() ? slug($("search").value) : "";
+  const list = foyers.filter(f =>
+    (filter === "all" || (filter === "done") === Boolean(reponses[f.code])) &&
+    (!q || slug(f.foyer).includes(q) || f.code.includes(q)));
+  const tbody = $("rows");
+  tbody.replaceChildren();
+  if (!list.length) {
+    const tr = document.createElement("tr"), td = document.createElement("td");
+    td.colSpan = 7; td.className = "empty";
+    td.textContent = foyers.length ? "Aucun foyer ne correspond." : "Aucun foyer pour l’instant. Ajoute le premier ci-dessous, ou importe une liste.";
+    tr.append(td); tbody.append(tr); return;
+  }
+  list.forEach(f => {
+    const tr = document.createElement("tr");
+    const name = document.createElement("td"); name.className = "name";
+    name.textContent = f.foyer;
+    const c = document.createElement("span"); c.className = "code"; c.textContent = f.code; name.append(c);
+    const n = document.createElement("td"); n.className = "num"; n.textContent = f.personnes;
+    tr.append(name, n);
+    ORDER.forEach(k => { const td = document.createElement("td"); td.className = "num"; td.append(cell(f, k)); tr.append(td); });
+
+    const share = document.createElement("td"), sa = document.createElement("div"); sa.className = "actions";
+    const copy = document.createElement("button"); copy.type = "button"; copy.className = "mini"; copy.textContent = "Copier";
+    copy.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(linkFor(f)); copy.textContent = "Copié"; copy.classList.add("done"); }
+      catch (e) { copy.textContent = linkFor(f); }
+      setTimeout(() => { copy.textContent = "Copier"; copy.classList.remove("done"); }, 2000);
+    });
+    const wa = document.createElement("a"); wa.className = "mini"; wa.textContent = "WhatsApp"; wa.target = "_blank"; wa.rel = "noopener";
+    wa.href = "https://wa.me/?text=" + encodeURIComponent(
+      "Assalamou alaykoum " + f.foyer + ",\nIbrahim et Malak ont la joie de vous inviter à leur mariage, in shaa Allah. Voici votre invitation :\n" + linkFor(f));
+    const see = document.createElement("a"); see.className = "mini"; see.textContent = "Voir"; see.href = linkFor(f); see.target = "_blank"; see.rel = "noopener";
+    sa.append(copy, wa, see); share.append(sa);
+
+    const manage = document.createElement("td"), ma = document.createElement("div"); ma.className = "actions";
+    const edit = document.createElement("button"); edit.type = "button"; edit.className = "mini"; edit.textContent = "Modifier";
+    edit.addEventListener("click", () => startEdit(f));
+    const del = document.createElement("button"); del.type = "button"; del.className = "mini danger"; del.textContent = "Supprimer";
+    del.addEventListener("click", async () => {
+      if (!del.classList.contains("armed")) {
+        del.classList.add("armed"); del.textContent = "Confirmer";
+        setTimeout(() => { del.classList.remove("armed"); del.textContent = "Supprimer"; }, 3000);
+        return;
+      }
+      await run($("list-msg"), async () => {
+        if (DB_READY) await rest("DELETE", "foyers?code=eq." + encodeURIComponent(f.code));
+        else foyers = foyers.filter(x => x.code !== f.code);
+        return f.foyer + " supprimé.";
+      });
+    });
+    ma.append(edit, del); manage.append(ma);
+    tr.append(share, manage);
+    tbody.append(tr);
+  });
+}
+
+function render() { renderStats(); renderTable(); }
+
+// Exécute une action, affiche son résultat, puis recharge les données.
+async function run(msgEl, fn) {
+  msgEl.className = "msg"; msgEl.textContent = "…";
+  try {
+    const text = await fn();
+    if (DB_READY) await loadAll();
+    render();
+    msgEl.className = "msg ok"; msgEl.textContent = text || "";
+    return true;
+  } catch (e) {
+    if (e.auth) return showLogin("Ta session a expiré. Reconnecte-toi.");
+    msgEl.className = "msg err"; msgEl.textContent = e.message;
+    return false;
+  }
+}
+
+/* ---------- Ajout / modification d'un foyer ---------- */
+function eventsPicker(selected) {
+  const box = $("f-events");
+  box.replaceChildren();
+  ORDER.forEach(k => {
+    const l = document.createElement("label"), i = document.createElement("input");
+    i.type = "checkbox"; i.value = k; i.id = "f-ev-" + k;
+    i.checked = k === "mairie" || selected.includes(k);
+    if (k === "mairie") i.disabled = true;
+    l.append(i, " " + EVENTS[k].titre + (k === "mairie" ? " (tous les invités)" : ""));
+    box.append(l);
+  });
+}
+
+function resetEditor() {
+  editing = null;
+  $("edit-t").textContent = "Ajouter un foyer";
+  $("f-save").textContent = "Ajouter";
+  $("f-cancel").hidden = true;
+  $("f-foyer").value = ""; $("f-personnes").value = 2;
+  $("f-code").textContent = "Le lien personnel est créé automatiquement à partir du nom.";
+  eventsPicker([]);
+}
+
+function startEdit(f) {
+  editing = f.code;
+  $("edit-t").textContent = "Modifier « " + f.foyer + " »";
+  $("f-save").textContent = "Enregistrer";
+  $("f-cancel").hidden = false;
+  $("f-foyer").value = f.foyer; $("f-personnes").value = f.personnes;
+  $("f-code").textContent = "Lien : " + linkFor(f) + " (inchangé)";
+  eventsPicker(f.evenements);
+  $("editor").scrollIntoView({ behavior: "smooth", block: "start" });
+  $("f-foyer").focus({ preventScroll: true });
+}
+
+$("f-cancel").addEventListener("click", resetEditor);
+
+$("edit-form").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const foyer = $("f-foyer").value.trim(), personnes = parseInt($("f-personnes").value, 10);
+  const evenements = ORDER.filter(k => $("f-ev-" + k).checked);
+  if (!foyer || !(personnes >= 1 && personnes <= 30)) {
+    $("f-msg").className = "msg err"; $("f-msg").textContent = "Indique un nom et un nombre de personnes entre 1 et 30."; return;
+  }
+  $("f-save").disabled = true;
+  const ok = await run($("f-msg"), async () => {
+    if (editing) {
+      if (DB_READY) await rest("PATCH", "foyers?code=eq." + encodeURIComponent(editing), { foyer, personnes, evenements });
+      else Object.assign(foyers.find(f => f.code === editing), { foyer, personnes, evenements });
+      return foyer + " modifié.";
+    }
+    const row = { code: newCode(foyer), foyer, personnes, evenements };
+    if (DB_READY) await rest("POST", "foyers", row); else foyers.push(row);
+    return foyer + " ajouté.";
+  });
+  $("f-save").disabled = false;
+  if (ok) resetEditor();
 });
 
-const tbody = document.getElementById("rows");
-GUESTS.forEach(g => {
-  const tr = document.createElement("tr");
-  tr.innerHTML = '<td></td><td class="num"></td><td></td><td><div class="actions"></div></td>';
-  tr.children[0].textContent = g.foyer;
-  if (g.exemple) { const s = document.createElement("div"); s.className = "ex"; s.textContent = "exemple"; tr.children[0].append(s); }
-  tr.children[1].textContent = g.personnes;
-  ORDER.filter(e => g.events.includes(e)).forEach(e => {
-    const c = document.createElement("span"); c.className = "chip " + e; c.textContent = EVENTS[e].lieu; tr.children[2].append(c);
+/* ---------- Import ---------- */
+function parseImport(text) {
+  const rows = [], errors = [];
+  text.split(/\r?\n/).forEach((line, i) => {
+    if (!line.trim()) return;
+    const [name, n, ev] = line.split(/[;\t]/).map(s => (s || "").trim());
+    const personnes = parseInt(n, 10);
+    const evenements = ["mairie", ...ORDER.filter(k => k !== "mairie" && slug(ev || "").includes(k === "mosquee" ? "mosqu" : k))];
+    if (!name || !(personnes >= 1 && personnes <= 30)) { errors.push("ligne " + (i + 1)); return; }
+    rows.push({ code: newCode(name), foyer: name, personnes, evenements });
   });
-  const actions = tr.querySelector(".actions");
+  return { rows, errors };
+}
 
-  const copy = document.createElement("button"); copy.type = "button"; copy.className = "btn"; copy.textContent = "Copier";
-  copy.addEventListener("click", async () => {
-    try { await navigator.clipboard.writeText(linkFor(g)); copy.textContent = "Copié"; copy.classList.add("done"); }
-    catch (e) { copy.textContent = linkFor(g); }
-    setTimeout(() => { copy.textContent = "Copier"; copy.classList.remove("done"); }, 2200);
+$("import-btn").addEventListener("click", async () => {
+  const { rows, errors } = parseImport($("import-text").value);
+  if (errors.length) { $("import-msg").className = "msg err"; $("import-msg").textContent = "À corriger : " + errors.join(", ") + "."; return; }
+  if (!rows.length) { $("import-msg").className = "msg err"; $("import-msg").textContent = "La liste est vide."; return; }
+  const ok = await run($("import-msg"), async () => {
+    if (DB_READY) await rest("POST", "foyers", rows); else foyers.push(...rows);
+    return plural(rows.length, "foyer importé", "foyers importés") + ".";
   });
-
-  const open = document.createElement("a"); open.className = "btn"; open.textContent = "Voir";
-  open.href = linkFor(g); open.target = "_blank"; open.rel = "noopener";
-
-  const wa = document.createElement("a"); wa.className = "btn"; wa.textContent = "WhatsApp";
-  wa.target = "_blank"; wa.rel = "noopener";
-  wa.href = "https://wa.me/?text=" + encodeURIComponent(
-    "Assalamou alaykoum " + g.foyer + ",\nIbrahim et Malak ont la joie de vous inviter à leur mariage, in shaa Allah. Voici votre invitation :\n" + linkFor(g));
-
-  actions.append(copy, open, wa);
-  tbody.append(tr);
+  if (ok) $("import-text").value = "";
 });
+
+/* ---------- Export ---------- */
+$("export").addEventListener("click", () => {
+  const head = ["Foyer", "Code", "Lien", "Personnes", ...ORDER.flatMap(k => [EVENTS[k].lieu + " invité", EVENTS[k].lieu + " présents"]), "Répondu le"];
+  const lines = foyers.map(f => {
+    const r = reponses[f.code];
+    return [f.foyer, f.code, linkFor(f), f.personnes,
+      ...ORDER.flatMap(k => [f.evenements.includes(k) ? "oui" : "non", !f.evenements.includes(k) || !r || r[k] == null ? "" : r[k]]),
+      r && r.updated_at ? new Date(r.updated_at).toLocaleString("fr-FR") : ""];
+  });
+  const csv = [head, ...lines].map(l => l.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(";")).join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" }));
+  a.download = "invites-mariage.csv";
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+});
+
+/* ---------- Filtres ---------- */
+$("filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  filter = b.dataset.f;
+  $("filters").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  renderTable();
+});
+$("search").addEventListener("input", renderTable);
+
+/* ---------- Connexion ---------- */
+function showLogin(message) {
+  $("app").hidden = true; $("logout").hidden = true; $("login").hidden = false;
+  const m = $("login-msg"); m.textContent = message || ""; m.hidden = !message;
+  $("login-email").focus();
+}
+
+async function showApp() {
+  $("login").hidden = true;
+  try {
+    await loadAll();
+  } catch (e) {
+    if (e.auth) return showLogin();
+    saveSession(null);
+    return showLogin(e.message + ". Vérifie que ton e-mail est bien dans la table admins (voir supabase/LISEZMOI.md).");
+  }
+  $("app").hidden = false; $("logout").hidden = !DB_READY;
+  resetEditor(); render();
+}
+
+$("login-form").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  $("login-btn").disabled = true; $("login-msg").hidden = true;
+  try {
+    await auth("password", { email: $("login-email").value.trim(), password: $("login-password").value });
+    $("login-password").value = "";
+    await showApp();
+  } catch (e) {
+    $("login-msg").textContent = e.message === "Invalid login credentials" ? "E-mail ou mot de passe incorrect." : e.message;
+    $("login-msg").hidden = false;
+  }
+  $("login-btn").disabled = false;
+});
+
+$("logout").addEventListener("click", () => { saveSession(null); showLogin(); });
+
+if (!DB_READY) { $("demo-note").hidden = false; showApp(); }
+else if (session) showApp();
+else showLogin();
 </script>
 </body>
 </html>
